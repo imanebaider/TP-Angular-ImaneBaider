@@ -66,16 +66,7 @@ For more information on using the Angular CLI, including detailed command refere
 TP Angular sur les templates, bindings et directives.
 
 ## Captures d'écran
-![Liste des produits](./screenshots/liste-produits.png)
-![Détails](./screenshots/details.png)
-
-## Dépendances
-Aucune dépendance externe requise.
-
-
-
-
-
+la liste des produits
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/list1.PNG?raw=true)
 
 
