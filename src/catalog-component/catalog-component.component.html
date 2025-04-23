@@ -1,0 +1,59 @@
+<ul class="product-grid">
+    <li *ngFor="let product of availableProducts"
+        class="product-card" 
+        [class.low-quantity]="product.quantity < 10">
+      
+        <img class="product-image" [src]="product.imageUrl" alt="{{ product.productTitle }}" />
+        <h3 class="product-title">{{ product.productTitle }}</h3>
+        <button (click)="selectProduct(product)">
+          {{ selectedProduct === product ? 'Cacher' : 'Détails' }}
+        </button>
+        <div *ngIf="selectedProduct === product" class="product-details-panel">
+          <h2><i class="fas fa-info-circle"></i> Product Details</h2>
+          
+          <div class="detail-row">
+            <i class="fas fa-tag"></i>
+            <div>
+              <span class="detail-label">Product</span>
+              <span class="detail-value">{{ selectedProduct.productTitle }}</span>
+            </div>
+          </div>
+          
+          <div class="detail-row">
+            <i class="fas fa-align-left"></i>
+            <div>
+              <span class="detail-label">Description</span>
+              <span class="detail-value">{{ selectedProduct.description }}</span>
+            </div>
+          </div>
+          
+          <div class="detail-row highlight">
+            <i class="fas fa-dollar-sign"></i>
+            <div>
+              <span class="detail-label">Price</span>
+              <span class="price">{{ selectedProduct.productPrice }}$</span>
+            </div>
+          </div>
+          
+          <div class="detail-row highlight" [class.low-stock]="selectedProduct.quantity < 10">
+            <i class="fas fa-boxes"></i>
+            <div>
+              <span class="detail-label">Stock</span>
+              <span class="quantity">{{ selectedProduct.quantity }} 
+                <span *ngIf="selectedProduct.quantity < 10" class="stock-warning">(Low Stock)</span>
+              </span>
+            </div>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="add-to-cart">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            <button class="wishlist">
+              <i class="far fa-heart"></i> Wishlist
+            </button>
+          </div>
+        </div>
+    </li>
+  </ul>
+  <app-product-details [product]="selectedProduct"></app-product-details>

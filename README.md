@@ -57,3 +57,17 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+# TP4 - Imane Baider
+
+## Description
+TP Angular sur les templates, bindings et directives.
+
+## Captures d'écran
+![Liste des produits](./screenshots/liste-produits.png)
+![Détails](./screenshots/details.png)
+
+## Dépendances
+Aucune dépendance externe requise.
