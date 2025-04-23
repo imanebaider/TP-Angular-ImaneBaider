@@ -68,7 +68,8 @@ TP Angular sur les templates, bindings et directives.
 ## Captures d'écran
 la liste des produits
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/list1.PNG?raw=true)
-
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/detail1.PNG?raw=true
+)
 
 
 
