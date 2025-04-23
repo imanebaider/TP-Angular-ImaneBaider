@@ -1,4 +1,4 @@
-# TpProduits
+# Tp-produits-imane
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
 
@@ -70,7 +70,7 @@ la liste des produits
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/list1.PNG?raw=true)
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/list2.PNG?raw=true
 )
-les details de chaque produit
+
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/detail1.PNG?raw=true
 )
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/detail2.PNG?raw=true
