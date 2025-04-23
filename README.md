@@ -71,3 +71,28 @@ TP Angular sur les templates, bindings et directives.
 
 ## Dépendances
 Aucune dépendance externe requise.
+
+
+
+
+
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/list1.PNG?raw=true)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
