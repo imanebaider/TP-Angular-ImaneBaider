@@ -1,9 +1,132 @@
-<ul class="product-grid">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<header class="main-header">
+  <div class="logo">LORAYA</div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Parure Bijoux Femme" />
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="header-icons">
+    <i class="fas fa-user"></i>
+    <i class="fas fa-shopping-cart"></i>
+    <i class="far fa-heart"></i>
+    <i class="fas fa-globe"></i>
+
+    
+  </div>
+</header>
+
+
+
+
+
+<div class="menu-container">
+  <!-- Colliers -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i class="fas fa-necklace"></i> Colliers
+    </a>
+    <div class="submenu">
+      <a href="#">Colliers ras-de-cou</a>
+      <a href="#">Colliers longs</a>
+      <a href="#">Colliers pendentifs</a>
+      <a href="#">Colliers perles</a>
+      <a href="#">Chaînes</a>
+    </div>
+  </div>
+  
+  <!-- Boucles d'oreilles -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i class="fas fa-earrings"></i> Boucles
+    </a>
+    <div class="submenu">
+      <a href="#">Crèoles</a>
+      <a href="#">Pendantes</a>
+      <a href="#">Clous d'oreilles</a>
+      <a href="#">Boucles perles</a>
+      <a href="#">Boucles diamant</a>
+    </div>
+  </div>
+  
+  <!-- Bracelets -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i class="fas fa-bracelet"></i> Bracelets
+    </a>
+    <div class="submenu">
+      <a href="#">Bracelets chaîne</a>
+      <a href="#">Bracelets perles</a>
+      <a href="#">Bracelets charms</a>
+      <a href="#">Bangles</a>
+      <a href="#">Bracelets cheville</a>
+    </div>
+  </div>
+  
+  <!-- Bagues -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i class="fas fa-ring"></i> Bagues
+    </a>
+    <div class="submenu">
+      <a href="#">Alliances</a>
+      <a href="#">Solitaires</a>
+      <a href="#">Bagues cocktail</a>
+      <a href="#">Bagues de fiançailles</a>
+      <a href="#">Chevalières</a>
+    </div>
+  </div>
+  
+  <!-- Autres -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i class="fas fa-gem"></i> Autres
+    </a>
+    <div class="submenu">
+      <a href="#">Broches</a>
+      <a href="#">Barrettes</a>
+      <a href="#">Bijoux de mariage</a>
+      <a href="#">Bijoux bébé</a>
+      <a href="#">Montres</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section class="hero-gallery">
+  <!-- Image principale (visible par défaut) -->
+  <div class="main-hero" style="background-image: url('https://wallpapercave.com/wp/wp4103480.jpg');">
+    <div class="hero-content">
+      <h1>LORAYA</h1>
+      <p>Bijoux de Luxe - Élégance Intemporelle</p>
+    </div>
+  </div>
+  
+  
+</section>
+
+
+
+
+
+ 
+ 
+ <ul class="product-grid">
     <li *ngFor="let product of availableProducts"
         class="product-card" 
         [class.low-quantity]="product.quantity < 10">
+
+
+        
       
-        <img class="product-image" [src]="product.imageUrl" alt="{{ product.productTitle }}" />
+        <img class="product-image" [src]="'http://localhost:3000/assets/images/' + product.imageUrl" alt="{{ product.productTitle }}" />
+
         <h3 class="product-title">{{ product.productTitle }}</h3>
         <button (click)="selectProduct(product)">
           {{ selectedProduct === product ? 'Cacher' : 'Détails' }}
@@ -45,6 +168,13 @@
             </div>
           </div>
           
+
+  <!-- العلامة ديال السلة -->
+  <div class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+  </div>
+
+
           <div class="action-buttons">
             <button class="add-to-cart">
               <i class="fas fa-cart-plus"></i> Add to Cart
@@ -56,4 +186,112 @@
         </div>
     </li>
   </ul>
+  
+
+  
   <app-product-details [product]="selectedProduct"></app-product-details>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Colonne 1 : Informations entreprise -->
+      <div class="footer-column">
+        <h3>INFORMATIONS SUR L'ENTREPRISE</h3>
+        <ul>
+          <li><a href="#">Qui Sommes-Nous?</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Responsabilité Sociale</a></li>
+          <li><a href="#">LORAYA VIP</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 2 : Centre d'aide -->
+      <div class="footer-column">
+        <h3>CENTRE D'AIDE</h3>
+        <ul>
+          <li><a href="#">Livraison</a></li>
+          <li><a href="#">Retour & Remboursement</a></li>
+          <li><a href="#">Commande</a></li>
+          <li><a href="#">Statut De Commande</a></li>
+          <li><a href="#">Guide Des Tailles</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 3 : Contact -->
+      <div class="footer-column">
+        <h3>AIDE</h3>
+        <ul>
+          <li><a href="#">Nous contacter</a></li>
+          <li><a href="#">Paiement</a></li>
+          <li><a href="#">Points Bonus</a></li>
+        </ul>
+        
+        <div class="social-media">
+          <h3>Trouvez-nous sur</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne 4 : Newsletter -->
+      <div class="footer-column newsletter">
+        <h3>Newsletter</h3>
+        <p>Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Votre Adresse E-mail" required>
+          <div class="phone-input">
+            <select>
+              <option>MA +212</option>
+              <option>FR +33</option>
+              <option>BE +32</option>
+            </select>
+            <input type="tel" placeholder="Téléphone pour SMS">
+          </div>
+          <button type="submit">S'abonner</button>
+        </form>
+        <small>Vous pouvez vous DÉSABONNER à tout moment</small>
+      </div>
+    </div>
+    
+    <!-- Paiements -->
+    <div class="payment-methods">
+      <h4>NOUS ACCEPTONS</h4>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-apple-pay"></i>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>©2023-2025 LORAYA Tous droits réservés</p>
+      <div class="legal-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Cookies</a>
+        <a href="#">Conditions Générales</a>
+        <a href="#">Avis IP</a>
+        <a href="#">Morocco</a>
+      </div>
+      <p class="trust-badge">
+        <i class="fas fa-lock"></i> Site sécurisé - Paiements 100% protégés
+      </p>
+    </div>
+  </footer>
+  
