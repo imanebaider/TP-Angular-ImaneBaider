@@ -1,4 +1,4 @@
-# TpProduits
+# TP-Angular-ImaneBaider
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
 
@@ -66,8 +66,29 @@ For more information on using the Angular CLI, including detailed command refere
 TP Angular sur les templates, bindings et directives.
 
 ## Captures d'écran
-![Liste des produits](./screenshots/liste-produits.png)
-![Détails](./screenshots/details.png)
+la liste des produits
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/list1.PNG?raw=true)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/list2.PNG?raw=true
+)
 
-## Dépendances
-Aucune dépendance externe requise.
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/detail1.PNG?raw=true
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/detail2.PNG?raw=true
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
