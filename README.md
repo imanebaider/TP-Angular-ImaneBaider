@@ -71,7 +71,7 @@ la liste des produits
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/listv2_2.PNG?raw=true
 )
 
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/detail1.PNG?raw=true
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/listv2_3.PNG?raw=true
 )
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/detail2.PNG?raw=true
 )
