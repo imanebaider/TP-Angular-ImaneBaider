@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <header class="main-header">
   <div class="logo">LORAYA</div>
 
@@ -101,7 +101,7 @@
 
 <section class="hero-gallery">
   <!-- Image principale (visible par défaut) -->
-  <div class="main-hero" style="background-image: url('https://wallpapercave.com/wp/wp4103480.jpg');">
+  <div class="main-hero" style="background-image: url('http://localhost:3000/assets/images/background-bijoux.jpg');">
     <div class="hero-content">
       <h1>LORAYA</h1>
       <p>Bijoux de Luxe - Élégance Intemporelle</p>
@@ -114,82 +114,114 @@
 
 
 
+<ul class="product-grid">
+  <li *ngFor="let product of availableProducts" class="product-card"
+  (mouseenter)="onMouseEnter(product.productId)" 
+  (mouseleave)="onMouseLeave()">
 
- 
- 
- <ul class="product-grid">
-    <li *ngFor="let product of availableProducts"
-        class="product-card" 
-        [class.low-quantity]="product.quantity < 10">
-
-
-        
-      
-        <img class="product-image" [src]="'http://localhost:3000/assets/images/' + product.imageUrl" alt="{{ product.productTitle }}" />
-
-        <h3 class="product-title">{{ product.productTitle }}</h3>
-        <button (click)="selectProduct(product)">
-          {{ selectedProduct === product ? 'Cacher' : 'Détails' }}
-        </button>
-        <div *ngIf="selectedProduct === product" class="product-details-panel">
-          <h2><i class="fas fa-info-circle"></i> Product Details</h2>
-          
-          <div class="detail-row">
-            <i class="fas fa-tag"></i>
-            <div>
-              <span class="detail-label">Product</span>
-              <span class="detail-value">{{ selectedProduct.productTitle }}</span>
-            </div>
-          </div>
-          
-          <div class="detail-row">
-            <i class="fas fa-align-left"></i>
-            <div>
-              <span class="detail-label">Description</span>
-              <span class="detail-value">{{ selectedProduct.description }}</span>
-            </div>
-          </div>
-          
-          <div class="detail-row highlight">
-            <i class="fas fa-dollar-sign"></i>
-            <div>
-              <span class="detail-label">Price</span>
-              <span class="price">{{ selectedProduct.productPrice }}$</span>
-            </div>
-          </div>
-          
-          <div class="detail-row highlight" [class.low-stock]="selectedProduct.quantity < 10">
-            <i class="fas fa-boxes"></i>
-            <div>
-              <span class="detail-label">Stock</span>
-              <span class="quantity">{{ selectedProduct.quantity }} 
-                <span *ngIf="selectedProduct.quantity < 10" class="stock-warning">(Low Stock)</span>
-              </span>
-            </div>
-          </div>
-          
-
-  <!-- العلامة ديال السلة -->
-  <div class="cart-icon">
-    <i class="fas fa-shopping-cart"></i>
+  <div class="product-images">
+    <img *ngFor="let img of product.imageUrl; let i = index"
+         class="product-image"
+         [src]="'http://localhost:3000/assets/images/' + img"
+         [alt]="product.productTitle"
+         [class.show]="i === 0 || hovered === product.productId">
   </div>
+    <h3 class="product-title">{{ product.productTitle }}</h3>
 
 
-          <div class="action-buttons">
-            <button class="add-to-cart">
-              <i class="fas fa-cart-plus"></i> Add to Cart
-            </button>
-            <button class="wishlist">
-              <i class="far fa-heart"></i> Wishlist
-            </button>
-          </div>
+
+
+
+
+
+
+
+    <div class="rating-price">
+      <div *ngFor="let star of [1, 2, 3, 4, 5]" 
+           [class.active]="star <= product.rating" 
+           (click)="rateProduct(star, product)" 
+           class="stars">
+        ★
+      </div>
+      <span class="product-price">{{ product.productPrice }}€</span>  
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ✅ الزر ديال التفاصيل -->
+    <button (click)="selectProduct(product)">
+      {{ selectedProduct === product ? 'Cacher' : 'Détails' }}
+    </button>
+
+    <!-- ✅ التفاصيل الكاملة -->
+    <div *ngIf="selectedProduct === product" class="product-details-panel">
+      <h2><i class="fas fa-info-circle"></i> Product Details</h2>
+
+      <div class="detail-row">
+        <i class="fas fa-tag"></i>
+        <div>
+          <span class="detail-label">Product</span>
+          <span class="detail-value">{{ selectedProduct.productTitle }}</span>
         </div>
-    </li>
-  </ul>
-  
+      </div>
 
+      <div class="detail-row">
+        <i class="fas fa-align-left"></i>
+        <div>
+          <span class="detail-label">Description</span>
+          <span class="detail-value">{{ selectedProduct.description }}</span>
+        </div>
+      </div>
+
+      <div class="detail-row highlight">
+        <i class="fas fa-dollar-sign"></i>
+        <div>
+          <span class="detail-label">Price</span>
+          <span class="price">{{ selectedProduct.productPrice }}€</span>
+        </div>
+      </div>
+
+      <div class="detail-row highlight" [class.low-stock]="selectedProduct.quantity < 10">
+        <i class="fas fa-boxes"></i>
+        <div>
+          <span class="detail-label">Stock</span>
+          <span class="quantity">{{ selectedProduct.quantity }} 
+            <span *ngIf="selectedProduct.quantity < 10" class="stock-warning">(Low Stock)</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- ✅ السلة -->
+      <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+
+      <!-- ✅ الأزرار -->
+      <div class="action-buttons">
+        <button class="add-to-cart">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+        <button class="wishlist">
+          <i class="far fa-heart"></i> Wishlist
+        </button>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<app-product-details [product]="selectedProduct"></app-product-details>
+
+ 
+ 
   
-  <app-product-details [product]="selectedProduct"></app-product-details>
+ 
   
 
 

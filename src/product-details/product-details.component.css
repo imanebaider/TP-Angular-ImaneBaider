@@ -1,0 +1,159 @@
+/* Style général */
+.luxury-product-card {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: #f8f6f2;
+    border-bottom: 1px solid #e5e0d8;
+}
+
+.brand-title {
+    font-size: 1.8rem;
+    color: #B38B59;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.product-id {
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+/* Image */
+.image-container {
+    position: relative;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(179, 139, 89, 0.1);
+}
+
+.jewelry-image {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.jewelry-image:hover {
+    transform: scale(1.02);
+}
+
+/* Détails */
+.product-details {
+    position: relative;
+}
+
+.product-title {
+    font-size: 2.2rem;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.price-box {
+    margin-bottom: 2rem;
+}
+
+.price {
+    display: block;
+    font-size: 2.5rem;
+    color: #B38B59;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tax {
+    font-family: 'Poppins', sans-serif;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.specs-box {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #faf9f7;
+    border-radius: 8px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+
+.material-icons {
+    color: #B38B59;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    border-left: 3px solid #B38B59;
+    padding-left: 1rem;
+}
+
+.add-to-cart {
+    background: #B38B59;
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #9a744d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(179, 139, 89, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-content {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+    
+    .product-title {
+        font-size: 1.8rem;
+    }
+    
+    .price {
+        font-size: 2rem;
+    }
+    
+    .jewelry-image {
+        height: 300px;
+    }
+}

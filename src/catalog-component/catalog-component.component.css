@@ -491,112 +491,132 @@
 
 
 
-
-
-
+/* ✅ Grille des produits */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 30px;
   list-style: none;
   margin: 0;
+  background-color: #fefefe;
 }
 
+/* ✅ Carte produit */
 .product-card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
   overflow: hidden;
-  position: relative;
-  padding: 10px;
-  transition: transform 0.3s;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
 }
 
+/* ✅ Image produit */
 .product-image {
   width: 100%;
-  border-radius: 8px;
+  height: 270px;
   object-fit: cover;
-  height: 200px;
+  background-color: #f9f9f9;
+  transition: opacity 0.3s ease;
 }
 
+/* ✅ Titre */
 .product-title {
   font-size: 1rem;
-  font-weight: bold;
-  margin: 10px 0 5px;
+  font-weight: 500;
   color: #333;
-  height: 40px;
+  padding: 10px 12px 4px;
+  height: 42px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ✅ Étoiles + Prix */
+.rating-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px 8px;
+  font-size: 0.95rem;
+}
+
+.stars {
+  color: #facc15; /* jaune doux */
 }
 
 .product-price {
-  font-size: 1.1rem;
   color: #e60023;
   font-weight: bold;
+  font-size: 1.05rem;
 }
 
+/* ✅ Bouton Détails */
 .product-card button {
-  background-color: #e60023;
+  background-color: #222;
   color: white;
   border: none;
   padding: 8px 12px;
-  border-radius: 8px;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
+  margin: 0 12px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
 }
 
 .product-card button:hover {
-  background-color: #cc001f;
+  background-color: #444;
 }
 
+/* ✅ Détails */
 .product-details-panel {
-  background-color: #fafafa;
   border-top: 1px solid #eee;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 8px;
+  background-color: #fafafa;
+  padding: 12px 14px;
   font-size: 0.9rem;
 }
 
 .detail-row {
   display: flex;
-  align-items: center;
-  margin-bottom: 8px;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .detail-row i {
-  margin-right: 8px;
   color: #e60023;
+  margin-top: 4px;
 }
 
 .detail-label {
-  font-weight: bold;
-  margin-right: 6px;
+  font-weight: 600;
+  color: #555;
 }
 
 .detail-value {
-  color: #444;
+  color: #222;
 }
 
 .price {
-  font-size: 1.2rem;
   color: #e60023;
+  font-size: 1.1rem;
 }
 
 .quantity {
   font-weight: bold;
+  color: #333;
 }
 
 .stock-warning {
   color: #ff9900;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  margin-left: 5px;
 }
 
 .low-quantity .product-title {
@@ -607,21 +627,35 @@
   color: red;
 }
 
+/* ✅ Actions */
 .action-buttons {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
   margin-top: 10px;
+  padding: 0 12px;
+  gap: 8px;
 }
 
-.add-to-cart,
-.wishlist {
+.add-to-cart, .wishlist {
   flex: 1;
-  padding: 6px 10px;
-  font-size: 0.85rem;
+  padding: 6px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
+.add-to-cart {
+  background-color: #e60023;
+  color: white;
+}
 
-
+.wishlist {
+  background-color: #fff;
+  color: #e60023;
+  border: 1px solid #e
+}
 
 
 
@@ -801,82 +835,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* Styles de base */
-.hero-gallery {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
-}
-
-.main-hero {
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: all 0.5s ease;
-}
-
-/* Contenu texte */
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  z-index: 2;
-}
-
-
-
-/* Mini-gallerie (cachée par défaut) */
-.hover-gallery {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-
-
-.gallery-item {
-  flex: 1;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.7);
-}
-
-/* Effet au survol */
-.hero-gallery:hover .main-hero {
-  filter: brightness(0.3);
-}
-
-.hero-gallery:hover .hover-gallery {
-  opacity: 1;
-}
-
-/* Animation des images */
-/*.gallery-item:hover {
-  flex: 2;
-  filter: brightness(1);
-  transition: all 0.5s ease;
-}
-*/
 
 
 
@@ -1093,4 +1051,195 @@
 
 
 
+
   
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+/* Styling for the hero section */
+.hero-gallery {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.main-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the background image */
+  display: flex;
+  align-items: center; /* Aligns the content vertically in the center */
+  justify-content: center; /* Centers content horizontally */
+  filter: brightness(70%); /* Darkens the background image to make the text more readable */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the content */
+  text-align: center;
+  color: white; /* White text */
+  z-index: 1; /* Ensures the text is above the image */
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Large font size */
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin: 0;
+  text-transform: capitalize;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-images {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.product-image.show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stars {
+  font-size: 20px;
+  cursor: pointer;
+  color: #ccc;
+  display: inline-block; /* النجوم في نفس السطر */
+  margin-right: 0; /* إزالة المسافة بين النجوم */
+  padding-right: 0; /* إزالة الحشو بين النجوم */
+}
+
+.stars:hover,
+.stars.active {
+  color: gold;
+}
+
