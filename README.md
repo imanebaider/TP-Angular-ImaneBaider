@@ -67,17 +67,20 @@ TP Angular sur les templates, bindings et directives.
 
 ## Captures d'écran
 la liste des produits
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/listv2_1.PNG?raw=true)
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/listv2_2.PNG?raw=true
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya1.PNG?raw=true
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya2.PNG?raw=true
 )
 
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/listv2_3.PNG?raw=true
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya3.PNG?raw=true
 )
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/listv2_4.PNG?raw=true
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya5.PNG?raw=true
 )
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/detailv2.PNG?raw=true
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya6.PNG?raw=true
 )
 
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya7.PNG?raw=true
+)
 
 
 
