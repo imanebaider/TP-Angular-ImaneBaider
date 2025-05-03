@@ -1,8 +1,15 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<header class="main-header">
-  <div class="logo">LORAYA</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <header class="main-header">
+    <div class="logo">
+      <i class="fas fa-gem"></i> LORAYA
+    </div>
+  
+  
 
   <div class="search-bar">
     <input type="text" placeholder="Parure Bijoux Femme" />
@@ -119,6 +126,8 @@
   (mouseenter)="onMouseEnter(product.productId)" 
   (mouseleave)="onMouseLeave()">
 
+
+
   <div class="product-images">
     <img *ngFor="let img of product.imageUrl; let i = index"
          class="product-image"
@@ -127,14 +136,6 @@
          [class.show]="i === 0 || hovered === product.productId">
   </div>
     <h3 class="product-title">{{ product.productTitle }}</h3>
-
-
-
-
-
-
-
-
 
     <div class="rating-price">
       <div *ngFor="let star of [1, 2, 3, 4, 5]" 
@@ -145,16 +146,6 @@
       </div>
       <span class="product-price">{{ product.productPrice }}€</span>  
     </div>
-
-
-
-
-
-
-
-
-
-
     <!-- ✅ الزر ديال التفاصيل -->
     <button (click)="selectProduct(product)">
       {{ selectedProduct === product ? 'Cacher' : 'Détails' }}

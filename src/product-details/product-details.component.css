@@ -157,3 +157,91 @@
         height: 300px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-image {
+    width: 400px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .large-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .thumbnail-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    cursor: pointer;
+    object-fit: cover;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .thumbnail-image:hover,
+  .thumbnail-image.active {
+    opacity: 1;
+    border-color: #c59fc9; /* لون منسجم مع المجوهرات */
+  }
+  

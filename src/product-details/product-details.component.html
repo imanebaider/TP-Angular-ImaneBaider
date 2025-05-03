@@ -5,11 +5,31 @@
   </div>
   
   <div class="product-content">
-      <div class="image-container">
-          <img [src]="'http://localhost:3000/assets/images/' + product.imageUrl" 
-               alt="{{product.productTitle}}"
-               class="jewelry-image">
+
+
+
+    
+    <div class="image-gallery">
+        <!-- الصورة الكبيرة -->
+        <div class="main-image">
+          <img [src]="'http://localhost:3000/assets/images/' + selectedImage" 
+               [alt]="product.productTitle" 
+               class="large-image">
+        </div>
+      
+        <!-- الصور المصغرة -->
+        <div class="thumbnails">
+          <img *ngFor="let img of product.imageUrl"
+               [src]="'http://localhost:3000/assets/images/' + img"
+               [alt]="product.productTitle"
+               (click)="selectImage(img)"
+               class="thumbnail-image"
+               [class.active]="img === selectedImage">
+        </div>
       </div>
+
+
+
       
       <div class="product-details">
           <h1 class="product-title">{{product.productTitle}}</h1>
