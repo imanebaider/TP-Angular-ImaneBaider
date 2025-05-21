@@ -1,14 +1,15 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'; 
 import { Product } from '../models/Product';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 
 @Component({
   selector: 'app-catalog-component',
   standalone: true,
-  imports: [FormsModule, CommonModule, ProductDetailsComponent],
+  imports: [FormsModule, CommonModule],
   templateUrl: './catalog-component.component.html',
   styleUrls: ['./catalog-component.component.css']
 })
@@ -19,10 +20,8 @@ export class CatalogComponentComponent implements OnInit {
   products: Product[] = [];
   hovered: number | null = null;
   apiUrl = 'http://localhost:3000/api/products'; //API
- 
 
-
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.http.get<Product[]>(this.apiUrl).subscribe({
@@ -51,8 +50,6 @@ export class CatalogComponentComponent implements OnInit {
     this.selectedProduct = this.selectedProduct === product ? null : product;
   }
 
-
-
   currentRating: number = 0;  // المتغير لتخزين التقييم الحالي
 
   // دالة لتحديث التقييم
@@ -61,5 +58,8 @@ export class CatalogComponentComponent implements OnInit {
     console.log(`Product ${product.productTitle} rated: ${star}`);
     this.currentRating = star; // حفظ التقييم الحالي
   }
-}
 
+  goToProductDetails(productId: number): void {
+    this.router.navigate(['/product', productId]);
+  }
+}

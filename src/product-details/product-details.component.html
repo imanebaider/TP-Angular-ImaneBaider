@@ -1,61 +1,29 @@
-<div *ngIf="product" class="luxury-product-card">
-  <div class="product-header">
-      <h3 class="brand-title">LORAYA</h3>
-      <div class="product-id">{{product.productId}}</div>
+<div *ngIf="product" class="product-details">
+  <div class="images-section">
+    <div class="main-image">
+      <img [src]="'http://localhost:3000/assets/images/' + selectedImage" [alt]="product.productTitle">
+    </div>
+    <div class="thumbnails">
+      <img 
+        *ngFor="let img of product.imageUrl"
+        [src]="'http://localhost:3000/assets/images/' + img"
+        (click)="selectImage(img)"
+        [class.active]="img === selectedImage"
+      >
+    </div>
   </div>
-  
-  <div class="product-content">
 
-
-
-    
-    <div class="image-gallery">
-        <!-- الصورة الكبيرة -->
-        <div class="main-image">
-          <img [src]="'http://localhost:3000/assets/images/' + selectedImage" 
-               [alt]="product.productTitle" 
-               class="large-image">
-        </div>
-      
-        <!-- الصور المصغرة -->
-        <div class="thumbnails">
-          <img *ngFor="let img of product.imageUrl"
-               [src]="'http://localhost:3000/assets/images/' + img"
-               [alt]="product.productTitle"
-               (click)="selectImage(img)"
-               class="thumbnail-image"
-               [class.active]="img === selectedImage">
-        </div>
-      </div>
-
-
-
-      
-      <div class="product-details">
-          <h1 class="product-title">{{product.productTitle}}</h1>
-          
-          <div class="price-box">
-              <span class="price">{{product.productPrice}} DH</span>
-              <span class="tax">TVA incluse</span>
-          </div>
-          
-          <div class="specs-box">
-              <div class="spec-item">
-                  <i class="material-icons">inventory</i>
-                  <span>Quantité disponible : {{product.quantity}}</span>
-              </div>
-              <div class="spec-item">
-                  <i class="material-icons">local_shipping</i>
-                  <span>Livraison gratuite</span>
-              </div>
-          </div>
-          
-          <p class="description">{{product.description}}</p>
-          
-          <button class="add-to-cart">
-              <i class="material-icons">shopping_bag</i>
-              Ajouter au panier
-          </button>
-      </div>
+  <div class="info-section">
+    <h1>{{ product.productTitle }}</h1>
+    <p class="description">{{ product.description }}</p>
+    <div class="price">{{ product.productPrice }}€</div>
+    <div class="stock" [class.low]="product.quantity < 10">
+      الكمية المتاحة: {{ product.quantity }}
+      <span *ngIf="product.quantity < 10" class="warning">(كمية محدودة!)</span>
+    </div>
   </div>
+</div>
+
+<div *ngIf="!product" class="loading">
+  جاري تحميل التفاصيل...
 </div>
