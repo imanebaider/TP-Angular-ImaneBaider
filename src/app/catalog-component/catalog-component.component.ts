@@ -1,10 +1,9 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'; 
-import { Product } from '../models/Product';
+import { Product } from '../../models/Product';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { ProductDetailsComponent } from '../product-details/product-details.component';
 
 @Component({
   selector: 'app-catalog-component',
@@ -13,6 +12,9 @@ import { ProductDetailsComponent } from '../product-details/product-details.comp
   templateUrl: './catalog-component.component.html',
   styleUrls: ['./catalog-component.component.css']
 })
+
+
+
 export class CatalogComponentComponent implements OnInit {
   @Input() selectedProduct: Product | null = null;
   @Output() productSelected = new EventEmitter<Product>();
@@ -58,8 +60,7 @@ export class CatalogComponentComponent implements OnInit {
     console.log(`Product ${product.productTitle} rated: ${star}`);
     this.currentRating = star; // حفظ التقييم الحالي
   }
-
-  goToProductDetails(productId: number): void {
-    this.router.navigate(['/product', productId]);
-  }
+goToProductDetails(productId: number): void {
+  this.router.navigate(['/product', productId]); // ✅ سيتم التوجيه عبر الـ Router
+}
 }
