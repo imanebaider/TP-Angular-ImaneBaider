@@ -8,7 +8,7 @@ import { Product } from '../models/Product';
   standalone: true,
   imports: [
     RouterOutlet,
-    CatalogComponentComponent
+    
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] // <-- هنا s في الأخير

@@ -12,18 +12,17 @@ import { Router } from '@angular/router';
   templateUrl: './catalog-component.component.html',
   styleUrls: ['./catalog-component.component.css']
 })
-
-
-
 export class CatalogComponentComponent implements OnInit {
   @Input() selectedProduct: Product | null = null;
   @Output() productSelected = new EventEmitter<Product>();
 
   products: Product[] = [];
   hovered: number | null = null;
-  apiUrl = 'http://localhost:3000/api/products'; //API
+  apiUrl = 'http://localhost:3000/api/products';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  currentRating: number = 0;
+
+constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.http.get<Product[]>(this.apiUrl).subscribe({
@@ -52,15 +51,17 @@ export class CatalogComponentComponent implements OnInit {
     this.selectedProduct = this.selectedProduct === product ? null : product;
   }
 
-  currentRating: number = 0;  // المتغير لتخزين التقييم الحالي
-
-  // دالة لتحديث التقييم
   rateProduct(star: number, product: Product): void {
-    product.rating = star;  // تعيين التقييم
+    product.rating = star;
     console.log(`Product ${product.productTitle} rated: ${star}`);
-    this.currentRating = star; // حفظ التقييم الحالي
+    this.currentRating = star;
   }
-goToProductDetails(productId: number): void {
-  this.router.navigate(['/product', productId]); // ✅ سيتم التوجيه عبر الـ Router
+
+ goToProductDetails(productId: number): void {
+  console.log('Clicked on product', productId);
+  this.router.navigate(['/products', productId]);
 }
+
+
+
 }
