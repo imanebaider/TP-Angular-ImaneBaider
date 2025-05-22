@@ -1,24 +1,51 @@
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
-<div *ngIf="product; else loading">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="product; else loading" class="product-container">
   <h1>{{ product.productTitle }}</h1>
-  <img [src]="'http://localhost:3000/assets/images/' + selectedImage" alt="{{ product.productTitle }}">
-  <p>Price: {{ product.productPrice }} DH</p>
-  <p>Description: {{ product.description }}</p>
 
-  <div>
-    <h3>Images</h3>
-    <img *ngFor="let img of product.imageUrl"
-         [src]="'http://localhost:3000/assets/images/' + img"
-         (click)="selectImage(img)"
-         [class.selected]="img === selectedImage"
-         style="width: 100px; cursor: pointer; margin: 5px;">
+  <img class="main-image"
+       [src]="'http://localhost:3000/assets/images/' + selectedImage"
+       alt="{{ product.productTitle }}">
+
+  <p><strong>Prix :</strong> {{ product.productPrice }} MAD</p>
+  <p><strong>Description :</strong> {{ product.description }}</p>
+
+  <div class="image-gallery">
+    <h3>Images supplémentaires</h3>
+    <div class="thumbnails">
+      <img *ngFor="let img of product.imageUrl"
+           class="thumbnail"
+           [src]="'http://localhost:3000/assets/images/' + img"
+           (click)="selectImage(img)"
+           [class.selected]="img === selectedImage">
+    </div>
   </div>
 </div>
 
 <ng-template #loading>
-  <p>جار التحميل...</p>
+  <p class="loading-text">Chargement en cours...</p>
 </ng-template>
 
 
@@ -48,76 +75,114 @@
 
 
 
-
-
-
-
-
-
-
-
-
-<!--
-
-<div *ngIf="product" class="luxury-product-card">
-  <div class="product-header">
-      <h3 class="brand-title">LORAYA</h3>
-      <div class="product-id">{{product.productId}}</div>
-  </div>
-  
-  <div class="product-content">
-
-
-
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Colonne 1 : Informations entreprise -->
+      <div class="footer-column">
+        <h3 >INFORMATIONS SUR L'ENTREPRISE</h3>
+        <ul>
+          <li ><a  href="#">Qui Sommes-Nous?</a></li>
+          <li><a  href="#">Blog</a></li>
+          <li><a  href="#">Responsabilité Sociale</a></li>
+          <li><a  href="#">LORAYA VIP</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 2 : Centre d'aide -->
+      <div class="footer-column">
+        <h3  >CENTRE D'AIDE</h3>
+        <ul>
+          <li><a href="#">Livraison</a></li>
+          <li><a  href="#">Retour & Remboursement</a></li>
+          <li><a   href="#">Commande</a></li>
+          <li><a  href="#">Statut De Commande</a></li>
+          <li><a   href="#">Guide Des Tailles</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 3 : Contact -->
+      <div class="footer-column">
+        <h3 >AIDE</h3>
+        <ul>
+          <li><a href="#">Nous contacter</a></li>
+          <li><a href="#">Paiement</a></li>
+          <li><a href="#">Points Bonus</a></li>
+        </ul>
+        
+        <div class="social-media">
+          <h3  >Trouvez-nous sur</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne 4 : Newsletter -->
+      <div class="footer-column newsletter">
+        <h3  >Newsletter</h3>
+        <p  >Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Votre Adresse E-mail" required>
+          <div class="phone-input">
+            <select>
+              <option>MA +212</option>
+              <option>FR +33</option>
+              <option>BE +32</option>
+            </select>
+            <input type="tel" placeholder="Téléphone pour SMS">
+          </div>
+          <button type="submit">S'abonner</button>
+        </form>
+        <small  >Vous pouvez vous DÉSABONNER à tout moment</small>
+      </div>
+    </div>
     
-    <div class="image-gallery">
-         الصورة الكبيرة 
-        <div class="main-image">
-          <img [src]="'http://localhost:3000/assets/images/' + selectedImage" 
-               [alt]="product.productTitle" 
-               class="large-image">
-        </div>
-      
-         الصور المصغرة 
-        <div class="thumbnails">
-          <img *ngFor="let img of product.imageUrl"
-               [src]="'http://localhost:3000/assets/images/' + img"
-               [alt]="product.productTitle"
-               (click)="selectImage(img)"
-               class="thumbnail-image"
-               [class.active]="img === selectedImage">
-        </div>
+    <!-- Paiements -->
+    <div class="payment-methods">
+      <h4  >NOUS ACCEPTONS</h4>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-apple-pay"></i>
       </div>
-
-
-
-      
-      <div class="product-details">
-          <h1 class="product-title">{{product.productTitle}}</h1>
-          
-          <div class="price-box">
-              <span class="price">{{product.productPrice}} DH</span>
-              <span class="tax">TVA incluse</span>
-          </div>
-          
-          <div class="specs-box">
-              <div class="spec-item">
-                  <i class="material-icons">inventory</i>
-                  <span>Quantité disponible : {{product.quantity}}</span>
-              </div>
-              <div class="spec-item">
-                  <i class="material-icons">local_shipping</i>
-                  <span>Livraison gratuite</span>
-              </div>
-          </div>
-          
-          <p class="description">{{product.description}}</p>
-          
-          <button class="add-to-cart">
-              <i class="material-icons">shopping_bag</i>
-              Ajouter au panier
-          </button>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+      <p  >©2023-2025 LORAYA Tous droits réservés</p>
+      <div class="legal-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Cookies</a>
+        <a href="#">Conditions Générales</a>
+        <a href="#">Avis IP</a>
+        <a href="#">Morocco</a>
       </div>
-  </div>
-</div>
--->
+      <p class="trust-badge">
+        <i class="fas fa-lock"></i> Site sécurisé - Paiements 100% protégés
+      </p>
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
