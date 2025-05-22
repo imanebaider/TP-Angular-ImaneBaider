@@ -1183,262 +1183,312 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-  padding: 20px;
+.cart-icon-container {
+  text-align: right;
+  padding: 0 10px;
+  margin-top: -10px;
+  margin-bottom: 5px;
 }
 
-.login-form {
-  background: white;
-  padding: 40px 50px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 480px;
+.fa-shopping-cart {
+  transition: color 0.3s ease;
 }
 
-.login-form h2 {
-  color: #222;
-  font-size: 24px;
-  margin-bottom: 8px;
-  font-weight: 600;
-  text-align: center;
+.fa-shopping-cart:hover {
+  color: #ff5722 !important;
 }
 
-.subtext {
-  color: #666;
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 30px;
-}
 
-form label {
-  display: block;
-  color: #444;
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
 
-form input {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: border-color 0.3s ease;
-}
 
-form input:focus {
-  border-color: #9a755a;
-  outline: none;
-}
 
-.or-text {
-  color: #999;
-  text-align: center;
-  margin: 20px 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-images {
   position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
 }
 
-.or-text::before,
-.or-text::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #e0e0e0;
-  margin: auto;
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
 
-.or-text {
-  display: flex;
-  align-items: center;
+.product-image.show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stars {
+  font-size: 20px;
+  cursor: pointer;
+  color: #ccc;
+  display: inline-block; /* النجوم في نفس السطر */
+  margin-right: 0; /* إزالة المسافة بين النجوم */
+  padding-right: 0; /* إزالة الحشو بين النجوم */
+}
+
+.stars:hover,
+.stars.active {
+  color: gold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f0ebeb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.product-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
   text-align: center;
 }
 
-.or-text::before,
-.or-text::after {
-  content: '';
-  flex: 1;
-  background: #e0e0e0;
-  height: 1px;
-  margin: 0 10px;
-}
-
-button[type="submit"] {
+.main-image {
   width: 100%;
-  padding: 14px;
-  background-color: #9a755a;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-button[type="submit"]:hover {
-  background-color: #9a755a;
+.main-image:hover {
+  transform: scale(1.02);
 }
 
-.social-login {
+.product-container p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.image-gallery {
   margin-top: 30px;
 }
 
-.google-btn,
-.facebook-btn {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  background: white;
+.image-gallery h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.thumbnails {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
-  font-size: 14px;
-  color: #444;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  transition: border 0.3s, transform 0.3s;
 }
 
-.google-btn:hover,
-.facebook-btn:hover {
-  background-color: #f8f8f8;
+.thumbnail:hover {
+  transform: scale(1.05);
 }
 
-.google-btn img,
-.facebook-btn img {
-  width: 20px;
-  height: 20px;
+.thumbnail.selected {
+  border-color: #3498db;
+  box-shadow: 0 0 5px #3498db;
 }
 
-.privacy-text {
-  color: #666;
-  font-size: 12px;
+.loading-text {
   text-align: center;
-  margin-top: 25px;
-  line-height: 1.5;
+  font-size: 18px;
+  color: #888;
+  padding: 40px;
 }
 
-.privacy-text a {
-  color: #9a755a;
-  text-decoration: none;
-  font-weight: 500;
-}
 
-.privacy-text a:hover {
-  text-decoration: underline;
-}
 
-@media (max-width: 480px) {
-  .login-form {
-    padding: 30px 20px;
-  }
-  
-  .login-form h2 {
-    font-size: 22px;
-  }
-  
-  button[type="submit"] {
-    font-size: 15px;
-    padding: 12px;
-  }
-}
+
+
+
+
+
+
+
+
+
+

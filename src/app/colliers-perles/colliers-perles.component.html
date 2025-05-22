@@ -1,3 +1,4 @@
+  
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -19,7 +20,7 @@
     <div class="user-menu">
   <i class="fas fa-user user-icon"></i>
   <div class="dropdown-content">
-<a routerLink="/login">Me connecter</a>
+    <a routerLink="/login">Me connecter</a>
     <a href="#">Mes Commandes</a>
     <a href="#">Mes Notifications</a>
     <a href="#">Mes Coupons</a>
@@ -42,18 +43,18 @@
 
 <div class="menu-container">
   <!-- Colliers -->
-  <div class="menu-category">
-    <a   href="#" class="category-title">
-      <i class="fas fa-necklace"></i> Colliers
-    </a>
-    <div class="submenu">
-      <a   href="#">Colliers ras-de-cou</a>
-      <a   href="#">Colliers longs</a>
-      <a   href="#">Colliers pendentifs</a>
-      <a   href="#">Colliers perles</a>
-      <a   href="#">Chaînes</a>
-    </div>
+<div class="menu-category">
+  <a href="#" class="category-title">
+    <i class="fas fa-necklace"></i> Colliers
+  </a>
+  <div class="submenu">
+    <a routerLink="/colliers-perles">Colliers en perles</a>
+    <a href="#">Colliers en émeraude</a>
+    <a href="#">Colliers en or</a>
+    <a href="#">Colliers en argent</a>
   </div>
+</div>
+
   
   <!-- Boucles d'oreilles -->
   <div class="menu-category">
@@ -113,89 +114,77 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="login-container">
-  <div class="login-form">
-    <h2>Connexion / S’inscrire</h2>
-    <p class="subtext">Vos données sont protégées.</p>
-
-    <form>
-      <label for="email">Numéro ou adresse e-mail:</label>
-      <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
-
-      
-
-      <label for="password">Mot de passe:</label>
-      <input type="password" id="password" name="password" placeholder="Mot de passe" required>
-
-      <button type="submit">Se connecter</button>
-    </form>
-
-    <div class="social-login">
-      <p class="or-text">Ou continuez avec</p>
-      <button class="google-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" />
-        Continuer avec Google
-      </button>
-      <button class="facebook-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" />
-        Continuer avec Facebook
-      </button>
-    </div>
-
-    <p class="privacy-text">
-      En continuant, vous acceptez notre
-      <a href="#">Politique de confidentialité & cookies</a>
-      et
-      <a href="#">Conditions Générales</a>.
-    </p>
+            
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+ <div class="products-grid">
+  <div *ngFor="let product of products" class="product-card">
+    <img [src]="'http://localhost:3000/assets/images/' + product.imageUrl[0]" 
+         alt="{{ product.productTitle }}" 
+         width="150" />
+         
+    <h3>{{ product.productTitle }}</h3>
+    <p>{{ product.productPrice }} MAD</p>
+    <p>{{ product.description }}</p>
   </div>
-
-  
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

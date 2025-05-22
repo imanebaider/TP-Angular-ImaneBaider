@@ -7,19 +7,21 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:3000/api/products'; // API ديالك
+  private apiUrl = 'http://localhost:3000/api/products';
 
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
     return this.http.get<any[]>(this.apiUrl).pipe(
       map(apiProducts => apiProducts.map(apiProduct => new Product(
-        0, // productId: ما عندناش فـ API id رقمي
+        0, 
         apiProduct.productTitle,
-        parseFloat(apiProduct.prouctPrice), // نحولو الرقم لي كان String
-        1, // quantity: مثلا نخليه 1
-        '', // description: فارغة مؤقتا
-        apiProduct.productImage // imageUrl
+        parseFloat(apiProduct.productPrice),
+        1, // quantity: مبدئيا نخليوها 1
+        '', // description: مؤقتا فارغة
+        apiProduct.productImage, 
+        0, 
+        apiProduct.type 
       )))
     );
   }
