@@ -1,24 +1,117 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <header class="main-header">
+    <div class="logo">
+      <i class="fas fa-gem"></i> LORAYA
+    </div>
+  
+  
+
+  <div class="search-bar">
+    <input type="text" placeholder="Parure Bijoux Femme" />
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="header-icons">
+    <div class="user-menu">
+  <i class="fas fa-user user-icon"></i>
+  <div class="dropdown-content">
+<button routerLink="/login">Me connecter</button>
+    <a href="#">Mes Commandes</a>
+    <a href="#">Mes Notifications</a>
+    <a href="#">Mes Coupons</a>
+    <a href="#">Mes Points Bonus</a>
+    <a href="#">Récemment Vus</a>
+    <a href="#">Plus de services</a>
+  </div>
+</div>
+    <i class="fas fa-shopping-cart"></i>
+    <i class="far fa-heart"></i>
+    <i class="fas fa-globe"></i>
+
+    
+  </div>
+</header>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="menu-container">
+  <!-- Colliers -->
+  <div class="menu-category">
+    <a   href="#" class="category-title">
+      <i class="fas fa-necklace"></i> Colliers
+    </a>
+    <div class="submenu">
+      <a   href="#">Colliers ras-de-cou</a>
+      <a   href="#">Colliers longs</a>
+      <a   href="#">Colliers pendentifs</a>
+      <a   href="#">Colliers perles</a>
+      <a   href="#">Chaînes</a>
+    </div>
+  </div>
+  
+  <!-- Boucles d'oreilles -->
+  <div class="menu-category">
+    <a   href="#" class="category-title">
+      <i  class="fas fa-earrings"></i> Boucles
+    </a>
+    <div class="submenu">
+      <a   href="#">Crèoles</a>
+      <a   href="#">Pendantes</a>
+      <a   href="#">Clous d'oreilles</a>
+      <a  href="#">Boucles perles</a>
+      <a   href="#">Boucles diamant</a>
+    </div>
+  </div>
+  
+  <!-- Bracelets -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i   class="fas fa-bracelet"></i> Bracelets
+    </a>
+    <div class="submenu">
+      <a  href="#">Bracelets chaîne</a>
+      <a  href="#">Bracelets perles</a>
+      <a   href="#">Bracelets charms</a>
+      <a   href="#">Bangles</a>
+      <a   href="#">Bracelets cheville</a>
+    </div>
+  </div>
+  
+  <!-- Bagues -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i  class="fas fa-ring"></i> Bagues
+    </a>
+    <div class="submenu">
+      <a   href="#">Alliances</a>
+      <a   href="#">Solitaires</a>
+      <a   href="#">Bagues cocktail</a>
+      <a  href="#">Bagues de fiançailles</a>
+      <a  href="#">Chevalières</a>
+    </div>
+  </div>
+  
+  <!-- Autres -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i  class="fas fa-gem"></i> Autres
+    </a>
+    <div class="submenu">
+      <a   href="#">Broches</a>
+      <a   href="#">Barrettes</a>
+      <a   href="#">Bijoux de mariage</a>
+      <a  href="#">Bijoux bébé</a>
+      <a  href="#">Montres</a>
+    </div>
+  </div>
+</div>
 
 
 
@@ -31,6 +124,8 @@
 
   <p><strong>Prix :</strong> {{ product.productPrice }} MAD</p>
   <p><strong>Description :</strong> {{ product.description }}</p>
+
+  
 
   <div class="image-gallery">
     <h3>Images supplémentaires</h3>
@@ -67,8 +162,11 @@
 
 
 
-
-
+ 
+ 
+  
+ 
+  
 
 
 
@@ -167,22 +265,3 @@
     </div>
   </footer>
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

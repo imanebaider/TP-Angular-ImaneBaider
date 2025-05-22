@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-catalog-component',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+imports: [FormsModule, CommonModule, RouterModule], //tres imprtant 
   templateUrl: './catalog-component.component.html',
   styleUrls: ['./catalog-component.component.css']
 })
@@ -61,6 +62,7 @@ constructor(private http: HttpClient, private router: Router) {}
   console.log('Clicked on product', productId);
   this.router.navigate(['/products', productId]);
 }
+
 
 
 

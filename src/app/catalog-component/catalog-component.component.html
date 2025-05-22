@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <header class="main-header">
     <div class="logo">
@@ -20,7 +20,7 @@
     <div class="user-menu">
   <i class="fas fa-user user-icon"></i>
   <div class="dropdown-content">
-<button routerLink="/login">Me connecter</button>
+<a routerLink="/login">Me connecter</a>
     <a href="#">Mes Commandes</a>
     <a href="#">Mes Notifications</a>
     <a href="#">Mes Coupons</a>
@@ -150,17 +150,12 @@
 
 
 
-
-
-
-
 <ul class="product-grid">
   <li *ngFor="let product of availableProducts" class="product-card"
       (mouseenter)="onMouseEnter(product.productId)" 
       (mouseleave)="onMouseLeave()">
 
     <div class="product-images">
-      <!-- نضيف (click) هنا باش التنقل -->
       <img *ngFor="let img of product.imageUrl; let i = index"
            class="product-image"
            [src]="'http://localhost:3000/assets/images/' + img"
@@ -170,10 +165,17 @@
            [class.show]="i === 0 || hovered === product.productId">
     </div>
 
-    <!-- الاسم كذلك clickable -->
-    <h3  class="product-title" (click)="goToProductDetails(product.productId)" style="cursor:pointer">
+    <h3 class="product-title" (click)="goToProductDetails(product.productId)" style="cursor:pointer">
       {{ product.productTitle }}
     </h3>
+
+    <!-- Add to cart icon -->
+    <div class="cart-icon-container">
+      <i class="fas fa-shopping-cart" 
+         title="Add to cart"
+         aria-label="Add to cart"
+         style="cursor: pointer; color: #666; margin-top: 5px;"></i>
+    </div>
 
     <div class="rating-price">
       <div *ngFor="let star of [1, 2, 3, 4, 5]" 
@@ -185,12 +187,8 @@
       <span class="product-price">{{ product.productPrice }}€</span>  
     </div>
 
-
-   <!--<button (click)="goToProductDetails(product.productId)">Détails</button>-->
-
   </li>
 </ul>
-
 
 
 
