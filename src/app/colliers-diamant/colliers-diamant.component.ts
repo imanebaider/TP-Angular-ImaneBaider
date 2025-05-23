@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { Product } from '../../models/Product';
 import { Router } from '@angular/router';
+import { Product } from '../../models/Product';
 import { FormsModule } from '@angular/forms';
+
 
 @Component({
   standalone: true,
-  selector: 'app-colliers-emeraude',
-  templateUrl: './colliers-emeraude.component.html',
-  styleUrls: ['./colliers-emeraude.component.css'],
+  selector: 'app-colliers-diamant',
+  templateUrl: './colliers-diamant.component.html',
+  styleUrls: ['./colliers-diamant.component.css'],
   imports: [CommonModule,FormsModule]
+  
 })
-export class ColliersEmeraudeComponent implements OnInit {
+export class ColliersDiamantComponent implements OnInit {
   products: Product[] = [];
   currentRating: number = 0;
   hovered: number | null = null;
@@ -21,14 +23,11 @@ filteredProducts: Product[] = [];
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  
  ngOnInit(): void {
-  const typeEncoded = encodeURIComponent('émeraude');
-  const url = `http://localhost:3000/api/products?type=${typeEncoded}`;
-
-  this.http.get<Product[]>(url).subscribe({
+  this.http.get<Product[]>('http://localhost:3000/api/products?type=diamant').subscribe({
     next: (data) => {
       this.products = data;
+      // فلترة المنتجات اللي الكمية ديالها أكبر من 0
       this.filteredProducts = this.products.filter(p => p.quantity > 0);
     },
     error: (err) => {
@@ -61,7 +60,7 @@ filteredProducts: Product[] = [];
     this.hovered = null;
   }
 
-  search() {
+   search() {
   const term = this.searchTerm.toLowerCase().trim();
 
   this.filteredProducts = this.products.filter(p => 

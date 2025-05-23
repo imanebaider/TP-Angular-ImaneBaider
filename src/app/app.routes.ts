@@ -6,6 +6,8 @@ import { ColliersPerlesComponent } from './colliers-perles/colliers-perles.compo
 import { ColliersEmeraudeComponent } from './colliers-emeraude/colliers-emeraude.component';
 import { ColliersOrComponent } from './colliers-or/colliers-or.component'; 
 import { CartComponent } from './cart/cart.component';
+import { ColliersDiamantComponent } from './colliers-diamant/colliers-diamant.component'; 
+
 
 
 export const routes: Routes = [
@@ -15,6 +17,7 @@ export const routes: Routes = [
   { path: 'colliers-perles', component: ColliersPerlesComponent },
   { path: 'colliers-émeraude', component: ColliersEmeraudeComponent },
    { path: 'colliers-or', component: ColliersOrComponent },
+    { path: 'colliers-diamant', component: ColliersDiamantComponent },
    { path: 'cart', component: CartComponent },
   { path: '**', redirectTo: '' }
 ];

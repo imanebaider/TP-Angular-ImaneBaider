@@ -22,6 +22,9 @@ export class CatalogComponentComponent implements OnInit {
 
   products: Product[] = [];
   hovered: number | null = null;
+  searchTerm: string = '';
+filteredProducts: Product[] = [];
+
   apiUrl = 'http://localhost:3000/api/products';
 
   currentRating: number = 0;
@@ -29,15 +32,17 @@ export class CatalogComponentComponent implements OnInit {
 constructor(private http: HttpClient, private router: Router , private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.http.get<Product[]>(this.apiUrl).subscribe({
-      next: (data) => {
-        this.products = data;
-      },
-      error: (err) => {
-        console.error('Erreur lors de la récupération des produits', err);
-      }
-    });
-  }
+  this.http.get<Product[]>(this.apiUrl).subscribe({
+    next: (data) => {
+      this.products = data;
+      this.filteredProducts = this.products.filter(p => p.quantity > 0);
+    },
+    error: (err) => {
+      console.error('Erreur lors de la récupération des produits', err);
+    }
+  });
+}
+
 
   get availableProducts(): Product[] {
     return this.products.filter(p => p.quantity > 0);
@@ -71,6 +76,14 @@ constructor(private http: HttpClient, private router: Router , private cartServi
     this.cartService.addItem(product);
     alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
   }
+  search() {
+  const term = this.searchTerm.toLowerCase().trim();
+
+  this.filteredProducts = this.products.filter(p => 
+    p.quantity > 0 && p.productTitle.toLowerCase().includes(term)
+  );
+}
+
 
 }
 

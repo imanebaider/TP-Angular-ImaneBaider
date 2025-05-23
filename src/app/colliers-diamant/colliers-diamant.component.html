@@ -1,4 +1,4 @@
-
+  
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,11 +11,11 @@
   
   
 
+  
   <div class="search-bar">
   <input type="text" placeholder="Parure Bijoux Femme" [(ngModel)]="searchTerm" (keyup.enter)="search()" />
   <button (click)="search()"><i class="fas fa-search"></i></button>
 </div>
-
 
 
   <div class="header-icons">
@@ -31,7 +31,7 @@
     <a href="#">Plus de services</a>
   </div>
 </div>
-    <a routerLink="/cart" class="fas fa-shopping-cart"></a>
+    <i class="fas fa-shopping-cart"></i>
     <i class="far fa-heart"></i>
     <i class="fas fa-globe"></i>
 
@@ -53,7 +53,6 @@
     <a routerLink="/colliers-perles">Colliers en perles</a>
     <a routerLink="/colliers-émeraude">Colliers en émeraude</a>
     <a routerLink="/colliers-or">Colliers en or</a>
-    <a routerLink="/colliers-diamant">Colliers en diamant</a>
     
   </div>
 </div>
@@ -70,7 +69,6 @@
     <a href="#">Boucles en perles</a>
   </div>
 </div>
-
   
   <!-- Bracelets -->
   <div class="menu-category">
@@ -116,72 +114,83 @@
 </div>
 
 
-
-
-
-<section class="hero-gallery">
-  <!-- Image principale (visible par défaut) -->
-  <div class="main-hero" style="background-image: url('http://localhost:3000/assets/images/background-bijoux.jpg');">
-    <div class="hero-content">
-      <h1 >LORAYA</h1>
-      <p > Bijoux de Luxe - Élégance Intemporelle</p>
-    </div>
-  </div>
-  
-  
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<ul class="product-grid">
+            
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            <ul class="product-grid">
   <li *ngFor="let product of filteredProducts" class="product-card"
       (mouseenter)="onMouseEnter(product.productId)" 
       (mouseleave)="onMouseLeave()">
 
-    <div class="product-images">
-      <img *ngFor="let img of product.imageUrl; let i = index"
-           class="product-image"
-           [src]="'http://localhost:3000/assets/images/' + img"
-           [alt]="product.productTitle"
-           (click)="goToProductDetails(product.productId)"
-           style="cursor:pointer"
-           [class.show]="i === 0 || hovered === product.productId">
+    <!-- صور المنتج -->
+    <div class="product-images" style="position: relative; height: 80%; overflow: hidden;">
+      <img 
+        [src]="'http://localhost:3000/assets/images/' + product.imageUrl[0]" 
+        alt="{{ product.productTitle }}" 
+        class="product-image"
+      >
+      
+      <!-- أيقونة السلة هنا داخل div position relative للصورة -->
+      <i class="fas fa-shopping-cart cart-icon" 
+         title="Add to cart"
+         aria-label="Add to cart"
+         (click)="addToCart(product)">
+      </i>
     </div>
 
-    <h3 class="product-title" (click)="goToProductDetails(product.productId)" style="cursor:pointer">
+    <!-- عنوان المنتج -->
+    <h3 class="product-title" 
+        (click)="goToProductDetails(product.productId)">
       {{ product.productTitle }}
     </h3>
 
-    <!-- Add to cart icon -->
-   
-   <i class="fas fa-shopping-cart cart-icon"
-   title="Ajouter au panier"
-   aria-label="Ajouter au panier"
-   (click)="addToCart(product)"
-   style="cursor:pointer;">
-</i>
-
-
-
+    <!-- تقييم وسعر المنتج -->
     <div class="rating-price">
       <div *ngFor="let star of [1, 2, 3, 4, 5]" 
            [class.active]="star <= product.rating" 
@@ -189,19 +198,22 @@
            class="stars">
         ★
       </div>
-      <span class="product-price">{{ product.productPrice }}€</span>  
+      <span class="product-price">{{ product.productPrice }} MAD</span>  
     </div>
 
   </li>
 </ul>
-
-
-
- 
- 
   
- 
-  
+              
+              
+              
+              
+              
+              
+    
+
+
+
 
 
 
