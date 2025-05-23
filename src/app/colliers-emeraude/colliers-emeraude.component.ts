@@ -6,20 +6,20 @@ import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
-  selector: 'app-colliers-perles',
-  templateUrl: './colliers-perles.component.html',
-  styleUrls: ['./colliers-perles.component.css'],
+  selector: 'app-colliers-emeraude',
+  templateUrl: './colliers-emeraude.component.html',
+  styleUrls: ['./colliers-emeraude.component.css'],
   imports: [CommonModule]
 })
-export class ColliersPerlesComponent implements OnInit {
-  products: Product[] = [];   
+export class ColliersEmeraudeComponent implements OnInit {
+  products: Product[] = [];
   currentRating: number = 0;
   hovered: number | null = null;
 
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
-    this.http.get<Product[]>('http://localhost:3000/api/products?type=perles').subscribe({
+    this.http.get<Product[]>('http://localhost:3000/api/products?type=émeraude').subscribe({
       next: (data) => this.products = data,
       error: (err) => console.error(err)
     });
@@ -37,7 +37,6 @@ export class ColliersPerlesComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
-    // هنا تقدر تضيف اللوجيك ديال إضافة المنتج للسلة
     console.log(`Added product ${product.productTitle} to cart.`);
   }
 
