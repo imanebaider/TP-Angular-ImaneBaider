@@ -1,4 +1,4 @@
-
+  
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -29,7 +29,7 @@
     <a href="#">Plus de services</a>
   </div>
 </div>
-    <a routerLink="/cart" class="fas fa-shopping-cart"></a>
+    <i class="fas fa-shopping-cart"></i>
     <i class="far fa-heart"></i>
     <i class="fas fa-globe"></i>
 
@@ -42,164 +42,80 @@
 
 
 <div class="menu-container">
-  <!-- Colliers -->
-<div class="menu-category">
-  <a href="#" class="category-title">
-    <i class="fas fa-necklace"></i> Colliers
-  </a>
-  <div class="submenu">
-    <a routerLink="/colliers-perles">Colliers en perles</a>
-    <a routerLink="/colliers-émeraude">Colliers en émeraude</a>
-    <a routerLink="/colliers-or">Colliers en or</a>
-    <a routerLink="/colliers-diamant">Colliers en diamant</a>
-    
-  </div>
+    <h2>Mon Panier</h2>
+
+<div *ngIf="cartItems.length === 0">
+  <p>Votre panier est vide.</p>
 </div>
 
-  <!-- Boucles d'oreilles -->
-<div class="menu-category">
-  <a href="#" class="category-title">
-    <i class="fas fa-gem"></i> Boucles d'oreilles
-  </a>
-  <div class="submenu">
-    <a href="#">Boucles en or</a>
-    <a href="#">Boucles en diamant</a>
-    <a href="#">Boucles en émeraude</a>
-    <a href="#">Boucles en perles</a>
-  </div>
-</div>
-
-  
-  <!-- Bracelets -->
-  <div class="menu-category">
-    <a href="#" class="category-title">
-      <i   class="fas fa-bracelet"></i> Bracelets
-    </a>
-    <div class="submenu">
-      <a  href="#">Bracelets chaîne</a>
-      <a  href="#">Bracelets perles</a>
-      <a   href="#">Bracelets charms</a>
-      <a   href="#">Bangles</a>
-      <a   href="#">Bracelets cheville</a>
-    </div>
-  </div>
-  
-  <!-- Bagues -->
-  <div class="menu-category">
-    <a href="#" class="category-title">
-      <i  class="fas fa-ring"></i> Bagues
-    </a>
-    <div class="submenu">
-      <a   href="#">Alliances</a>
-      <a   href="#">Solitaires</a>
-      <a   href="#">Bagues cocktail</a>
-      <a  href="#">Bagues de fiançailles</a>
-      <a  href="#">Chevalières</a>
-    </div>
-  </div>
-  
-  <!-- Autres -->
-  <div class="menu-category">
-    <a href="#" class="category-title">
-      <i  class="fas fa-gem"></i> Autres
-    </a>
-    <div class="submenu">
-      <a   href="#">Broches</a>
-      <a   href="#">Barrettes</a>
-      <a   href="#">Bijoux de mariage</a>
-      <a  href="#">Bijoux bébé</a>
-      <a  href="#">Montres</a>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<section class="hero-gallery">
-  <!-- Image principale (visible par défaut) -->
-  <div class="main-hero" style="background-image: url('http://localhost:3000/assets/images/background-bijoux.jpg');">
-    <div class="hero-content">
-      <h1 >LORAYA</h1>
-      <p > Bijoux de Luxe - Élégance Intemporelle</p>
-    </div>
-  </div>
-  
-  
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<ul class="product-grid">
-  <li *ngFor="let product of availableProducts" class="product-card"
-      (mouseenter)="onMouseEnter(product.productId)" 
-      (mouseleave)="onMouseLeave()">
-
-    <div class="product-images">
-      <img *ngFor="let img of product.imageUrl; let i = index"
-           class="product-image"
-           [src]="'http://localhost:3000/assets/images/' + img"
-           [alt]="product.productTitle"
-           (click)="goToProductDetails(product.productId)"
-           style="cursor:pointer"
-           [class.show]="i === 0 || hovered === product.productId">
-    </div>
-
-    <h3 class="product-title" (click)="goToProductDetails(product.productId)" style="cursor:pointer">
-      {{ product.productTitle }}
-    </h3>
-
-    <!-- Add to cart icon -->
-   
-   <i class="fas fa-shopping-cart cart-icon"
-   title="Ajouter au panier"
-   aria-label="Ajouter au panier"
-   (click)="addToCart(product)"
-   style="cursor:pointer;">
-</i>
-
-
-
-    <div class="rating-price">
-      <div *ngFor="let star of [1, 2, 3, 4, 5]" 
-           [class.active]="star <= product.rating" 
-           (click)="rateProduct(star, product)" 
-           class="stars">
-        ★
-      </div>
-      <span class="product-price">{{ product.productPrice }}€</span>  
-    </div>
-
+<ul *ngIf="cartItems.length > 0">
+  <li *ngFor="let product of cartItems">
+    <strong>{{ product.productTitle }}</strong> - {{ product.productPrice | currency:'EUR' }}
   </li>
 </ul>
 
+<button (click)="clearCart()" *ngIf="cartItems.length > 0">Vider le panier</button>
 
 
- 
- 
-  
- 
-  
+</div>          
+            
+              
+              
+              
+              
+              
+              
+         
+   
+              
+        
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+      
+
+
+
+
+
+
+
+
+
 
 
 
@@ -298,3 +214,15 @@
     </div>
   </footer>
   
+
+
+
+
+
+
+
+
+
+
+
+

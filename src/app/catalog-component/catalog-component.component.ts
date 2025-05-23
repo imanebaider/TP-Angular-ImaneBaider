@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { CartService } from '../services/cart.service';
+
+
 
 @Component({
   selector: 'app-catalog-component',
@@ -23,7 +26,7 @@ export class CatalogComponentComponent implements OnInit {
 
   currentRating: number = 0;
 
-constructor(private http: HttpClient, private router: Router) {}
+constructor(private http: HttpClient, private router: Router , private cartService: CartService) {}
 
   ngOnInit(): void {
     this.http.get<Product[]>(this.apiUrl).subscribe({
@@ -64,6 +67,17 @@ constructor(private http: HttpClient, private router: Router) {}
 }
 
 
-
+  addToCart(product: Product): void {
+    this.cartService.addItem(product);
+    alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
+  }
 
 }
+
+
+
+
+
+
+
+
