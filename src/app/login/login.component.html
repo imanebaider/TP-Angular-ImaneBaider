@@ -140,18 +140,30 @@
   <div class="login-form">
     <h2>Connexion / S’inscrire</h2>
     <p class="subtext">Vos données sont protégées.</p>
+<form (ngSubmit)="login()" #loginForm="ngForm">
+  <label for="email">البريد الإلكتروني:</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="دخل الإيميل ديالك"
+    required
+    [(ngModel)]="email"
+  />
 
-    <form>
-      <label for="email">Numéro ou adresse e-mail:</label>
-      <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+  <label for="password">كلمة السر:</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    placeholder="دخل كلمة السر"
+    required
+    [(ngModel)]="password"
+  />
 
-      
+  <button type="submit" [disabled]="!loginForm.form.valid">دخول</button>
+</form>
 
-      <label for="password">Mot de passe:</label>
-      <input type="password" id="password" name="password" placeholder="Mot de passe" required>
-
-      <button type="submit">Se connecter</button>
-    </form>
 
     <div class="social-login">
       <p class="or-text">Ou continuez avec</p>

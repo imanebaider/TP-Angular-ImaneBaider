@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// ✅ صحيح
+
 import { CatalogComponentComponent } from "./catalog-component/catalog-component.component";
 import { Product } from '../models/Product';
 @Component({
@@ -11,7 +11,7 @@ import { Product } from '../models/Product';
     
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // <-- هنا s في الأخير
+  styleUrls: ['./app.component.css'] 
 })
 
 export class AppComponent {

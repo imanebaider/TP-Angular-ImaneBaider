@@ -1,29 +1,1478 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" target-language="ar" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="3533026104798239556" datatype="html">
-        <source>LORAYA</source>
-        <target>لورايا</target>
+      <trans-unit id="6131023202389212893" datatype="html">
+        <source>Me connecter</source>
+        <target>تسجيل الدخول</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/catalog-component/catalog-component.component.html</context>
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4296453940322449362" datatype="html">
+        <source>Mes Commandes</source>
+        <target>طلباتي</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5418952421852209816" datatype="html">
+        <source>Mes Notifications</source>
+        <target>إشعاراتي</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1024097360047245953" datatype="html">
+        <source>Mes Coupons</source>
+        <target>قسائمي</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6156750253087020875" datatype="html">
+        <source>Mes Points Bonus</source>
+        <target>نقاطي الإضافية</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5638817775334896773" datatype="html">
+        <source>Récemment Vus</source>
+         <target>المشاهدات الأخيرة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8652955142396582445" datatype="html">
+        <source>Plus de services</source>
+         <target>المزيد من الخدمات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3787419471985789691" datatype="html">
+        <source>Colliers en perles</source>
+         <target>قلائد من اللؤلؤ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8489464006936484174" datatype="html">
+        <source>Colliers en émeraude</source>
+         <target>قلائد من الزمرد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6386980065105326525" datatype="html">
+        <source>Colliers en or</source>
+        <target>قلائد من الذهب</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3085934811685378777" datatype="html">
+        <source>Colliers en diamant</source>
+        <target>قلائد من الماس</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4019522585182148339" datatype="html">
+        <source>Boucles en or</source>
+        <target>أقراط من الذهب</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8958334986751014882" datatype="html">
+        <source>Boucles en diamant</source>
+          <target>أقراط من الماس</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5653035909140495339" datatype="html">
+        <source>Boucles en émeraude</source>
+          <target>أقراط من الزمرد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="436684394857916828" datatype="html">
+        <source>Boucles en perles</source>
+        <target>أقراط من اللؤلؤ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="41568843139676813" datatype="html">
+        <source>Bracelets chaîne</source>
+         <target>أساور سلسلة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8543888330749009473" datatype="html">
+        <source>Bracelets perles</source>
+        <target>أساور من اللؤلؤ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2151643381576197514" datatype="html">
+        <source>Bracelets charms</source>
+         <target>أساور ذات تعليقات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="420298441937987146" datatype="html">
+        <source>Bangles</source>
+        <target>أساور صلبة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821720657785477829" datatype="html">
+        <source>Bracelets cheville</source>
+        <target>أساور للكاحل</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4785331436579823133" datatype="html">
+        <source>Alliances</source>
+        <target>خواتم الزواج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="622397248654729571" datatype="html">
+        <source>Solitaires</source>
+        <target>خواتم سوليتير</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2012024969904046808" datatype="html">
+        <source>Bagues cocktail</source>
+        <target>خواتم كوكتيل</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5592197758563723873" datatype="html">
+        <source>Bagues de fiançailles</source>
+        <target>خواتم خطوبة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9022096475112347005" datatype="html">
+        <source>Chevalières</source>
+         <target>خواتم خاتم عائلة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3564794624666431479" datatype="html">
+        <source>Broches</source>
+         <target>دبابيس</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">109,110</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">109,110</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">109,110</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">110,111</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">109,110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8431793010144025117" datatype="html">
+        <source>Barrettes</source>
+        <target>مشابك شعر</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">110,111</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">110,111</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">110,111</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">110,111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6793726533349541584" datatype="html">
+        <source>Bijoux de mariage</source>
+        <target>مجوهرات الزفاف</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7641155043571926455" datatype="html">
+        <source>Bijoux bébé</source>
+        <target>مجوهرات الأطفال</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5649263443672718916" datatype="html">
+        <source>Montres</source>
+        <target>ساعات</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
           <context context-type="linenumber">113,114</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6070172094325277015" datatype="html">
-        <source> Bijoux de Luxe - Élégance Intemporelle</source>
-        <target>مجوهرات فاخرة - أناقة خالدة</target>
+      <trans-unit id="8800248376535396681" datatype="html">
+        <source>INFORMATIONS SUR L&apos;ENTREPRISE</source>
+        <target>معلومات عن الشركة</target>
+
+
         <context-group purpose="location">
-          <context context-type="sourcefile">src/catalog-component/catalog-component.component.html</context>
-          <context context-type="linenumber">114,115</context>
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">228,229</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">226,227</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">228,229</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">233,234</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">230,231</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7708270344948043036" datatype="html">
-        <source> <x id="INTERPOLATION" equiv-text="{{ product.productTitle }}"/> </source>
-        <target> <x id="INTERPOLATION" equiv-text="{{ product.productTitle }}"/> </target>
+      <trans-unit id="5991532297729360673" datatype="html">
+        <source>Qui Sommes-Nous?</source>
+        <target>من نحن؟</target>
+
         <context-group purpose="location">
-          <context context-type="sourcefile">src/catalog-component/catalog-component.component.html</context>
-          <context context-type="linenumber">164,167</context>
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">230,231</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">228,229</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">230,231</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">235,236</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">232,233</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7751010942038334793" datatype="html">
+        <source>Blog</source>
+        <target>مدونة</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">231,232</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">229,230</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">231,232</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">236,237</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">233,234</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1279521794469651955" datatype="html">
+        <source>Responsabilité Sociale</source>
+<target>المسؤولية الاجتماعية</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">232,233</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">230,231</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">232,233</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">237,238</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">234,235</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6109836969643732224" datatype="html">
+        <source>LORAYA VIP</source>
+        <target>لورايا VIP</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">233,234</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">231,232</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">233,234</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">238,239</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">235,236</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7931180583482448975" datatype="html">
+        <source>CENTRE D&apos;AIDE</source>
+        <target>مركز المساعدة</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">239,240</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">237,238</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">239,240</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">244,245</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">241,242</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4722037178898560928" datatype="html">
+        <source>Livraison</source>
+        <target>التوصيل</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">241,242</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">239,240</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">241,242</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">246,247</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">243,244</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2153695579488262849" datatype="html">
+        <source>Retour &amp; Remboursement</source>
+        <target>الإرجاع والاسترداد</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">242,243</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">240,241</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">242,243</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">247,248</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">244,245</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7458901075126609817" datatype="html">
+        <source>Commande</source>
+        <target>الطلب</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">243,244</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">241,242</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">243,244</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">248,249</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">245,246</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6334338190927292213" datatype="html">
+        <source>Statut De Commande</source>
+        <target>حالة الطلب</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">244,245</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">242,243</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">244,245</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">249,250</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">246,247</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7204470329501941480" datatype="html">
+        <source>Guide Des Tailles</source>
+        <target>دليل المقاسات</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">245,246</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">243,244</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">245,246</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">250,251</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">247,248</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6249878766078728794" datatype="html">
+        <source>AIDE</source>
+        <target>مساعدة</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">251,252</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">249,250</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">251,252</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">256,257</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">253,254</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4625459039493049168" datatype="html">
+        <source>Nous contacter</source>
+        <target>اتصل بنا</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">253,254</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">251,252</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">253,254</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">258,259</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">255,256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7131232222234720332" datatype="html">
+        <source>Paiement</source>
+        <target>الدفع</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">254,255</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">252,253</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">254,255</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">259,260</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">256,257</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8541393294482259021" datatype="html">
+        <source>Points Bonus</source>
+        <target>نقاط المكافأة</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">255,256</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">253,254</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">255,256</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">260,261</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">257,258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4559262976687561953" datatype="html">
+        <source>Trouvez-nous sur</source>
+        <target>تجدنا على</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">259,260</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">257,258</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">259,260</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">264,265</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">261,262</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8805275264572614953" datatype="html">
+        <source>Newsletter</source>
+        <target>النشرة الإخبارية</target>
+
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">271,272</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">269,270</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">271,272</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">276,277</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">273,274</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1236441502261256794" datatype="html">
+        <source>Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</source>
+        <target>اشترك لتكتشف مجموعاتنا الجديدة حصريًا</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">272,273</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">270,271</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">272,273</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">277,278</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">274,275</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2238523807981647200" datatype="html">
+        <source>MA +212</source>
+        <target>MA +212</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">277,278</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">275,276</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">277,278</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">282,283</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">279,280</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3303978682451313924" datatype="html">
+        <source>FR +33</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">278,279</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">276,277</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">278,279</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">283,284</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">280,281</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2940226789745766426" datatype="html">
+        <source>BE +32</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">279,280</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">277,278</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">279,280</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">284,285</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">281,282</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3835977017887935192" datatype="html">
+        <source>S&apos;abonner</source>
+        <target>اشترك</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">283,284</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">281,282</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">283,284</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">288,289</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">285,286</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3829696674055644007" datatype="html">
+        <source>Vous pouvez vous DÉSABONNER à tout moment</source>
+        <target>يمكنك إلغاء الاشتراك في أي وقت</target>
+
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">285,286</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">283,284</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">285,286</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">290,291</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">287,288</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3837897734904577672" datatype="html">
+        <source>NOUS ACCEPTONS</source>
+        <target>نحن نقبل</target>
+
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">291,292</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">289,290</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">291,292</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">296,297</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">293,294</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7156112425311606645" datatype="html">
+        <source>©2023-2025 LORAYA Tous droits réservés</source>
+        <target>©2023-2025 لورايا جميع الحقوق محفوظة</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">302,303</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">300,301</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">302,303</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">307,308</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">304,305</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8393472153703114984" datatype="html">
+        <source>Confidentialité</source>
+        <target>الخصوصية</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">304,305</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">302,303</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">304,305</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">309,310</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">306,307</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4516124744118816397" datatype="html">
+        <source>Cookies</source>
+        <target>ملفات تعريف الارتباط</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">305,306</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">303,304</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">305,306</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">310,311</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">307,308</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4993180989506831922" datatype="html">
+        <source>Conditions Générales</source>
+        <target>الشروط والأحكام العامة</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">306,307</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">304,305</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">306,307</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">311,312</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">308,309</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9211094979988841448" datatype="html">
+        <source>Avis IP</source>
+        <target>إشعار الملكية الفكرية</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">307,308</context>
+        </context-group>sss
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">305,306</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">307,308</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">312,313</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">309,310</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2141197120629300851" datatype="html">
+        <source>Morocco</source>
+        <target>المغرب</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-diamant/colliers-diamant.component.html</context>
+          <context context-type="linenumber">308,309</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-emeraude/colliers-emeraude.component.html</context>
+          <context context-type="linenumber">306,307</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-or/colliers-or.component.html</context>
+          <context context-type="linenumber">308,309</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/colliers-perles/colliers-perles.component.html</context>
+          <context context-type="linenumber">313,314</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-details/product-details.component.html</context>
+          <context context-type="linenumber">310,311</context>
         </context-group>
       </trans-unit>
     </body>

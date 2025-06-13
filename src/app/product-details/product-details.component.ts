@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../../models/Product';
 import { CommonModule } from '@angular/common';
-
+import { CartService } from '../services/cart.service';
 
 
 @Component({
@@ -16,11 +16,13 @@ import { CommonModule } from '@angular/common';
 export class ProductDetailsComponent implements OnInit {
   product!: Product;
   selectedImage: string = '';
+  
 
   constructor(
     private route: ActivatedRoute,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private cartService: CartService
   ) {}
 
    ngOnInit(): void {
@@ -47,6 +49,13 @@ export class ProductDetailsComponent implements OnInit {
     this.selectedImage = img;
   }
 
+
+
+  
+  addToCart(product: Product): void {
+    this.cartService.addItem(product);
+    alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
+  }
 }
 
 

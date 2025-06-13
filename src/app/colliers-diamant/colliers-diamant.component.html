@@ -1,4 +1,4 @@
-  
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,27 +11,27 @@
   
   
 
-  
   <div class="search-bar">
   <input type="text" placeholder="Parure Bijoux Femme" [(ngModel)]="searchTerm" (keyup.enter)="search()" />
   <button (click)="search()"><i class="fas fa-search"></i></button>
 </div>
 
 
+
   <div class="header-icons">
     <div class="user-menu">
   <i class="fas fa-user user-icon"></i>
   <div class="dropdown-content">
-    <a routerLink="/login">Me connecter</a>
-    <a href="#">Mes Commandes</a>
-    <a href="#">Mes Notifications</a>
-    <a href="#">Mes Coupons</a>
-    <a href="#">Mes Points Bonus</a>
-    <a href="#">Récemment Vus</a>
-    <a href="#">Plus de services</a>
+    <a routerLink="/login" i18n>Me connecter</a>
+    <a href="#" i18n>Mes Commandes</a>
+    <a href="#" i18n>Mes Notifications</a>
+    <a href="#" i18n>Mes Coupons</a>
+    <a href="#"  i18n>Mes Points Bonus</a>
+    <a href="#"  i18n >Récemment Vus</a>
+    <a href="#"  i18n>Plus de services</a>
   </div>
 </div>
-    <i class="fas fa-shopping-cart"></i>
+    <a routerLink="/cart" class="fas fa-shopping-cart"></a>
     <i class="far fa-heart"></i>
     <i class="fas fa-globe"></i>
 
@@ -47,12 +47,13 @@
   <!-- Colliers -->
 <div class="menu-category">
   <a href="#" class="category-title">
-    <i class="fas fa-necklace"></i> Colliers
+    <i class="fas fa-necklace"  i18n></i> Colliers
   </a>
   <div class="submenu">
-    <a routerLink="/colliers-perles">Colliers en perles</a>
-    <a routerLink="/colliers-émeraude">Colliers en émeraude</a>
-    <a routerLink="/colliers-or">Colliers en or</a>
+    <a routerLink="/colliers-perles" i18n>Colliers en perles</a>
+    <a routerLink="/colliers-émeraude" i18n>Colliers en émeraude</a>
+    <a routerLink="/colliers-or" i18n>Colliers en or</a>
+    <a routerLink="/colliers-diamant" i18n>Colliers en diamant</a>
     
   </div>
 </div>
@@ -60,55 +61,56 @@
   <!-- Boucles d'oreilles -->
 <div class="menu-category">
   <a href="#" class="category-title">
-    <i class="fas fa-gem"></i> Boucles d'oreilles
+    <i class="fas fa-gem" i18n></i> Boucles d'oreilles
   </a>
   <div class="submenu">
-    <a href="#">Boucles en or</a>
-    <a href="#">Boucles en diamant</a>
-    <a href="#">Boucles en émeraude</a>
-    <a href="#">Boucles en perles</a>
+    <a href="#" i18n>Boucles en or</a>
+    <a href="#" i18n>Boucles en diamant</a>
+    <a href="#" i18n>Boucles en émeraude</a>
+    <a href="#" i18n>Boucles en perles</a>
   </div>
 </div>
+
   
   <!-- Bracelets -->
   <div class="menu-category">
     <a href="#" class="category-title">
-      <i   class="fas fa-bracelet"></i> Bracelets
+      <i   class="fas fa-bracelet" i18n></i> Bracelets
     </a>
     <div class="submenu">
-      <a  href="#">Bracelets chaîne</a>
-      <a  href="#">Bracelets perles</a>
-      <a   href="#">Bracelets charms</a>
-      <a   href="#">Bangles</a>
-      <a   href="#">Bracelets cheville</a>
+      <a  href="#" i18n>Bracelets chaîne</a>
+      <a  href="#" i18n>Bracelets perles</a>
+      <a   href="#" i18n>Bracelets charms</a>
+      <a   href="#" i18n>Bangles</a>
+      <a   href="#" i18n>Bracelets cheville</a>
     </div>
   </div>
   
   <!-- Bagues -->
   <div class="menu-category">
     <a href="#" class="category-title">
-      <i  class="fas fa-ring"></i> Bagues
+      <i  class="fas fa-ring" i18n></i> Bagues
     </a>
     <div class="submenu">
-      <a   href="#">Alliances</a>
-      <a   href="#">Solitaires</a>
-      <a   href="#">Bagues cocktail</a>
-      <a  href="#">Bagues de fiançailles</a>
-      <a  href="#">Chevalières</a>
+      <a   href="#" i18n>Alliances</a>
+      <a   href="#" i18n>Solitaires</a>
+      <a   href="#" i18n >Bagues cocktail</a>
+      <a  href="#" i18n>Bagues de fiançailles</a>
+      <a  href="#" i18n>Chevalières</a>
     </div>
   </div>
   
   <!-- Autres -->
   <div class="menu-category">
     <a href="#" class="category-title">
-      <i  class="fas fa-gem"></i> Autres
+      <i  class="fas fa-gem" i18n></i> Autres
     </a>
     <div class="submenu">
-      <a   href="#">Broches</a>
-      <a   href="#">Barrettes</a>
-      <a   href="#">Bijoux de mariage</a>
-      <a  href="#">Bijoux bébé</a>
-      <a  href="#">Montres</a>
+      <a   href="#" i18n>Broches</a>
+      <a   href="#" i18n>Barrettes</a>
+      <a   href="#" i18n>Bijoux de mariage</a>
+      <a  href="#" i18n>Bijoux bébé</a>
+      <a  href="#" i18n>Montres</a>
     </div>
   </div>
 </div>
@@ -219,43 +221,42 @@
 
 
 
-
   <footer class="site-footer">
     <div class="footer-container">
       <!-- Colonne 1 : Informations entreprise -->
       <div class="footer-column">
-        <h3 >INFORMATIONS SUR L'ENTREPRISE</h3>
+        <h3 i18n>INFORMATIONS SUR L'ENTREPRISE</h3>
         <ul>
-          <li ><a  href="#">Qui Sommes-Nous?</a></li>
-          <li><a  href="#">Blog</a></li>
-          <li><a  href="#">Responsabilité Sociale</a></li>
-          <li><a  href="#">LORAYA VIP</a></li>
+          <li ><a  href="#" i18n>Qui Sommes-Nous?</a></li>
+          <li><a  href="#" i18n>Blog</a></li>
+          <li><a  href="#" i18n>Responsabilité Sociale</a></li>
+          <li><a  href="#"i18n >LORAYA VIP</a></li>
         </ul>
       </div>
       
       <!-- Colonne 2 : Centre d'aide -->
       <div class="footer-column">
-        <h3  >CENTRE D'AIDE</h3>
+        <h3 i18n >CENTRE D'AIDE</h3>
         <ul>
-          <li><a href="#">Livraison</a></li>
-          <li><a  href="#">Retour & Remboursement</a></li>
-          <li><a   href="#">Commande</a></li>
-          <li><a  href="#">Statut De Commande</a></li>
-          <li><a   href="#">Guide Des Tailles</a></li>
+          <li><a href="#" i18n>Livraison</a></li>
+          <li><a  href="#" i18n>Retour & Remboursement</a></li>
+          <li><a   href="#" i18n>Commande</a></li>
+          <li><a  href="#" i18n>Statut De Commande</a></li>
+          <li><a   href="#" i18n >Guide Des Tailles</a></li>
         </ul>
       </div>
       
       <!-- Colonne 3 : Contact -->
       <div class="footer-column">
-        <h3 >AIDE</h3>
+        <h3 i18n>AIDE</h3>
         <ul>
-          <li><a href="#">Nous contacter</a></li>
-          <li><a href="#">Paiement</a></li>
-          <li><a href="#">Points Bonus</a></li>
+          <li><a href="#" i18n >Nous contacter</a></li>
+          <li><a href="#"i18n >Paiement</a></li>
+          <li><a href="#" i18n>Points Bonus</a></li>
         </ul>
         
         <div class="social-media">
-          <h3  >Trouvez-nous sur</h3>
+          <h3 i18n >Trouvez-nous sur</h3>
           <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -267,27 +268,27 @@
       
       <!-- Colonne 4 : Newsletter -->
       <div class="footer-column newsletter">
-        <h3  >Newsletter</h3>
-        <p  >Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</p>
+        <h3  i18n>Newsletter</h3>
+        <p i18n >Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</p>
         <form class="newsletter-form">
           <input type="email" placeholder="Votre Adresse E-mail" required>
           <div class="phone-input">
             <select>
-              <option>MA +212</option>
-              <option>FR +33</option>
-              <option>BE +32</option>
+              <option i18n>MA +212</option>
+              <option i18n >FR +33</option>
+              <option i18n>BE +32</option>
             </select>
             <input type="tel" placeholder="Téléphone pour SMS">
           </div>
-          <button type="submit">S'abonner</button>
+          <button type="submit" i18n>S'abonner</button>
         </form>
-        <small  >Vous pouvez vous DÉSABONNER à tout moment</small>
+        <small i18n >Vous pouvez vous DÉSABONNER à tout moment</small>
       </div>
     </div>
     
     <!-- Paiements -->
     <div class="payment-methods">
-      <h4  >NOUS ACCEPTONS</h4>
+      <h4  i18n>NOUS ACCEPTONS</h4>
       <div class="payment-icons">
         <i class="fab fa-cc-visa"></i>
         <i class="fab fa-cc-mastercard"></i>
@@ -298,16 +299,16 @@
     
     <!-- Copyright -->
     <div class="copyright">
-      <p  >©2023-2025 LORAYA Tous droits réservés</p>
+      <p i18n >©2023-2025 LORAYA Tous droits réservés</p>
       <div class="legal-links">
-        <a href="#">Confidentialité</a>
-        <a href="#">Cookies</a>
-        <a href="#">Conditions Générales</a>
-        <a href="#">Avis IP</a>
-        <a href="#">Morocco</a>
+        <a href="#" i18n>Confidentialité</a>
+        <a href="#" i18n>Cookies</a>
+        <a href="#" i18n>Conditions Générales</a>
+        <a href="#" i18n>Avis IP</a>
+        <a href="#" i18n>Morocco</a>
       </div>
       <p class="trust-badge">
-        <i class="fas fa-lock"></i> Site sécurisé - Paiements 100% protégés
+        <i class="fas fa-lock" i18n></i> Site sécurisé - Paiements 100% protégés
       </p>
     </div>
   </footer>
