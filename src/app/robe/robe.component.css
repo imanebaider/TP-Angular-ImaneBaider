@@ -1116,11 +1116,9 @@
 /* Styling for the hero section */
 .hero-gallery {
   position: relative;
-  width:100%;
+  width: 100%;
   height: 100vh; /* Full screen height */
   overflow: hidden;
-    border-radius: 15px;
-
 }
 
 .main-hero {
@@ -1267,104 +1265,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.home-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.category {
-  width: 200px;
-  text-align: center;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.category:hover {
-  transform: scale(1.05);
-}
-
-.image-container {
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  color: #333;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: crimson;
-  color: white;
-  padding: 5px 10px;
-  font-size: 12px;
-  border-radius: 20px;
-}
-
-
 .product-images {
   position: relative;
   width: 100%;
@@ -1396,15 +1296,49 @@
 }
 
 
-.overlay h2 {
-  font-style: italic; /* يجعل النص مائل */
-  font-family: 'Playfair Display', serif; /* خط أنيق وشيك */
-  font-size: 15px;
-  color: #000000; /* أبيض أو اختار لون يناسب الصورة */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* ظل خفيف للنص */
-  letter-spacing: 1px; /* تباعد بين الحروف */
-  margin: 0;
+
+
+
+
+
+
+
+
+
+
+
+
+.stars {
+  font-size: 20px;
+  cursor: pointer;
+  color: #ccc;
+  display: inline-block; /* النجوم في نفس السطر */
+  margin-right: 0; /* إزالة المسافة بين النجوم */
+  padding-right: 0; /* إزالة الحشو بين النجوم */
 }
+
+.stars:hover,
+.stars.active {
+  color: gold;
+}
+
+
+/* السلة فأسفل اليمين */
+.cart-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 5px 7px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+
 
 
 .section-separator {
@@ -1422,633 +1356,74 @@
 }
 
 .section-separator .title {
-  font-weight: 600; /* خليها شوي خفيفة باش تبان أنيقة */
-  font-size: 1.4rem;
+  font-weight: 600; 
+  font-size: 1rem;
   text-transform: uppercase;
-  color: #444; /* لون غامق شوي لكن مش أسود قاسي */
+  color: #000000; /* لون غامق شوي لكن مش أسود قاسي */
   font-family: 'Georgia'; /* خط serif يعطي طابع كلاسيكي وأنيق */
   font-style: italic; /* هنا دير italic */
-  letter-spacing: 1.5px; /* زيادة التباعد بين الحروف باش يبان مريح للعين */
+  letter-spacing: 1px; /* زيادة التباعد بين الحروف باش يبان مريح للعين */
   text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /* ظل خفيف يعطي عمق */
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.home {
-  display: flex;
-  flex-wrap: nowrap;       /* منع لف العناصر لأسطر جديدة */
-  justify-content: flex-start; /* حطهم من جهة اليسار (تقدر تغيرها ل center إذا بغيت) */
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  overflow-x: auto;        /* سكرول أفقي إذا ما كفاوش الكروت */
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-} /* سلاسة السكرول على الموبايل */
-.home::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-
-.categorys {
-  flex: 0 0 auto;          /* الحجم ثابت، ما يتمددش ولا ينكمش */
-  width: 200px;
-  text-align: center;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.categorys:hover {
-  transform: scale(1.05);
-}
-
-.image {
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
+.hero-gallery {
   position: relative;
-  border-radius: 12px 12px 0 0;
-}
-
-.badges {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: #ff4757;
-  color: white;
-  padding: 4px 8px;
-  font-size: 0.8rem;
-  border-radius: 12px;
-  font-weight: bold;
-}
-
-.categorys h2 {
-  margin: 12px 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-}
-
-
-/* الحاوية الرئيسية */
-.home {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 15px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  scroll-behavior: smooth;
-}
-
-.home::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* تأثير hover */
-.categorys:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(232, 30, 99, 0.15);
-}
-
-.categorys {
-  flex-shrink: 0;
-  width: 250px;
-  height: 400px; /* خديت كارت مربعة مثلاً */
-  text-align: center;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  background: #fff;
-  position: relative;
-}
-
-/* الصورة تغطي الكارت كلو */
-.image {
   width: 100%;
-  height: 100%; /* باش تولي قادة مع البطاقة */
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  position: relative;
-}
-
-/* اسم الماركة يطلع فوق الصورة (position absolute) */
-.categorys h2 {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
-
-
-
-/* البادج فوق الصورة */
-.badges {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: #ff4757;
-  color: white;
-  padding: 4px 8px;
-  font-size: 0.8rem;
-  border-radius: 12px;
-  font-weight: bold;
-}
-
-/* الاسم تحت الصورة */
-.categorys h2 {
-  margin: 12px 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.decouvrez-section {
-  text-align: center;
-  padding: 40px 20px;
-  background: #fff0f5;
-}
-
-.decouvrez-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #cc3366;
-}
-
-.decouvrez-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.produit {
-  width: 200px;
-  border-radius: 10px;
+  height: 450px; /* hauteur fixe, ajustable selon besoin */
   overflow: hidden;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.produit:hover {
-  transform: translateY(-5px);
+  font-family: 'Great Vibes', cursive, serif;
+    border-radius: 15px;
+
 }
 
-.produit img {
+.main-hero {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-.produit h3 {
-  font-size: 1rem;
-  margin: 10px 0 5px;
-}
-.produit p {
-  color: #888;
-  margin-bottom: 10px;
-}
-.btn-decouvrez {
-  display: inline-block;
-  margin-top: 20px;
-  background-color: #cc3366;
-  color: white;
-  padding: 10px 25px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.btn-decouvrez:hover {
-  background-color: #a82450;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.brands-showcase {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 20px auto;
-  flex-wrap: nowrap;
-}
-
-.brand-image {
-  width: 80px;
-  height: 60px;
+  height: 100%;
   background-size: cover;
-  background-position: center;
-  border-radius: 6px;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-.brand-image.large {
-  width: 250px;
-  height: 180px;
-  opacity: 1;
-  border: 2px solid #a00;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-
-.brands-showcase {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.thumbnails {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.thumbnail {
-  width: 80px;
-  height: 60px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.thumbnail.active,
-.thumbnail:hover {
-  opacity: 1;
-  border: 2px solid #a00;
-}
-
-.main-image {
-  width: 300px;
-  height: 220px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.brands-showcase {
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+}
+
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the content */
+  text-align: center;
+  color: white; /* White text */
+  z-index: 1; /* Ensures the text is above the image */
   padding: 20px;
-  background-color: #f8f8f8; /* خلفية بسيطة */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-.thumbnails {
-  display: flex;
-  gap: 12px;
-  /* نخليهم في صف واحد */
-}
-
-.thumbnail {
-  width: 70px;
-  height: 50px;
-  border-radius: 6px;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.3s ease, border 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.thumbnail.active,
-.thumbnail:hover {
-  opacity: 1;
-  border-color: #b22;
-}
-
-.main-image {
-  width: 280px;
-  height: 160px;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  flex-shrink: 0; /* باش ما يصغرش */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.coup-coeur-section {
-  background: #ffffff; /* Rose pâle */
-  padding: 60px 20px;
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-}
-
-.section-separator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
-}
-
-.section-separator .line {
-  width: 50px;
-  height: 1.5px;
-  background: #3b3b3b;
-  border-radius: 3px;
-}
-
-.section-separator .title {
-  font-size: 1.3rem;
+.hero-content h1 {
+  font-size: 3rem; /* Large font size */
   font-weight: bold;
-  color: #1d1b1c;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
   text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
   letter-spacing: 1px;
+  font-weight: 300;
+  margin: 0;
+  text-transform: capitalize;
+  opacity: 0.9;
 }
 
-.highlighted-product {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
-  max-width: 1100px;
-  margin: auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
 }
-
-.image-side {
-  flex: 1;
-  max-width: 550px;
-}
-
-.image-side img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.image-side img:hover {
-  transform: scale(1.02);
-}
-
-.btn-discover {
-  display: inline-block;
-  padding: 12px 26px;
-  background-color: #e91e63;
-  color: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-discover:hover {
-  background-color: #c2185b;
-  transform: translateY(-2px);
-}
-.description {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.8;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  letter-spacing: 0.3px;
-  text-shadow: 0.3px 0.3px #f3f3f3;
-}
-
-.info-side {
-  flex: 1;
-  text-align: left;
-  color: #111; /* لون أسود أنيق */
-  font-family: 'Playfair Display', serif;
-  padding: 10px;
-}
-
-.info-side h2 {
-  font-size: 1.8rem;
-  color: #000;
-  font-weight: 600;
-  margin-bottom: 20px;
-  line-height: 1.4;
-  letter-spacing: 0.5px;
-}
-
-.description {
-  font-style: italic;
-  font-size: 1.15rem;
-  color: #333;
-  line-height: 1.8;
-  margin-bottom: 30px;
-  font-family: 'Georgia', serif;
-}
-
-.btn-discover {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.btn-discover:hover {
-  background-color: #333;
-  transform: translateY(-2px);
-}
-.info-side h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color:#bc8629;;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.btn-discover {
-  background: linear-gradient(90deg, #d4af37, #c49b2d); /* ذهبي متدرج */
-  color: #fff;
-  border: none;
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  padding: 12px 28px;
-  border-radius: 10px;
-  text-decoration: none;
-  box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3);
-  transition: all 0.3s ease;
-}
-
-.btn-discover:hover {
-  background: linear-gradient(90deg, #010101, #000000);
-  transform: scale(1.03);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

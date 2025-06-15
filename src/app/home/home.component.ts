@@ -26,6 +26,8 @@ export class HomeComponent implements AfterViewInit {
     { url: 'http://localhost:3000/assets/images/marque9.jpg', name: 'Marque 4' },
     { url: 'http://localhost:3000/assets/images/marque10.jpg', name: 'Marque 4' },
      { url: 'http://localhost:3000/assets/images/marque11.jpg', name: 'Marque 4' },
+      { url: 'http://localhost:3000/assets/images/marque12.jpg', name: 'Marque 4' },
+       { url: 'http://localhost:3000/assets/images/marque13.jpg', name: 'Marque 4' },
   ];
 
   @Input() selectedProduct: Product | null = null;
@@ -69,7 +71,7 @@ export class HomeComponent implements AfterViewInit {
           container.scrollLeft = this.scrollPosition;
         }
       }
-    }, 2000);
+    }, 1500);
   }
 
 

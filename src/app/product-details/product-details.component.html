@@ -31,7 +31,7 @@
     <a href="#"  i18n>Plus de services</a>
   </div>
 </div>
-    <a routerLink="/cart" class="fas fa-shopping-cart"></a>
+     <a routerLink="/cart" class="fas fa-shopping-cart"></a>
     <i class="far fa-heart"></i>
     <i class="fas fa-globe"></i>
 
@@ -115,41 +115,6 @@
   </div>
 </div>
 
-<!--
-
-<div *ngIf="product; else loading" class="product-container">
-  <h1>{{ product.productTitle }}</h1>
-
-  <img class="main-image"
-       [src]="'http://localhost:3000/assets/images/' + selectedImage"
-       alt="{{ product.productTitle }}">
-
-  <p><strong>Prix :</strong> {{ product.productPrice }} MAD</p>
-  <p><strong>Description :</strong> {{ product.description }}</p>
-
-  
-
-  <div class="image-gallery">
-    <h3>Images supplémentaires</h3>
-    <div class="thumbnails">
-      <img *ngFor="let img of product.imageUrl"
-           class="thumbnail"
-           [src]="'http://localhost:3000/assets/images/' + img"
-           (click)="selectImage(img)"
-           [class.selected]="img === selectedImage">
-    </div>
-  </div>
-</div>
-
-<ng-template #loading>
-  <p class="loading-text">Chargement en cours...</p>
-</ng-template>
-
-
-
-
-
--->
 
 
 

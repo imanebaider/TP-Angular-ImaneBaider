@@ -12,11 +12,10 @@ import { CartService } from '../services/cart.service';
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })
-
 export class ProductDetailsComponent implements OnInit {
   product!: Product;
   selectedImage: string = '';
-  
+  type: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -25,37 +24,32 @@ export class ProductDetailsComponent implements OnInit {
     private cartService: CartService
   ) {}
 
-   ngOnInit(): void {
-  console.log('ProductDetailsComponent ngOnInit called');
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.type = this.route.snapshot.paramMap.get('type') ?? 'products'; // fallback
 
-  const id = this.route.snapshot.paramMap.get('id');
-  console.log('Product id from route:', id);
+    console.log('Type:', this.type);
+    console.log('ID:', id);
 
-  this.http.get<Product>(`http://localhost:3000/api/products/${id}`).subscribe({
-    next: (data) => {
-      console.log('Product data received:', data);
-      this.product = data;
-      this.selectedImage = data.imageUrl[0]; // اختيار أول صورة افتراضيا
-    },
-    error: (err) => {
-      console.error('Error fetching product:', err);
-      this.router.navigate(['/not-found']); // توجيه لصفحة 404 إن لزم
-    }
-  });
-}
-
+    this.http.get<Product>(`http://localhost:3000/api/${this.type}/${id}`).subscribe({
+      next: (data) => {
+        this.product = data;
+        this.selectedImage = data.imageUrl[0]; 
+      },
+      error: (err) => {
+        console.error('Erreur lors de la récupération du produit:', err);
+        this.router.navigate(['/not-found']); // rediriger vers 404 si produit non trouvé
+      }
+    });
+  }
 
   selectImage(img: string): void {
     this.selectedImage = img;
   }
 
-
-
-  
   addToCart(product: Product): void {
     this.cartService.addItem(product);
-    alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
+    alert(`✅ Le produit"${product.productTitle}" a bien été ajouté au panier`);
   }
 }
-
 

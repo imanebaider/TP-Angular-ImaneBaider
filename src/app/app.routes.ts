@@ -10,6 +10,10 @@ import { ColliersDiamantComponent } from './colliers-diamant/colliers-diamant.co
 import { HomeComponent } from './home/home.component'; // ✅ import home
 import { ParfumsComponent } from './parfums/parfums.component';
 import { SacsComponent } from './sacs/sacs.component';
+import { TalonsComponent } from './talons/talons.component';
+import { RobeComponent } from './robe/robe.component';
+import { ValidationComponent } from './validation/validation.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 export const routes: Routes = [
@@ -18,18 +22,16 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'colliers-perles', component: ColliersPerlesComponent },
-  { path: 'colliers-émeraude', component: ColliersEmeraudeComponent },
+  { path: 'colliers-emeraude', component: ColliersEmeraudeComponent },
   { path: 'colliers-or', component: ColliersOrComponent },
   { path: 'colliers-diamant', component: ColliersDiamantComponent },
   { path: 'cart', component: CartComponent },
   { path: 'parfums', component: ParfumsComponent },
   { path: 'sacs', component: SacsComponent },
-  { 
-  path: 'colliers-perles', component: ColliersPerlesComponent,
-  children: [
-    { path: 'émeraude', component: ColliersEmeraudeComponent }
-  ]
-},
-
+  { path: 'talons', component: TalonsComponent },
+  { path: 'robes', component: RobeComponent },
+  { path: 'validation', component: ValidationComponent },
+  { path: 'payment', component: PaymentComponent },
+ 
   { path: '**', redirectTo: '' }
 ];

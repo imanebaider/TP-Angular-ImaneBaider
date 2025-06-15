@@ -18,4 +18,10 @@ export class CartService {
   clearCart(): void {
     this.cartItems = [];
   }
+  updateCart(newCart: Product[]): void {
+  this.cartItems = newCart;
+  // إذا كتخزن في localStorage مثلاً
+  localStorage.setItem('cart', JSON.stringify(this.cartItems));
+}
+
 }

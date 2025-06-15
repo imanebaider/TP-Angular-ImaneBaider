@@ -1,4 +1,5 @@
 export class Product {
+  public selected: boolean;
   // Constructeur de la classe Product
   constructor(
     public productId: number, // Identifiant du produit
@@ -8,10 +9,14 @@ export class Product {
     public description: string, // Description du produit
     public imageUrl: string[], // URL des images du produit sous forme de tableau
     public rating: number = 0, // Évaluation du produit, initialisée à 0 par défaut
-    public type: string
+    public type: string,
+    selected: boolean = true
 
   
-  ) {}
+  ) {
+    this.selected = selected;
+  }
+  
 
   // Méthode pour afficher les informations du produit sous forme de chaîne
   public printProduct(): string {
@@ -68,4 +73,5 @@ export class Product {
   public getRating(): number {
     return this.rating; // Retourne la note du produit
   }
+
 }

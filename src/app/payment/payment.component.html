@@ -1,4 +1,4 @@
-  
+ 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -46,159 +46,97 @@
 </div>
 
 
-<div class="panier-container">
 
-  <!-- 🛒 Colonne gauche : Panier -->
-  <div class="cart-left">
-    <h2> Mon Panier</h2>
 
-    <div *ngIf="cartItems.length === 0">
-      <p>Votre panier est vide.</p>
+
+<section class="payment-container">
+  <div class="payment-main">
+    <!-- Colonne gauche -->
+    <div class="left-side">
+
+      <section class="billing-address">
+        <h2>Adresse de Facturation</h2>
+        <p>hhhh hhoooho</p>
+        <p>612225554</p>
+        <p>Tanger</p>
+        <p>Agadir Morocco Morocco 12345</p>
+        <button class="btn-modify">Modifier</button>
+      </section>
+
+      <section class="card-info">
+        <h2>Informations sur la carte</h2>
+
+        <form>
+          <label>Numéro De Carte *</label>
+          <input type="text" placeholder="1234 5678 9012 3456" required />
+
+          <label>Date d'expiration *</label>
+          <div class="expiration">
+            <select required>
+              <option value="">Mois</option>
+              <option>01</option>
+              <option>02</option>
+              <!-- ... -->
+              <option>12</option>
+            </select>
+
+            <select required>
+              <option value="">Année</option>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+              <!-- ... -->
+            </select>
+          </div>
+
+          <label>Code de sécurité *</label>
+          <input type="text" placeholder="CVV/CVC/CID" maxlength="4" required />
+          <small>Qu'est-ce que le code de sécurité?</small>
+
+          <label>
+            <input type="checkbox" />
+            Rappelez-vous cette carte pour une utilisation ultérieure
+          </label>
+
+          <button type="submit" class="btn-pay">Payer</button>
+        </form>
+      </section>
+
     </div>
 
-    <ul *ngIf="cartItems.length > 0" class="cart-list">
-      <li *ngFor="let product of cartItems" class="cart-item">
+    <!-- Colonne droite -->
+    <div class="right-side">
 
-        <input type="checkbox"
-         [(ngModel)]="product.selected"
-         [ngModelOptions]="{standalone: true}"
-         (change)="updateSummary()"/>
-        <img 
-          [src]="'http://localhost:3000/assets/images/' + product.imageUrl[0]"
-          [alt]="product.productTitle"
-          width="60" height="60"
-          style="object-fit: cover; border-radius: 8px; margin-right: 10px;" />
+      <section class="order-summary">
+        <h2>Résumé de votre commande</h2>
+        <p>Numéro de commande: <strong>GSH1UR31B00M75J</strong></p>
+        <p>Subtotal: <strong>DH214.00</strong></p>
+        <p>Frais de livraison: <strong>DH51.00</strong></p>
+        <p>La garantie de votre colis: <strong>DH9.08</strong></p>
+        <p><strong>Totals: DH274.08</strong></p>
+      </section>
 
-        <div class="cart-item-details">
-          <strong>{{ product.productTitle }}</strong><br>
-          <small class="product-type">Type: {{ product.type }}</small><br>
-          <p class="product-description">{{ product.description }}</p>
-          Prix: {{ product.productPrice | currency:'EUR' }}
+      <section class="security-info">
+        <h3>Garantie de livraison sécurisée</h3>
+        <p>
+          SHEIN travaille avec des partenaires de livraison fiables dans le monde entier. Nous vous garantissons que votre colis vous parviendra en toute sécurité et à temps. En cas de problème pendant le transit des articles que vous avez achetés, tel qu'un dommage, une perte ou un retard, soyez assuré(e) que nous ferons de notre mieux pour résoudre les problèmes et fournir les solutions appropriées.
+        </p>
 
-          <div class="quantity-container">
-            <label>Quantité: </label>
-            <input 
-              type="number" 
-              min="1" 
-              [(ngModel)]="product.quantity" 
-              (change)="onQuantityChange(product)"
-              class="quantity-input" />
-          </div>
-        </div>
+        <h3>Sécurité des paiements</h3>
+        <p>
+          SHEIN s'engage à protéger vos informations de paiement et ne partage vos informations de carte de crédit qu'avec nos fournisseurs de services de paiement qui ont accepté de protéger vos informations.
+        </p>
 
-        <button (click)="removeItem(product)" class="delete-btn" title="Supprimer ce produit">
-          <i class="fas fa-trash-alt"></i>
-        </button>
-      </li>
-    </ul>
+        <h3>Sécurité et Confidentialité</h3>
+        <p>
+          SHEIN respecte la vie privée des utilisateurs et des visiteurs de son site et s'engage à la protéger en appliquant des mesures physiques, techniques et administratives conformes aux normes de l'industrie, conçues pour protéger vos données personnelles contre tout traitement, utilisation ou divulgation non autorisés.
+        </p>
+      </section>
 
-    <button (click)="clearCart()" *ngIf="cartItems.length > 0" class="clear-cart-btn">🧹 Vider le panier</button>
+    </div>
   </div>
 
-<!-- نعرضو résumé غير إلا كان شي item مختار -->
-<div class="order-summary" *ngIf="selectedItems.length">
-
-  <h3>Résumé De Votre Commande</h3>
-
-  <!-- صورة أوّل منتج مختار -->
-  <div class="summary-product">
-    <input type="checkbox" checked disabled />
-    <img [src]="'http://localhost:3000/assets/images/' + selectedItems[0].imageUrl[0]" alt="" />
-    <span class="badge" *ngIf="selectedItems[0].quantity<= 5">Presque épuisé</span>
-  </div>
-
-  <!-- lignes de total -->
-  <div class="summary-line">
-    <span>Prix de référence:</span>
-    <span>CHF{{ getTotalBeforeDiscount() | number:'1.2-2' }}</span>
-  </div>
-
-  <div class="summary-line reduction" *ngIf="getDiscount()">
-    <span>Réduction:</span>
-    <span>-CHF{{ getDiscount() | number:'1.2-2' }}</span>
-  </div>
-
-  <div class="summary-line">
-    <span>Sous-total:</span>
-    <span>CHF{{ getTotal() | number:'1.2-2' }}</span>
-  </div>
-
-  <!-- Prix estimé -->
-  <div class="estimated-price">
-    Prix Estimé:
-    <strong>CHF{{ getTotalBeforeDiscount() | number:'1.2-2' }}</strong>
-    <span class="final-price">CHF{{ getTotal() | number:'1.2-2' }}</span>
-  </div>
-
-  <!-- Bouton -->
- <a class="checkout-btn" routerLink="/validation">
-  Passer au paiement ({{ selectedItems.length }})
-</a>
-
-<div class="payment-icons">
-  <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" />
-  <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" />
-  <img src="https://img.icons8.com/color/48/000000/amex.png" alt="American Express" />
-  <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" />
-  <img src="https://img.icons8.com/color/48/000000/apple-pay.png" alt="Apple Pay" />
-  <img src="https://img.icons8.com/color/48/000000/google-pay.png" alt="Google Pay" />
-  <img src="https://img.icons8.com/color/48/000000/maestro.png" alt="Maestro" />
-  <img src="https://img.icons8.com/color/48/000000/cash-in-hand.png" alt="Cash" />
-</div>
-
-
-  <!-- Icons paiement … -->
-</div>
-
-   
-
-
-
-              
-              
-              
-         
-   
-              
-        
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-      
+</section>
 
 
 
@@ -209,8 +147,6 @@
 
 
 
-<br>
-<br><br><br><br><br><br><br><br><br>
 
 
   <footer class="site-footer">

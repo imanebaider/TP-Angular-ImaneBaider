@@ -1,4 +1,5 @@
 
+
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'; 
 import { Product } from '../../models/Product';
 import { FormsModule } from '@angular/forms';
@@ -10,14 +11,15 @@ import { CartService } from '../services/cart.service';
 
 
 @Component({
-  selector: 'app-sacs',
-  imports:  [FormsModule, CommonModule, RouterModule],
-  templateUrl: './sacs.component.html',
-  styleUrl: './sacs.component.css'
+  selector: 'app-robe',
+  imports: [FormsModule, CommonModule, RouterModule],
+  templateUrl: './robe.component.html',
+  styleUrl: './robe.component.css'
 })
 
 
-export class SacsComponent  implements OnInit {
+
+export class  RobeComponent implements OnInit {
   @Input() selectedProduct: Product | null = null;
   @Output() productSelected = new EventEmitter<Product>();
 
@@ -26,7 +28,7 @@ export class SacsComponent  implements OnInit {
   searchTerm: string = '';
 filteredProducts: Product[] = [];
 
-  apiUrl = 'http://localhost:3000/api/sacs';
+  apiUrl = 'http://localhost:3000/api/robes';
 
 
   currentRating: number = 0;
