@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Product } from '../../models/Product';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-colliers-diamant',
   templateUrl: './colliers-diamant.component.html',
   styleUrls: ['./colliers-diamant.component.css'],
-  imports: [CommonModule,FormsModule]
+  imports: [CommonModule,FormsModule,RouterModule]
   
 })
 export class ColliersDiamantComponent implements OnInit {

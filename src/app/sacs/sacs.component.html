@@ -23,8 +23,8 @@
   <i class="fas fa-user user-icon"></i>
   <div class="dropdown-content">
     <a routerLink="/login" i18n>Me connecter</a>
-    <a href="#" i18n>Mes Commandes</a>
-    <a href="#" i18n>Mes Notifications</a>
+    <a routerLink="/commande"  i18n>Mes Commandes</a>
+   <a routerLink="/profile"i18n>Mon profile </a>
     <a href="#" i18n>Mes Coupons</a>
     <a href="#"  i18n>Mes Points Bonus</a>
     <a href="#"  i18n >Récemment Vus</a>
@@ -80,11 +80,18 @@
   <!-- Autres -->
   <div class="menu-category">
     <a href="#" class="category-title">
-      <i  class="fas fa-gem" i18n></i>Gucci
+      <i  class="fas fa-gem" i18n></i> Autres
     </a>
-    
+    <div class="submenu">
+      <a   routerLink="/parfums" i18n>Parfums</a>
+      <a   routerLink="/sacs" i18n>Sacs</a>
+      <a   routerLink="/robes" i18n>Robes</a>
+      <a  routerLink="/talons"i18n>Talons</a>
+      <a  routerLink="/parfum" i18n>Soins de vissage</a>
+    </div>
   </div>
 </div>
+
 
 
 
@@ -133,14 +140,15 @@
            class="product-image"
            [src]="'http://localhost:3000/assets/images/' + img"
            [alt]="product.productTitle"
-           (click)="goToProductDetails(product.productId)"
+           (click)="goToDetail(product.productId)"
            style="cursor:pointer"
            [class.show]="i === 0 || hovered === product.productId">
     </div>
 
-    <h3 class="product-title" (click)="goToProductDetails(product.productId)" style="cursor:pointer">
-      {{ product.productTitle }}
-    </h3>
+    <h3 (click)="goToDetail(product.productId)" style="cursor: pointer;">
+  {{ product.productTitle }}
+</h3>
+
 
     <!-- Add to cart icon -->
    

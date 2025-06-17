@@ -1,39 +1,32 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';  // Import du FormsModule
-
-interface Client {
-  email: string;
-  password: string;
-}
+import { FormsModule } from '@angular/forms';
+import { AuthService } from '../services/auth.service';  // استيراد الخدمة
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,  
-  imports: [FormsModule],  
+  imports: [FormsModule, RouterModule],  
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']  
 })
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  errorMessage: string = '';
 
-  clients: Client[] = [
-    { email: 'imane@test.com', password: '1234' }
-  ];
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   login() {
-    const user = this.clients.find(
-      c => c.email === this.email && c.password === this.password
-    );
+    const success = this.authService.login(this.email, this.password);
 
-    if (user) {
+    if (success) {
       alert('Connexion réussie !');
-      this.router.navigate(['catalog']);  // Navigation vers la page d’accueil
+      this.router.navigate(['catalog']);
     } else {
-      alert('Email ou mot de passe incorrect.');
+      this.errorMessage = 'Email ou mot de passe incorrect.';
+      alert(this.errorMessage);
     }
   }
 }

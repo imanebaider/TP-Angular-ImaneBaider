@@ -1643,10 +1643,16 @@ h2 {
 
 .delivery-address h2,
 .payment-method h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 10px;
+  margin-bottom: 10px;
   color: #333;
 }
+.left-side h2 {
+  font-size: 18px; /* حجم أصغر من الافتراضي */
+  font-weight: 600; /* حجم خط معقول */
+  margin-bottom: 12px; /* مسافة تحت العنوان */
+  color: #333; /* لون داكن مريح */
+}
 
 
 
@@ -1669,215 +1675,247 @@ h2 {
 
 
 
-/* ====== Structure générale ====== */
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
 .payment-container {
+  background-color: #fff;
+  padding: 30px;
   max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #222; /* Texte par défaut en noir */
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+h1, h2, h3 {
+  color: #000;
 }
 
-/* ====== Étapes du paiement ====== */
 .steps-nav {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.step {
-  display: inline-block;
-  margin: 0 10px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  padding: 5px 10px;
-  border-radius: 8px;
-  background-color: #f3f3f3;
-}
-
-.step.done {
-  color: #28a745;
-  background-color: #e0f9e5;
-}
-
-.step.current {
-  color: #fff;
-  background-color: #333;
-}
-
-/* ====== Layout en deux colonnes ====== */
-.payment-main {
+  margin: 20px 0;
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 10px;
+  font-size: 14px;
   flex-wrap: wrap;
 }
 
-/* ====== Colonne gauche ====== */
-.left-side {
-  flex: 0 0 60%;
+.step {
+  color: gray;
 }
 
-.billing-address, .card-info {
+.step.done {
+  color: green;
+}
+
+.step.current {
+  font-weight: bold;
+  color: #000;
+}
+
+.payment-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Colonne gauche */
+.left-side {
+  flex: 1.5;
   background-color: #fff;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  margin-bottom: 25px;
-}
-
-.billing-address h2, .card-info h2 {
-  color: #000;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-.btn-modify {
-  background-color: #000;
-  color: white;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-form label {
-  display: block;
-  margin-top: 10px;
-  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 input, select {
   width: 100%;
   padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-top: 5px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #000;
 }
 
-.expiration {
-  display: flex;
-  gap: 10px;
+input::placeholder {
+  color: #888;
 }
 
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-modify,
 .btn-pay {
   margin-top: 15px;
-  width: 100%;
-  padding: 12px;
-  background-color: #000;
+  padding: 12px 20px;
+  background-color: #4caf50;
   color: white;
-  font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 .btn-pay:hover {
-  background-color: #222;
+  background-color: #43a047;
 }
 
-/* ====== Colonne droite (Résumé) ====== */
+/* Colonne droite */
 .right-side {
-  flex: 0 0 35%;
-  background-color: #f9f9f9;
+  flex: 1;
+  max-width: 380px;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
-.order-summary h2 {
-  color: #000;
-  margin-bottom: 10px;
+.order-summary {
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
 }
 
 .order-summary p {
-  font-size: 0.95rem;
-  margin: 8px 0;
-  color: #444;
+  margin: 6px 0;
 }
 
 .order-summary strong {
   color: #000;
 }
 
-/* ====== Sécurité & Confidentialité ====== */
-.security-info {
-  margin-top: 20px;
-}
-
 .security-info h3 {
-  color: #28a745; /* Vert sécurisant */
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+  color: #4caf50;
+  margin-top: 20px;
+  font-size: 16px;
 }
 
 .security-info p {
-  font-size: 0.9rem;
-  color: #444;
+  font-size: 13px;
+  color: #333;
+  margin-top: 5px;
   line-height: 1.5;
-  margin-bottom: 15px;
 }
 
-/* ====== Responsive pour téléphone ====== */
+/* Responsive */
 @media (max-width: 768px) {
   .payment-main {
     flex-direction: column;
   }
 
-  .left-side,
   .right-side {
-    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
-.right-side {
-  width: 30%; /* ⬅️ نضيق العمود ديال اليمين */
-  font-size: 0.85rem; /* ⬅️ نصغر حجم الكتابة العامة */
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Résumé de la commande */
-.order-summary {
-  background-color: #fff;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  font-size: 0.8rem; /* ⬅️ نصغر بزاف حجم النص */
-}
-
-.order-summary h2 {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #000;
-}
-
-.order-summary p {
-  margin: 6px 0;
-  font-size: 0.75rem;
-}
-
-/* Section sécurité */
 .security-info {
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 0.75rem; /* ⬅️ تصغير الكتابة */
-  line-height: 1.5;
+  font-size: 10px; /* نص صغير */
   color: #333;
 }
 
 .security-info h3 {
-  color: green; /* ⬅️ العناوين باللون الأخضر */
-  font-size: 0.85rem;
-  margin-top: 10px;
+  color: #4caf50;
+  font-size: 12px; /* العنوان صغير شوية */
+  margin-top: 15px;
   margin-bottom: 6px;
 }
+
+.security-info p {
+  font-size: 10px; /* نص أصغر */
+  line-height: 1.4;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.billing-address {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.billing-address:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.billing-address h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.billing-address p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.btn-modify {
+  margin-top: 15px;
+  background-color: #279314;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-modify:hover {
+  background-color: #4dea0f;
+}
+
+
+
+
+
+
+
+
+
+
+
+

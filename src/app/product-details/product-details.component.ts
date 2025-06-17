@@ -4,11 +4,12 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from '../../models/Product';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../services/cart.service';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })

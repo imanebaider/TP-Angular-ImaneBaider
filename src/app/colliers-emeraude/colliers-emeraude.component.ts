@@ -4,13 +4,14 @@ import { CommonModule } from '@angular/common';
 import { Product } from '../../models/Product';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-colliers-emeraude',
   templateUrl: './colliers-emeraude.component.html',
   styleUrls: ['./colliers-emeraude.component.css'],
-  imports: [CommonModule,FormsModule]
+  imports: [CommonModule,FormsModule,RouterModule]
 })
 export class ColliersEmeraudeComponent implements OnInit {
   products: Product[] = [];

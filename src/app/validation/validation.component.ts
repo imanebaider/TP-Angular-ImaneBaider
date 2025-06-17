@@ -1,54 +1,90 @@
-import { Component } from '@angular/core';
-import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { CheckoutService } from '../services/checkout.service';
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-validation',
   templateUrl: './validation.component.html',
-  styleUrls: ['./validation.component.css'],  // لازم يكون 'styleUrls' مع s
+  styleUrls: ['./validation.component.css'],
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule]   // خاص تضمن ReactiveFormsModule هنا
+  imports: [CommonModule, ReactiveFormsModule,RouterModule ]
 })
-export class ValidationComponent {
+export class ValidationComponent implements OnInit {
   currentStep = 2;
-  selectedItems: any[] = [];  // عرفناها كـ any[] (يمكنك تخصص النوع)
   addressForm: FormGroup;
-  livraison = 'standard';
 
-  constructor(private fb: FormBuilder, private router: Router,) {
+  orderSummary: any = {
+    items: [],
+    totalBeforeDiscount: 0,
+    discount: 0,
+    total: 0
+  };
+
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private checkoutService: CheckoutService
+  ) {
     this.addressForm = this.fb.group({
-      nom: ['', Validators.required],
-      adresse: ['', Validators.required],
-      ville: ['', Validators.required],
-      codePostal: ['', Validators.required],
-      telephone: ['', Validators.required],
+      fullName: ['', Validators.required],
+      street: ['', Validators.required],
+      apt: [''],
+      city: ['', Validators.required],
+      postal: ['', Validators.required],
+      phone: ['', Validators.required],
     });
+  }
+
+  ngOnInit() {
+    // نجيب ملخص الطلب من السيرفس
+    this.orderSummary = this.checkoutService.getOrderSummary();
+
+    // نجيب العنوان إذا كان مخزن (لتعبئة الفورم)
+    const savedAddress = this.checkoutService.getAddress();
+    if (savedAddress) {
+      this.addressForm.patchValue(savedAddress);
+    }
+  }
+
+  // يمكن تحسب هنا أو تعتمد على orderSummary المخزن مسبقاً
+  getTotalBeforeDiscount(): number {
+    return this.orderSummary.totalBeforeDiscount || 0;
+  }
+
+  getDiscount(): number {
+    return this.orderSummary.discount || 0;
+  }
+
+  getTotal(): number {
+    return this.orderSummary.total || 0;
   }
 
   goToPaiement() {
     if (this.addressForm.valid) {
-      // تقدر تخزن البيانات هنا أو تبعتهم للسيرفر
+      const formData = this.addressForm.value;
+      console.log("✅ Adresse à enregistrer:", formData);
 
-      this.router.navigate(['/payer']);
+      // 👇 خزّن البيانات
+      this.checkoutService.setAddress(formData);
+
+      // 👇 تنقّل
+      this.router.navigate(['/payment']);
+    } else {
+      this.addressForm.markAllAsTouched(); // باش تبان الأخطاء
     }
   }
 
-  
-// Total brut (sans réduction)
-getTotalBeforeDiscount(): number {
-  return this.selectedItems.reduce((total, item) => {
-    return total + item.productPrice * item.quantity;
-  }, 0);
+
+
+   onContinue() {
+    this.checkoutService.setAddress(this.addressForm);
+    this.router.navigate(['/payement']);
+  }
+  payment() {
+  this.router.navigate(['/payment']);
 }
 
-// Simule une réduction
-getDiscount(): number {
-  const total = this.getTotalBeforeDiscount();
-  return total >= 500 ? total * 0.05 : 0; // -5% si total >= 500
-}
-
-// Total après réduction
-getTotal(): number {
-  return this.getTotalBeforeDiscount() - this.getDiscount();
-}
 }

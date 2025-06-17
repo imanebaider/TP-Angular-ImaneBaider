@@ -1844,3 +1844,25 @@ h2 {
 .payment-option input[type="radio"]:checked + .payment-icons {
   filter: brightness(1.2);
 }
+button[type="submit"] {
+  background-color: #000000; /* وردي غامق */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  width: 100%; /* ياخد العرض كامل */
+}
+
+button[type="submit"]:hover {
+  background-color: #f1c34d;
+  transform: scale(1.02);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}

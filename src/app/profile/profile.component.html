@@ -1,0 +1,212 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<header class="main-header">
+    <div class="logo">
+      <i class=""></i> LORAYA
+    </div>
+  
+  
+
+
+
+
+  <div class="header-icons">
+    <div class="user-menu">
+  <i class="fas fa-user user-icon"></i>
+  <div class="dropdown-content">
+    <a routerLink="/login" i18n>Me connecter</a>
+    <a routerLink="/commande" i18n>Mes Commandes</a>
+    <a routerLink="/profile"i18n>Mon profile </a>
+    <a href="#" i18n>Mes Coupons</a>
+    <a href="#"  i18n>Mes Points Bonus</a>
+    <a href="#"  i18n >Récemment Vus</a>
+    <a href="#"  i18n>Plus de services</a>
+  </div>
+</div>
+    <a routerLink="/cart" class="fas fa-shopping-cart"></a>
+    <i class="far fa-heart"></i>
+    <i class="fas fa-globe"></i>
+
+    
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="profile-container">
+  <h2>Mon profil</h2>
+
+  <section class="profile-info">
+
+    <!-- Affichage des infos dynamiques de l'utilisateur connecté -->
+    <div *ngIf="currentUser">
+      <p><strong>Rôle :</strong> {{ currentUser.role }}</p>
+    </div>
+
+    <h3>Informations</h3>
+
+    <label for="pseudo">Pseudo : *</label>
+<input type="text" id="pseudo" name="pseudo" [value]="currentUser?.email" readonly />
+
+
+    <p class="section-title">Préférences <span>(+20 points)</span></p>
+
+    <fieldset>
+      <legend>Quelles sont vos catégories favorites ?</legend>
+      <label><input type="checkbox" name="categories" value="Femme" /> Femme</label>
+      <label><input type="checkbox" name="categories" value="Homme" /> Homme</label>
+      <label><input type="checkbox" name="categories" value="Grande Taille" /> Grande Taille</label>
+      <label><input type="checkbox" name="categories" value="Enfants" /> Enfants</label>
+      <label><input type="checkbox" name="categories" value="Maison" /> Maison</label>
+      <label><input type="checkbox" name="categories" value="Fournitures Pour Animaux" /> Fournitures Pour Animaux</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Pour qui avez-vous l'habitude d'acheter des vêtements ?</legend>
+      <label><input type="checkbox" name="achetePour" value="Moi" /> Moi</label>
+      <label><input type="checkbox" name="achetePour" value="Mon petit copain" /> Mon petit copain</label>
+      <label><input type="checkbox" name="achetePour" value="Mes parents" /> Mes parents</label>
+      <label><input type="checkbox" name="achetePour" value="Petites Filles 1 À 6 Ans" /> Petites Filles 1 À 6 Ans</label>
+      <label><input type="checkbox" name="achetePour" value="Filles 7 À 14 Ans" /> Filles 7 À 14 Ans</label>
+      <label><input type="checkbox" name="achetePour" value="Petits Garçons 1 À 6 Ans" /> Petits Garçons 1 À 6 Ans</label>
+      <label><input type="checkbox" name="achetePour" value="Garçons 7 À 14 Ans" /> Garçons 7 À 14 Ans</label>
+      <label><input type="checkbox" name="achetePour" value="Bébés 0 À 24 Mois" /> Bébés 0 À 24 Mois</label>
+      <label><input type="checkbox" name="achetePour" value="Chiens" /> Chiens</label>
+      <label><input type="checkbox" name="achetePour" value="Chats" /> Chats</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Quels sont vos styles favoris ?</legend>
+      <label><input type="checkbox" name="styles" value="Basiques" /> Basiques</label>
+      <label><input type="checkbox" name="styles" value="Casual" /> Casual</label>
+      <label><input type="checkbox" name="styles" value="Élégant" /> Élégant</label>
+      <label><input type="checkbox" name="styles" value="Sexy" /> Sexy</label>
+      <label><input type="checkbox" name="styles" value="Sportif" /> Sportif</label>
+      <label><input type="checkbox" name="styles" value="Vintage" /> Vintage</label>
+      <label><input type="checkbox" name="styles" value="Vacances" /> Vacances</label>
+      <label><input type="checkbox" name="styles" value="Fête" /> Fête</label>
+      <label><input type="checkbox" name="styles" value="Tenues de travail" /> Tenues de travail</label>
+      <label><input type="checkbox" name="styles" value="Tenues de mariage" /> Tenues de mariage</label>
+    </fieldset>
+
+    <p class="confidential">Les informations restent confidentielles</p>
+  </section>
+</div>
+
+
+
+
+<br>
+ <br>
+ <br>
+ 
+<footer class="site-footer">
+    <div class="footer-container">
+      <!-- Colonne 1 : Informations entreprise -->
+      <div class="footer-column">
+        <h3 i18n>INFORMATIONS SUR L'ENTREPRISE</h3>
+        <ul>
+          <li ><a  href="#" i18n>Qui Sommes-Nous?</a></li>
+          <li><a  href="#" i18n>Blog</a></li>
+          <li><a  href="#" i18n>Responsabilité Sociale</a></li>
+          <li><a  href="#"i18n >LORAYA VIP</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 2 : Centre d'aide -->
+      <div class="footer-column">
+        <h3 i18n >CENTRE D'AIDE</h3>
+        <ul>
+          <li><a href="#" i18n>Livraison</a></li>
+          <li><a  href="#" i18n>Retour & Remboursement</a></li>
+          <li><a   href="#" i18n>Commande</a></li>
+          <li><a  href="#" i18n>Statut De Commande</a></li>
+          <li><a   href="#" i18n >Guide Des Tailles</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 3 : Contact -->
+      <div class="footer-column">
+        <h3 i18n>AIDE</h3>
+        <ul>
+          <li><a href="#" i18n >Nous contacter</a></li>
+          <li><a href="#"i18n >Paiement</a></li>
+          <li><a href="#" i18n>Points Bonus</a></li>
+        </ul>
+        
+        <div class="social-media">
+          <h3 i18n >Trouvez-nous sur</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne 4 : Newsletter -->
+      <div class="footer-column newsletter">
+        <h3  i18n>Newsletter</h3>
+        <p i18n >Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Votre Adresse E-mail" required>
+          <div class="phone-input">
+            <select>
+              <option i18n>MA +212</option>
+              <option i18n >FR +33</option>
+              <option i18n>BE +32</option>
+            </select>
+            <input type="tel" placeholder="Téléphone pour SMS">
+          </div>
+          <button type="submit" i18n>S'abonner</button>
+        </form>
+        <small i18n >Vous pouvez vous DÉSABONNER à tout moment</small>
+      </div>
+    </div>
+    
+    <!-- Paiements -->
+    <div class="payment-methods">
+      <h4  i18n>NOUS ACCEPTONS</h4>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-apple-pay"></i>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+      <p i18n >©2023-2025 LORAYA Tous droits réservés</p>
+      <div class="legal-links">
+        <a href="#" i18n>Confidentialité</a>
+        <a href="#" i18n>Cookies</a>
+        <a href="#" i18n>Conditions Générales</a>
+        <a href="#" i18n>Avis IP</a>
+        <a href="#" i18n>Morocco</a>
+      </div>
+      <p class="trust-badge">
+        <i class="fas fa-lock" i18n></i> Site sécurisé - Paiements 100% protégés
+      </p>
+    </div>
+  </footer>
+  

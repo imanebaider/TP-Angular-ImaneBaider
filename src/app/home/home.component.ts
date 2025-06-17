@@ -12,6 +12,31 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   @ViewChild('homeContainer', { static: false }) homeContainer!: ElementRef<HTMLDivElement>;
 
   images = [

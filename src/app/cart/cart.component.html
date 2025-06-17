@@ -100,39 +100,35 @@
 
   <h3>Résumé De Votre Commande</h3>
 
-  <!-- صورة أوّل منتج مختار -->
-  <div class="summary-product">
-    <input type="checkbox" checked disabled />
-    <img [src]="'http://localhost:3000/assets/images/' + selectedItems[0].imageUrl[0]" alt="" />
-    <span class="badge" *ngIf="selectedItems[0].quantity<= 5">Presque épuisé</span>
-  </div>
+<div class="summary-product" *ngIf="orderSummary.items && orderSummary.items.length > 0">
+  <input type="checkbox" checked disabled />
+  <img [src]="'http://localhost:3000/assets/images/' + orderSummary.items[0].imageUrl[0]" alt="" />
+  <span class="badge" *ngIf="orderSummary.items[0].quantity <= 5">Presque épuisé</span>
+</div>
 
-  <!-- lignes de total -->
-  <div class="summary-line">
-    <span>Prix de référence:</span>
-    <span>CHF{{ getTotalBeforeDiscount() | number:'1.2-2' }}</span>
-  </div>
+<div class="summary-line">
+  <span>Prix de référence:</span>
+  <span>CHF{{ getTotalBeforeDiscount() | number:'1.2-2' }}</span>
+</div>
 
-  <div class="summary-line reduction" *ngIf="getDiscount()">
-    <span>Réduction:</span>
-    <span>-CHF{{ getDiscount() | number:'1.2-2' }}</span>
-  </div>
+<div class="summary-line reduction" *ngIf="getDiscount() > 0">
+  <span>Réduction:</span>
+  <span>-CHF{{ getDiscount() | number:'1.2-2' }}</span>
+</div>
 
-  <div class="summary-line">
-    <span>Sous-total:</span>
-    <span>CHF{{ getTotal() | number:'1.2-2' }}</span>
-  </div>
+<div class="summary-line">
+  <span>Sous-total:</span>
+  <span>CHF{{ getTotal() | number:'1.2-2' }}</span>
+</div>
 
-  <!-- Prix estimé -->
-  <div class="estimated-price">
-    Prix Estimé:
-    <strong>CHF{{ getTotalBeforeDiscount() | number:'1.2-2' }}</strong>
-    <span class="final-price">CHF{{ getTotal() | number:'1.2-2' }}</span>
-  </div>
+<div class="estimated-price">
+  Prix Estimé:
+  <strong>CHF{{ getTotalBeforeDiscount() | number:'1.2-2' }}</strong>
+  <span class="final-price">CHF{{ getTotal() | number:'1.2-2' }}</span>
+</div>
 
-  <!-- Bouton -->
- <a class="checkout-btn" routerLink="/validation">
-  Passer au paiement ({{ selectedItems.length }})
+<a class="checkout-btn" routerLink="/validation">
+  Passer au paiement ({{ orderSummary.items?.length || 0 }})
 </a>
 
 <div class="payment-icons">

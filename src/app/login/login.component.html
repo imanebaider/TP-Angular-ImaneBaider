@@ -5,22 +5,18 @@
 
   <header class="main-header">
     <div class="logo">
-      <i class="fas fa-gem"></i> LORAYA
+      <i ></i> LORAYA
     </div>
   
   
 
-  <div class="search-bar">
-    <input type="text" placeholder="Parure Bijoux Femme" />
-    <button><i class="fas fa-search"></i></button>
-  </div>
-
+  
   <div class="header-icons">
     <div class="user-menu">
   <i class="fas fa-user user-icon"></i>
   <div class="dropdown-content">
 <a routerLink="/login">Me connecter</a>
-    <a href="#">Mes Commandes</a>
+    <a routerLink="/commande" >Mes Commandes</a>
     <a href="#">Mes Notifications</a>
     <a href="#">Mes Coupons</a>
     <a href="#">Mes Points Bonus</a>
@@ -35,82 +31,6 @@
     
   </div>
 </header>
-
-
-
-
-
-<div class="menu-container">
-  <!-- Colliers -->
-  <div class="menu-category">
-    <a   href="#" class="category-title">
-      <i class="fas fa-necklace"></i> Colliers
-    </a>
-    <div class="submenu">
-      <a   href="#">Colliers ras-de-cou</a>
-      <a   href="#">Colliers longs</a>
-      <a   href="#">Colliers pendentifs</a>
-      <a   href="#">Colliers perles</a>
-      <a   href="#">Chaînes</a>
-    </div>
-  </div>
-  
-  <!-- Boucles d'oreilles -->
-  <div class="menu-category">
-    <a   href="#" class="category-title">
-      <i  class="fas fa-earrings"></i> Boucles
-    </a>
-    <div class="submenu">
-      <a   href="#">Crèoles</a>
-      <a   href="#">Pendantes</a>
-      <a   href="#">Clous d'oreilles</a>
-      <a  href="#">Boucles perles</a>
-      <a   href="#">Boucles diamant</a>
-    </div>
-  </div>
-  
-  <!-- Bracelets -->
-  <div class="menu-category">
-    <a href="#" class="category-title">
-      <i   class="fas fa-bracelet"></i> Bracelets
-    </a>
-    <div class="submenu">
-      <a  href="#">Bracelets chaîne</a>
-      <a  href="#">Bracelets perles</a>
-      <a   href="#">Bracelets charms</a>
-      <a   href="#">Bangles</a>
-      <a   href="#">Bracelets cheville</a>
-    </div>
-  </div>
-  
-  <!-- Bagues -->
-  <div class="menu-category">
-    <a href="#" class="category-title">
-      <i  class="fas fa-ring"></i> Bagues
-    </a>
-    <div class="submenu">
-      <a   href="#">Alliances</a>
-      <a   href="#">Solitaires</a>
-      <a   href="#">Bagues cocktail</a>
-      <a  href="#">Bagues de fiançailles</a>
-      <a  href="#">Chevalières</a>
-    </div>
-  </div>
-  
-  <!-- Autres -->
-  <div class="menu-category">
-    <a href="#" class="category-title">
-      <i  class="fas fa-gem"></i> Autres
-    </a>
-    <div class="submenu">
-      <a   href="#">Broches</a>
-      <a   href="#">Barrettes</a>
-      <a   href="#">Bijoux de mariage</a>
-      <a  href="#">Bijoux bébé</a>
-      <a  href="#">Montres</a>
-    </div>
-  </div>
-</div>
 
 
 
@@ -140,30 +60,31 @@
   <div class="login-form">
     <h2>Connexion / S’inscrire</h2>
     <p class="subtext">Vos données sont protégées.</p>
-<form (ngSubmit)="login()" #loginForm="ngForm">
-  <label for="email">البريد الإلكتروني:</label>
-  <input
-    type="email"
-    id="email"
-    name="email"
-    placeholder="دخل الإيميل ديالك"
-    required
-    [(ngModel)]="email"
-  />
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <label for="email">Adresse e-mail :</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Entrez votre e-mail"
+        required
+        [(ngModel)]="email"
+      />
 
-  <label for="password">كلمة السر:</label>
-  <input
-    type="password"
-    id="password"
-    name="password"
-    placeholder="دخل كلمة السر"
-    required
-    [(ngModel)]="password"
-  />
+      <label for="password">Mot de passe :</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Entrez votre mot de passe"
+        required
+        [(ngModel)]="password"
+      />
 
-  <button type="submit" [disabled]="!loginForm.form.valid">دخول</button>
-</form>
+      <button type="submit" [disabled]="!loginForm.form.valid">Se connecter</button>
+    </form>
 
+    <p>Pas encore inscrit ? <a routerLink="/register">Créer un compte</a></p>
 
     <div class="social-login">
       <p class="or-text">Ou continuez avec</p>
@@ -178,18 +99,10 @@
     </div>
 
     <p class="privacy-text">
-      En continuant, vous acceptez notre
-      <a href="#">Politique de confidentialité & cookies</a>
-      et
-      <a href="#">Conditions Générales</a>.
-    </p>
-  </div>
 
-  
+    </div>
+
 </div>
-
-
-
 
 
 

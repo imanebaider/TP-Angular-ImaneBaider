@@ -1,0 +1,222 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <header class="main-header">
+    <div class="logo">
+      <i class="fas fa-gem"></i> LORAYA
+    </div>
+  
+  
+
+  <div class="search-bar">
+    <input type="text" placeholder="Parure Bijoux Femme" />
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="header-icons">
+    <div class="user-menu">
+  <i class="fas fa-user user-icon"></i>
+  <div class="dropdown-content">
+    <a routerLink="/login">Me connecter</a>
+    <a routerLink="/commande" >Mes Commandes</a>
+    <a routerLink="/profile"i18n>Mon profile </a>
+    <a href="#">Mes Coupons</a>
+    <a href="#">Mes Points Bonus</a>
+    <a href="#">Récemment Vus</a>
+    <a href="#">Plus de services</a>
+  </div>
+</div>
+    <i class="fas fa-shopping-cart"></i>
+    <i class="far fa-heart"></i>
+    <i class="fas fa-globe"></i>
+
+    
+  </div>
+</header>
+
+
+<div class="progress-bar">
+  <div class="step" [class.active]="currentStep >= 1">Panier</div>
+  <div class="step" [class.active]="currentStep >= 2">VALIDATION</div>
+  <div class="step" [class.active]="currentStep >= 3">Payer</div>
+  <div class="step" [class.active]="currentStep >= 4">CONFIRMATION</div>
+</div>
+
+ <!-- ✅ Message principal -->
+  <div class="thank-you-box">
+    <h2>Merci pour votre commande !</h2>
+    <p>Votre commande a bien été enregistrée.</p>
+  </div>
+
+  <!-- ✅ Résumé principal -->
+  <div class="summary-box">
+    <p><strong>Numéro de commande :</strong> {{ orderId }}</p>
+    <p><strong>Date :</strong> {{ orderDate | date: 'dd/MM/yyyy' }}</p>
+    <p><strong>Total :</strong> DH{{ total }}</p>
+    <p><strong>Méthode de paiement :</strong> {{ paymentMethod }}</p>
+    <p><strong>Statut du paiement :</strong>
+      <span [class.paid]="isPaid" [class.pending]="!isPaid">
+        {{ isPaid ? 'Payé' : 'En attente de paiement' }}
+      </span>
+    </p>
+    <p><strong>Livraison :</strong> {{ shippingCompany }} – Suivi : {{ trackingNumber }}</p>
+    <p><strong>Date estimée :</strong> {{ estimatedDeliveryDate | date:'dd/MM/yyyy' }}</p>
+  </div>
+
+  <!-- ✅ Détails des produits -->
+  <section class="order-details" *ngIf="orderItems.length > 0">
+    <h3>Produits commandés</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Produit</th>
+          <th>Quantité</th>
+          <th>Prix unitaire</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of orderItems">
+          <td><img [src]="'http://localhost:3000/assets/images/' + item.imageUrl[0]" alt="{{ item.productTitle }}" width="50" /></td>
+          <td>{{ item.productTitle }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>DH{{ item.productPrice }}</td>
+          <td>DH{{ item.productPrice * item.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ✅ Informations du client -->
+  <section class="customer-info">
+    <h3>Informations du client</h3>
+    <p><strong>Nom :</strong> {{ customer.name }}</p>
+    <p><strong>Téléphone :</strong> {{ customer.phone }}</p>
+    <p><strong>Adresse :</strong> {{ customer.address }}</p>
+    <p><strong>Email :</strong> {{ customer.email }}</p>
+  </section>
+
+  <!-- ✅ Actions -->
+  <div class="actions">
+    <button routerLink="">🏠 Accueil</button>
+    <button routerLink="/catalog">🛍️ Continuer les achats</button>
+    <button (click)="printInvoice()">🧾 Imprimer la facture</button>
+    <a href="tel:+212600000000">📞 Contacter le support</a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Colonne 1 : Informations entreprise -->
+      <div class="footer-column">
+        <h3 >INFORMATIONS SUR L'ENTREPRISE</h3>
+        <ul>
+          <li ><a  href="#">Qui Sommes-Nous?</a></li>
+          <li><a  href="#">Blog</a></li>
+          <li><a  href="#">Responsabilité Sociale</a></li>
+          <li><a  href="#">LORAYA VIP</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 2 : Centre d'aide -->
+      <div class="footer-column">
+        <h3  >CENTRE D'AIDE</h3>
+        <ul>
+          <li><a href="#">Livraison</a></li>
+          <li><a  href="#">Retour & Remboursement</a></li>
+          <li><a   href="#">Commande</a></li>
+          <li><a  href="#">Statut De Commande</a></li>
+          <li><a   href="#">Guide Des Tailles</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 3 : Contact -->
+      <div class="footer-column">
+        <h3 >AIDE</h3>
+        <ul>
+          <li><a href="#">Nous contacter</a></li>
+          <li><a href="#">Paiement</a></li>
+          <li><a href="#">Points Bonus</a></li>
+        </ul>
+        
+        <div class="social-media">
+          <h3  >Trouvez-nous sur</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne 4 : Newsletter -->
+      <div class="footer-column newsletter">
+        <h3  >Newsletter</h3>
+        <p  >Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Votre Adresse E-mail" required>
+          <div class="phone-input">
+            <select>
+              <option>MA +212</option>
+              <option>FR +33</option>
+              <option>BE +32</option>
+            </select>
+            <input type="tel" placeholder="Téléphone pour SMS">
+          </div>
+          <button type="submit">S'abonner</button>
+        </form>
+        <small  >Vous pouvez vous DÉSABONNER à tout moment</small>
+      </div>
+    </div>
+    
+    <!-- Paiements -->
+    <div class="payment-methods">
+      <h4  >NOUS ACCEPTONS</h4>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-apple-pay"></i>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+      <p  >©2023-2025 LORAYA Tous droits réservés</p>
+      <div class="legal-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Cookies</a>
+        <a href="#">Conditions Générales</a>
+        <a href="#">Avis IP</a>
+        <a href="#">Morocco</a>
+      </div>
+      <p class="trust-badge">
+        <i class="fas fa-lock"></i> Site sécurisé - Paiements 100% protégés
+      </p>
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+

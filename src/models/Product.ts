@@ -1,20 +1,21 @@
 export class Product {
   public selected: boolean;
+  public originalStock?: number;
   // Constructeur de la classe Product
   constructor(
-    public productId: number, // Identifiant du produit
-    public productTitle: string, // Titre du produit
-    public productPrice: number, // Prix du produit
-    public quantity: number, // Quantité disponible du produit
-    public description: string, // Description du produit
-    public imageUrl: string[], // URL des images du produit sous forme de tableau
-    public rating: number = 0, // Évaluation du produit, initialisée à 0 par défaut
+    public productId: number,
+    public productTitle: string,
+    public productPrice: number,
+    public quantity: number,
+    public description: string,
+    public imageUrl: string[],
+    public rating: number = 0,
     public type: string,
-    selected: boolean = true
-
-  
+    selected: boolean = true,
+    originalStock?: number,          // براميطر جديد اختياري
   ) {
     this.selected = selected;
+    this.originalStock = originalStock;  // تخزين البراميطر في الخاصية
   }
   
 

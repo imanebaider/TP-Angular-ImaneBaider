@@ -29,7 +29,11 @@ filteredProducts: Product[] = [];
 
   apiUrl = 'http://localhost:3000/api/parfums';
 
+selectedImage: string = '';
 
+  // المتغيرات للتحكم في النافذة
+  isModalOpen: boolean = false;
+  modalProduct: Product | null = null;
   currentRating: number = 0;
 
 constructor(private http: HttpClient, private router: Router , private cartService: CartService) {}
@@ -68,16 +72,19 @@ constructor(private http: HttpClient, private router: Router , private cartServi
     console.log(`Product ${product.productTitle} rated: ${star}`);
     this.currentRating = star;
   }
-
- goToProductDetails(productId: number): void {
+goToProductDetails(productId: number): void {
   console.log('Clicked on product', productId);
-  this.router.navigate(['/products', productId]);
+  this.router.navigate(['/parfums', productId]); // ✅ dirna "parfums" f l lien
 }
 
 
-  addToCart(product: Product): void {
-    this.cartService.addItem(product);
-    alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
+
+   addToCart(product: Product | null): void {
+    if (product) {
+      this.cartService.addItem(product);
+      alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
+      this.closeModal();  // نغلق النافذة بعد الإضافة
+    }
   }
   search() {
   const term = this.searchTerm.toLowerCase().trim();
@@ -88,6 +95,21 @@ constructor(private http: HttpClient, private router: Router , private cartServi
 }
 
 
+  // تفتح النافذة مع تفاصيل المنتج
+  openModal(product: Product) {
+    this.modalProduct = product;
+  this.selectedImage = product.imageUrl[0]; // première image
+  this.isModalOpen = true;
+  }
+
+  // تغلق النافذة
+  closeModal() {
+    this.isModalOpen = false;
+    this.modalProduct = null;
+  }
+ selectImage(img: string): void {
+    this.selectedImage = img;
+  }
 }
 
 

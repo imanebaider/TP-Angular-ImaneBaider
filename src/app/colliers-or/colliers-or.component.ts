@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/Product';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-colliers-or',
   templateUrl: './colliers-or.component.html',
   styleUrls: ['./colliers-or.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule,RouterModule]
 })
 export class ColliersOrComponent implements OnInit {
   products: Product[] = [];

@@ -21,8 +21,8 @@
   <i class="fas fa-user user-icon"></i>
   <div class="dropdown-content">
     <a routerLink="/login">Me connecter</a>
-    <a href="#">Mes Commandes</a>
-    <a href="#">Mes Notifications</a>
+    <a routerLink="/commande" >Mes Commandes</a>
+    <a routerLink="/profile"i18n>Mon profile </a>
     <a href="#">Mes Coupons</a>
     <a href="#">Mes Points Bonus</a>
     <a href="#">Récemment Vus</a>
@@ -54,14 +54,40 @@
   <div class="left-column">
     <!-- Adresse -->
     <section class="delivery-address">
-      <h2>📍 Adresse de livraison</h2>
-      <input placeholder="Nom complet, entreprise..." />
-      <input placeholder="Rue, Adresse, C/O" />
-      <input placeholder="Appartement, étage, etc. (optionnel)" />
-      <input placeholder="Ville" />
-      <input placeholder="Code postal" />
-      <input placeholder="Téléphone" />
-      <p class="tip">💡 Conseil : assurez-vous que l’adresse est complète.</p>
+<form [formGroup]="addressForm" (ngSubmit)="goToPaiement()">
+  <section class="delivery-address">
+    <h2>📍 Adresse de livraison</h2>
+
+    <input formControlName="fullName" placeholder="Nom complet, entreprise..." />
+    <div *ngIf="addressForm.get('fullName')?.touched && addressForm.get('fullName')?.invalid" class="error">
+      Le nom complet est obligatoire.
+    </div>
+
+    <input formControlName="street" placeholder="Rue, Adresse, C/O" />
+    <div *ngIf="addressForm.get('street')?.touched && addressForm.get('street')?.invalid" class="error">
+      L'adresse est obligatoire.
+    </div>
+
+    <input formControlName="apt" placeholder="Appartement, étage..." />
+
+    <input formControlName="city" placeholder="Ville" />
+    <div *ngIf="addressForm.get('city')?.touched && addressForm.get('city')?.invalid" class="error">
+      La ville est obligatoire.
+    </div>
+
+    <input formControlName="postal" placeholder="Code postal" />
+    <div *ngIf="addressForm.get('postal')?.touched && addressForm.get('postal')?.invalid" class="error">
+      Le code postal est obligatoire.
+    </div>
+
+    <input formControlName="phone" placeholder="Téléphone" />
+    <div *ngIf="addressForm.get('phone')?.touched && addressForm.get('phone')?.invalid" class="error">
+      Le téléphone est obligatoire.
+    </div>
+  </section>
+        <button type="submit">Passer au paiement</button>
+
+</form>
     </section>
 
   <section class="payment-method">
@@ -89,44 +115,25 @@
 
 
 
-    <button class="pay-btn">Payer maintenant</button>
+  
   </div>
 <section class="order-summary">
-  <h3>Résumé de votre commande</h3>
+ <h3>Résumé de votre commande</h3>
 
-  <!-- Produit sélectionné -->
-  <div class="summary-product" *ngIf="selectedItems.length > 0">
-    <input type="checkbox" checked disabled />
-    <img [src]="'http://localhost:3000/assets/images/' + selectedItems[0].imageUrl[0]" alt="" />
-    <span class="badge" *ngIf="selectedItems[0].quantity <= 5">Presque épuisé</span>
+<div *ngIf="orderSummary.items.length > 0">
+  <div *ngFor="let item of orderSummary.items">
+    <img [src]="'http://localhost:3000/assets/images/' + item.imageUrl[0]" alt="{{item.productTitle}}" width="50" />
+    <strong>{{ item.productTitle }}</strong> — Quantité: {{ item.quantity }} — Prix: CHF{{ item.productPrice | number:'1.2-2' }}
   </div>
 
-  <!-- Totaux -->
-  <div class="summary-line">
-    <span>Prix de référence :</span>
-    <span>DH{{ getTotalBeforeDiscount() | number:'1.2-2' }}</span>
+  <div>
+    <p>Prix de référence: CHF{{ getTotalBeforeDiscount() | number:'1.2-2' }}</p>
+    <p *ngIf="getDiscount() > 0">Réduction: -CHF{{ getDiscount() | number:'1.2-2' }}</p>
+    <p><strong>Total: CHF{{ getTotal() | number:'1.2-2' }}</strong></p>
   </div>
+</div>
 
-  <div class="summary-line reduction" *ngIf="getDiscount() > 0">
-    <span>Réduction :</span>
-    <span>-DH{{ getDiscount() | number:'1.2-2' }}</span>
-  </div>
 
-  <div class="summary-line">
-    <span>Sous-total :</span>
-    <span>DH{{ getTotal() | number:'1.2-2' }}</span>
-  </div>
-
-  <!-- Estimé -->
-  <div class="estimated-price">
-    Prix estimé : <strong>DH{{ getTotalBeforeDiscount() | number:'1.2-2' }}</strong><br>
-    <span class="final-price">DH{{ getTotal() | number:'1.2-2' }}</span>
-  </div>
-
-  <!-- Bouton -->
-  <a class="checkout-btn" routerLink="/validation">
-    Passer au paiement ({{ selectedItems.length }})
-  </a>
   
 <!-- Sécurité des paiements -->
 <div class="security-section">

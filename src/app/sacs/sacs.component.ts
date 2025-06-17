@@ -68,9 +68,8 @@ constructor(private http: HttpClient, private router: Router , private cartServi
     this.currentRating = star;
   }
 
- goToProductDetails(productId: number): void {
-  console.log('Clicked on product', productId);
-  this.router.navigate(['/products', productId]);
+ goToDetail(id: number): void {
+  this.router.navigate(['/sacs', id]);
 }
 
 

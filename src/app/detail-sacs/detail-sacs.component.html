@@ -1,0 +1,294 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <header class="main-header">
+    <div class="logo">
+      <i class="fas fa-gem"></i> LORAYA
+    </div>
+  
+  
+
+  <div class="search-bar">
+  <input type="text" placeholder="Parure Bijoux Femme" />
+  <button ><i class="fas fa-search"></i></button>
+</div>
+
+
+
+  <div class="header-icons">
+    <div class="user-menu">
+  <i class="fas fa-user user-icon"></i>
+  <div class="dropdown-content">
+    <a routerLink="/login" i18n>Me connecter</a>
+    <a routerLink="/commande"  i18n>Mes Commandes</a>
+    <a routerLink="/profile"i18n>Mon profile </a>
+    <a href="#" i18n>Mes Coupons</a>
+    <a href="#"  i18n>Mes Points Bonus</a>
+    <a href="#"  i18n >Récemment Vus</a>
+    <a href="#"  i18n>Plus de services</a>
+  </div>
+</div>
+     <a routerLink="/cart" class="fas fa-shopping-cart"></a>
+    <i class="far fa-heart"></i>
+    <i class="fas fa-globe"></i>
+
+    
+  </div>
+</header>
+
+
+
+
+
+<div class="menu-container">
+  <!-- Colliers -->
+<div class="menu-category">
+  <a routerLink="/colliers-perles" class="category-title">
+    <i class="fas fa-necklace"  i18n></i>perles
+  </a>
+ 
+</div>
+
+  <!-- Boucles d'oreilles -->
+<div class="menu-category">
+  <a routerLink="/colliers-emeraude" class="category-title">
+    <i class="fas fa-gem" i18n></i> émeraude
+  </a>
+
+</div>
+
+  
+  <!-- Bracelets -->
+  <div class="menu-category">
+    <a routerLink="/colliers-or" class="category-title">
+      <i   class="fas fa-bracelet" i18n></i> or
+    </a>
+    
+  </div>
+  
+  <!-- Bagues -->
+  <div class="menu-category">
+    <a routerLink="/colliers-diamant" class="category-title">
+      <i  class="fas fa-ring" i18n></i>diamant
+    </a>
+  
+    
+  </div>
+  
+  <!-- Autres -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i  class="fas fa-gem" i18n></i> Autres
+    </a>
+    <div class="submenu">
+      <a   routerLink="/parfums" i18n>Parfums</a>
+      <a   routerLink="/sacs" i18n>Sacs</a>
+      <a   routerLink="/robes" i18n>Robes</a>
+      <a  routerLink="/talons"i18n>Talons</a>
+      <a  routerLink="/parfum" i18n>Soins de vissage</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div *ngIf="product" class="luxury-product-card">
+
+  <!-- Titre et ID -->
+  <div class="product-header">
+    <h3 class="brand-title">{{ product.productTitle }}</h3>
+    <div class="product-id">ID: {{ product.productId }}</div>
+  </div>
+
+  <div class="product-content">
+
+    <!-- Image principale -->
+    <div class="main-image">
+      <img
+        [src]="'http://localhost:3000/assets/images/' + selectedImage"
+        alt="Image principale"
+        class="jewelry-image-main"
+        style="width: 300px; height: auto; border-radius: 12px; object-fit: contain;"
+      />
+    </div>
+
+    <!-- Miniatures -->
+    <div class="thumbnails">
+      <img
+        *ngFor="let img of product.imageUrl"
+        [src]="'http://localhost:3000/assets/images/' + img"
+        alt="Miniature"
+        class="thumbnail"
+        (click)="selectImage(img)"
+        [class.selected]="img === selectedImage"
+      />
+    </div>
+
+    <!-- Détails du produit -->
+    <div class="product-details">
+
+      <!-- Prix -->
+      <div class="price-box">
+        <span class="price">{{ product.productPrice }} DH</span>
+        <span class="tax">TVA incluse</span>
+      </div>
+
+      <!-- Spécifications -->
+      <div class="specs-box">
+        <div class="spec-item">
+          <i class="material-icons">inventory</i>
+          <span>Quantité disponible : {{ product.quantity }}</span>
+        </div>
+        <div class="spec-item">
+          <i class="material-icons">local_shipping</i>
+          <span>Livraison gratuite</span>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="description">{{ product.description }}</p>
+
+      <!-- Bouton Ajouter au panier -->
+      <button
+        class="add-to-cart"
+        title="Ajouter au panier"
+        aria-label="Ajouter au panier"
+        (click)="addToCart(product)"
+        style="cursor: pointer;"
+      >
+        Ajouter au panier
+      </button>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Colonne 1 : Informations entreprise -->
+      <div class="footer-column">
+        <h3 i18n>INFORMATIONS SUR L'ENTREPRISE</h3>
+        <ul>
+          <li ><a  href="#" i18n>Qui Sommes-Nous?</a></li>
+          <li><a  href="#" i18n>Blog</a></li>
+          <li><a  href="#" i18n>Responsabilité Sociale</a></li>
+          <li><a  href="#"i18n >LORAYA VIP</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 2 : Centre d'aide -->
+      <div class="footer-column">
+        <h3 i18n >CENTRE D'AIDE</h3>
+        <ul>
+          <li><a href="#" i18n>Livraison</a></li>
+          <li><a  href="#" i18n>Retour & Remboursement</a></li>
+          <li><a   href="#" i18n>Commande</a></li>
+          <li><a  href="#" i18n>Statut De Commande</a></li>
+          <li><a   href="#" i18n >Guide Des Tailles</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 3 : Contact -->
+      <div class="footer-column">
+        <h3 i18n>AIDE</h3>
+        <ul>
+          <li><a href="#" i18n >Nous contacter</a></li>
+          <li><a href="#"i18n >Paiement</a></li>
+          <li><a href="#" i18n>Points Bonus</a></li>
+        </ul>
+        
+        <div class="social-media">
+          <h3 i18n >Trouvez-nous sur</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne 4 : Newsletter -->
+      <div class="footer-column newsletter">
+        <h3  i18n>Newsletter</h3>
+        <p i18n >Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Votre Adresse E-mail" required>
+          <div class="phone-input">
+            <select>
+              <option i18n>MA +212</option>
+              <option i18n >FR +33</option>
+              <option i18n>BE +32</option>
+            </select>
+            <input type="tel" placeholder="Téléphone pour SMS">
+          </div>
+          <button type="submit" i18n>S'abonner</button>
+        </form>
+        <small i18n >Vous pouvez vous DÉSABONNER à tout moment</small>
+      </div>
+    </div>
+    
+    <!-- Paiements -->
+    <div class="payment-methods">
+      <h4  i18n>NOUS ACCEPTONS</h4>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-apple-pay"></i>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+      <p i18n >©2023-2025 LORAYA Tous droits réservés</p>
+      <div class="legal-links">
+        <a href="#" i18n>Confidentialité</a>
+        <a href="#" i18n>Cookies</a>
+        <a href="#" i18n>Conditions Générales</a>
+        <a href="#" i18n>Avis IP</a>
+        <a href="#" i18n>Morocco</a>
+      </div>
+      <p class="trust-badge">
+        <i class="fas fa-lock" i18n></i> Site sécurisé - Paiements 100% protégés
+      </p>
+    </div>
+  </footer>
+  

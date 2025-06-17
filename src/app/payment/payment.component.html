@@ -21,8 +21,8 @@
   <i class="fas fa-user user-icon"></i>
   <div class="dropdown-content">
     <a routerLink="/login">Me connecter</a>
-    <a href="#">Mes Commandes</a>
-    <a href="#">Mes Notifications</a>
+    <a routerLink="/commande" >Mes Commandes</a>
+   <a routerLink="/profile"i18n>Mon profile </a>
     <a href="#">Mes Coupons</a>
     <a href="#">Mes Points Bonus</a>
     <a href="#">Récemment Vus</a>
@@ -53,20 +53,23 @@
   <div class="payment-main">
     <!-- Colonne gauche -->
     <div class="left-side">
+<h2>Adresse de Facturation</h2>
+<section class="billing-address" *ngIf="address?.fullName">
+  <p>{{ address.fullName }}</p>
+  <p>{{ address.phone }}</p>
+  <p>{{ address.city }}</p>
+  <p>{{ address.street }} {{ address.apt }} {{ address.postal }}</p>
+  <button class="btn-modify" (click)="editAddress()">Modifier</button>
+</section>
 
-      <section class="billing-address">
-        <h2>Adresse de Facturation</h2>
-        <p>hhhh hhoooho</p>
-        <p>612225554</p>
-        <p>Tanger</p>
-        <p>Agadir Morocco Morocco 12345</p>
-        <button class="btn-modify">Modifier</button>
-      </section>
+
+
+
 
       <section class="card-info">
         <h2>Informations sur la carte</h2>
 
-        <form>
+        <form (ngSubmit)="onPay()">
           <label>Numéro De Carte *</label>
           <input type="text" placeholder="1234 5678 9012 3456" required />
 
@@ -98,7 +101,7 @@
             Rappelez-vous cette carte pour une utilisation ultérieure
           </label>
 
-          <button type="submit" class="btn-pay">Payer</button>
+          <button type="submit" class="btn-pay" routerLink="/confirmation">Payer</button>
         </form>
       </section>
 
@@ -108,28 +111,45 @@
     <div class="right-side">
 
       <section class="order-summary">
-        <h2>Résumé de votre commande</h2>
-        <p>Numéro de commande: <strong>GSH1UR31B00M75J</strong></p>
-        <p>Subtotal: <strong>DH214.00</strong></p>
-        <p>Frais de livraison: <strong>DH51.00</strong></p>
-        <p>La garantie de votre colis: <strong>DH9.08</strong></p>
-        <p><strong>Totals: DH274.08</strong></p>
+        <h3>Résumé de votre commande</h3>
+
+<div *ngIf="orderSummary.items?.length > 0">
+  <div *ngFor="let item of orderSummary.items" class="summary-product">
+    <img [src]="'http://localhost:3000/assets/images/' + item.imageUrl[0]" alt="{{item.productTitle}}" width="50" />
+    <strong>{{ item.productTitle }}</strong> — Quantité: {{ item.quantity }} — Prix: CHF{{ item.productPrice | number:'1.2-2' }}
+  </div>
+
+  <div class="summary-line">
+    <span>Prix de référence:</span>
+    <span>CHF{{ getTotalBeforeDiscount() | number:'1.2-2' }}</span>
+  </div>
+
+  <div class="summary-line reduction" *ngIf="getDiscount() > 0">
+    <span>Réduction:</span>
+    <span>-CHF{{ getDiscount() | number:'1.2-2' }}</span>
+  </div>
+
+  <div class="summary-line">
+    <span>Total:</span>
+    <span><strong>CHF{{ getTotal() | number:'1.2-2' }}</strong></span>
+  </div>
+</div>
       </section>
 
       <section class="security-info">
         <h3>Garantie de livraison sécurisée</h3>
         <p>
-          SHEIN travaille avec des partenaires de livraison fiables dans le monde entier. Nous vous garantissons que votre colis vous parviendra en toute sécurité et à temps. En cas de problème pendant le transit des articles que vous avez achetés, tel qu'un dommage, une perte ou un retard, soyez assuré(e) que nous ferons de notre mieux pour résoudre les problèmes et fournir les solutions appropriées.
+          LORAYA travaille avec des partenaires de livraison fiables dans le monde entier. Nous vous garantissons que votre colis vous parviendra en toute sécurité et à temps. En cas de problème pendant le transit des articles que vous avez achetés, tel qu'un dommage, une perte ou un retard, soyez assuré(e) que nous ferons de notre mieux pour résoudre les problèmes et fournir les solutions appropriées.
         </p>
 
         <h3>Sécurité des paiements</h3>
         <p>
-          SHEIN s'engage à protéger vos informations de paiement et ne partage vos informations de carte de crédit qu'avec nos fournisseurs de services de paiement qui ont accepté de protéger vos informations.
+          LORAYA s'engage à protéger vos informations de paiement et ne partage vos informations de carte de crédit qu'avec nos fournisseurs de services de paiement qui ont accepté de protéger vos informations.
         </p>
 
         <h3>Sécurité et Confidentialité</h3>
         <p>
-          SHEIN respecte la vie privée des utilisateurs et des visiteurs de son site et s'engage à la protéger en appliquant des mesures physiques, techniques et administratives conformes aux normes de l'industrie, conçues pour protéger vos données personnelles contre tout traitement, utilisation ou divulgation non autorisés.
+          LORAYA    respecte la vie privée des utilisateurs et des visiteurs de son site et s'engage à la protéger en appliquant des mesures physiques, techniques et administratives conformes aux normes de l'industrie, conçues pour protéger vos données personnelles contre tout traitement, utilisation ou divulgation non autorisés.
         </p>
       </section>
 

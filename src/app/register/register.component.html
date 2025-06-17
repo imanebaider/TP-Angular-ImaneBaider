@@ -1,0 +1,226 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <header class="main-header">
+    <div class="logo">
+      <i ></i> LORAYA
+    </div>
+  
+  
+
+  <div class="header-icons">
+    <div class="user-menu">
+  <i class="fas fa-user user-icon"></i>
+  <div class="dropdown-content">
+<a routerLink="/login">Me connecter</a>
+    <a routerLink="/commande" >Mes Commandes</a>
+    <a href="#">Mes Notifications</a>
+    <a href="#">Mes Coupons</a>
+    <a href="#">Mes Points Bonus</a>
+    <a href="#">Récemment Vus</a>
+    <a href="#">Plus de services</a>
+  </div>
+</div>
+    <i class="fas fa-shopping-cart"></i>
+    <i class="far fa-heart"></i>
+    <i class="fas fa-globe"></i>
+
+    
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="login-container">
+  <div class="login-form">
+    <h2>Créer un compte</h2>
+    <p class="subtext">Vos données sont protégées.</p>
+    <form (ngSubmit)="register()" #registerForm="ngForm">
+      
+      <label for="email">Adresse e-mail :</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Entrez votre e-mail"
+        required
+        [(ngModel)]="email"
+      />
+
+      <label for="password">Mot de passe :</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Entrez votre mot de passe"
+        required
+        [(ngModel)]="password"
+      />
+
+      <label for="confirmPassword">Confirmer le mot de passe :</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="Confirmez votre mot de passe"
+        required
+        [(ngModel)]="confirmPassword"
+      />
+
+      <label for="role">Rôle :</label>
+      <select id="role" name="role" [(ngModel)]="role" required>
+        <option value="" disabled>Choisissez un rôle</option>
+        <option value="client">Client</option>
+        <option value="gerant">Gérant</option>
+        <option value="admin">Admin</option>
+      </select>
+<br><br><br>
+      <button type="submit" [disabled]="!registerForm.form.valid">S'inscrire</button>
+    </form>
+
+    
+
+    <div class="social-login">
+      <p class="or-text">Ou continuez avec</p>
+      <button class="google-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" />
+        Continuer avec Google
+      </button>
+      <button class="facebook-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" />
+        Continuer avec Facebook
+      </button>
+    </div>
+
+    <p class="privacy-text">
+      En continuant, vous acceptez notre
+      <a href="#">Politique de confidentialité & cookies</a>
+      et
+      <a href="#">Conditions Générales</a>.
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Colonne 1 : Informations entreprise -->
+      <div class="footer-column">
+        <h3 >INFORMATIONS SUR L'ENTREPRISE</h3>
+        <ul>
+          <li ><a  href="#">Qui Sommes-Nous?</a></li>
+          <li><a  href="#">Blog</a></li>
+          <li><a  href="#">Responsabilité Sociale</a></li>
+          <li><a  href="#">LORAYA VIP</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 2 : Centre d'aide -->
+      <div class="footer-column">
+        <h3  >CENTRE D'AIDE</h3>
+        <ul>
+          <li><a href="#">Livraison</a></li>
+          <li><a  href="#">Retour & Remboursement</a></li>
+          <li><a   href="#">Commande</a></li>
+          <li><a  href="#">Statut De Commande</a></li>
+          <li><a   href="#">Guide Des Tailles</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 3 : Contact -->
+      <div class="footer-column">
+        <h3 >AIDE</h3>
+        <ul>
+          <li><a href="#">Nous contacter</a></li>
+          <li><a href="#">Paiement</a></li>
+          <li><a href="#">Points Bonus</a></li>
+        </ul>
+        
+        <div class="social-media">
+          <h3  >Trouvez-nous sur</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne 4 : Newsletter -->
+      <div class="footer-column newsletter">
+        <h3  >Newsletter</h3>
+        <p  >Abonnez-vous pour découvrir nos nouvelles collections en exclusivité</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Votre Adresse E-mail" required>
+          <div class="phone-input">
+            <select>
+              <option>MA +212</option>
+              <option>FR +33</option>
+              <option>BE +32</option>
+            </select>
+            <input type="tel" placeholder="Téléphone pour SMS">
+          </div>
+          <button type="submit">S'abonner</button>
+        </form>
+        <small  >Vous pouvez vous DÉSABONNER à tout moment</small>
+      </div>
+    </div>
+    
+    <!-- Paiements -->
+    <div class="payment-methods">
+      <h4  >NOUS ACCEPTONS</h4>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-apple-pay"></i>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+      <p  >©2023-2025 LORAYA Tous droits réservés</p>
+      <div class="legal-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Cookies</a>
+        <a href="#">Conditions Générales</a>
+        <a href="#">Avis IP</a>
+        <a href="#">Morocco</a>
+      </div>
+      <p class="trust-badge">
+        <i class="fas fa-lock"></i> Site sécurisé - Paiements 100% protégés
+      </p>
+    </div>
+  </footer>
+  
