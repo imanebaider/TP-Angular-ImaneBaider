@@ -740,20 +740,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .product-card {
   position: relative;
   padding: 10px;
@@ -805,20 +791,6 @@
 }
 
 /* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1015,23 +987,6 @@
       min-width: 100%;
     }
   }
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1288,18 +1243,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         .menu-container {
   max-width: 700px;
   margin: 40px auto;
@@ -1388,86 +1331,6 @@ h2 {
   border-top: 2px solid #000;
   padding-top: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1570,16 +1433,6 @@ h2 {
 
 
 
-
-
-
-
-
-
-
-
-
-
 .progress-bar {
   display: flex;
   justify-content: center;
@@ -1610,20 +1463,6 @@ h2 {
   font-weight: 400;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .checkout-container {
   display: flex;
   gap: 40px;
@@ -1648,32 +1487,11 @@ h2 {
   color: #333;
 }
 .left-side h2 {
-  font-size: 18px; /* حجم أصغر من الافتراضي */
-  font-weight: 600; /* حجم خط معقول */
-  margin-bottom: 12px; /* مسافة تحت العنوان */
-  color: #333; /* لون داكن مريح */
+  font-size: 18px; 
+  font-weight: 600; 
+  margin-bottom: 12px; 
+  color: #333;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   body {
   font-family: 'Segoe UI', sans-serif;
@@ -1825,19 +1643,19 @@ label {
   }
 }
 .security-info {
-  font-size: 10px; /* نص صغير */
+  font-size: 10px; 
   color: #333;
 }
 
 .security-info h3 {
   color: #4caf50;
-  font-size: 12px; /* العنوان صغير شوية */
+  font-size: 12px; 
   margin-top: 15px;
   margin-bottom: 6px;
 }
 
 .security-info p {
-  font-size: 10px; /* نص أصغر */
+  font-size: 10px; 
   line-height: 1.4;
   margin-top: 5px;
   margin-bottom: 10px;

@@ -9,7 +9,7 @@ import { StockService , ProductStock} from '../services/stock.service';
 
 @Component({
   selector: 'app-stock',
-  standalone: true,  // هادي باش تولي standalone
+  standalone: true,  
   imports: [CommonModule,RouterModule,FormsModule,  ],
   templateUrl: './stock.component.html',
   styleUrls: ['./stock.component.css']

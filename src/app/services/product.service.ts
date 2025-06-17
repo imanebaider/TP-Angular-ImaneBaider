@@ -17,8 +17,8 @@ export class ProductService {
         0, 
         apiProduct.productTitle,
         parseFloat(apiProduct.productPrice),
-        1, // quantity: مبدئيا نخليوها 1
-        '', // description: مؤقتا فارغة
+        1, 
+        '', 
         apiProduct.productImage, 
         0, 
         apiProduct.type 

@@ -29,7 +29,6 @@ export class CatalogComponentComponent implements OnInit {
   currentRating: number = 0;
 selectedImage: string = '';
 
-  // المتغيرات للتحكم في النافذة
   isModalOpen: boolean = false;
   modalProduct: Product | null = null;
 
@@ -79,7 +78,7 @@ selectedImage: string = '';
     if (product) {
       this.cartService.addItem(product);
       alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
-      this.closeModal();  // نغلق النافذة بعد الإضافة
+      this.closeModal();  
     }
   }
 
@@ -90,14 +89,12 @@ selectedImage: string = '';
     );
   }
 
-  // تفتح النافذة مع تفاصيل المنتج
   openModal(product: Product) {
     this.modalProduct = product;
   this.selectedImage = product.imageUrl[0]; // première image
   this.isModalOpen = true;
   }
 
-  // تغلق النافذة
   closeModal() {
     this.isModalOpen = false;
     this.modalProduct = null;

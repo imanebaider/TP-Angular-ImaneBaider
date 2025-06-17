@@ -780,22 +780,6 @@
   margin-right: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .product-card {
   position: relative;
   padding: 10px;
@@ -811,7 +795,6 @@
   border-radius: 8px;
 }
 
-/* البادج الأحمر تحت الصورة */
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -846,7 +829,6 @@
   display: inline-block;
 }
 
-/* السلة فأسفل اليمين */
 .cart-icon {
   position: absolute;
   bottom: 10px;
@@ -862,13 +844,6 @@
 }
 
 
-
-
-
-
-
-
-
 .hero-content h1 {
   font-size: 48px;
   font-weight: bold;
@@ -881,16 +856,6 @@
   font-size: 20px;
   font-style: italic;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1089,30 +1054,6 @@
   }
 
 
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
 /* Styling for the hero section */
 .hero-gallery {
   position: relative;
@@ -1176,13 +1117,6 @@
 
 
 
-
-
-
-
-
-
-
 .cart-icon-container {
   text-align: right;
   padding: 0 10px;
@@ -1197,71 +1131,6 @@
 .fa-shopping-cart:hover {
   color: #ff5722 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1296,25 +1165,13 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .stars {
   font-size: 20px;
   cursor: pointer;
   color: #ccc;
-  display: inline-block; /* النجوم في نفس السطر */
-  margin-right: 0; /* إزالة المسافة بين النجوم */
-  padding-right: 0; /* إزالة الحشو بين النجوم */
+  display: inline-block;
+  margin-right: 0; 
+  padding-right: 0; 
 }
 
 .stars:hover,
@@ -1323,7 +1180,7 @@
 }
 
 
-/* السلة فأسفل اليمين */
+
 .cart-icon {
   position: absolute;
   bottom: 10px;
@@ -1356,13 +1213,13 @@
 }
 
 .section-separator .title {
-  font-weight: 600; /* خليها شوي خفيفة باش تبان أنيقة */
+  font-weight: 600; 
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #684158; /* لون غامق شوي لكن مش أسود قاسي */
-  font-family: 'Georgia'; /* خط serif يعطي طابع كلاسيكي وأنيق */
-  font-style: italic; /* هنا دير italic */
-  letter-spacing: 1.5px; /* زيادة التباعد بين الحروف باش يبان مريح للعين */
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /* ظل خفيف يعطي عمق */
+  color: #684158; 
+  font-family: 'Georgia'; 
+  font-style: italic; 
+  letter-spacing: 1.5px; 
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 

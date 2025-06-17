@@ -811,7 +811,6 @@
   border-radius: 8px;
 }
 
-/* البادج الأحمر تحت الصورة */
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -1312,9 +1311,9 @@
   font-size: 20px;
   cursor: pointer;
   color: #ccc;
-  display: inline-block; /* النجوم في نفس السطر */
-  margin-right: 0; /* إزالة المسافة بين النجوم */
-  padding-right: 0; /* إزالة الحشو بين النجوم */
+  display: inline-block; 
+  margin-right: 0;
+  padding-right: 0; 
 }
 
 .stars:hover,
@@ -1323,7 +1322,6 @@
 }
 
 
-/* السلة فأسفل اليمين */
 .cart-icon {
   position: absolute;
   bottom: 10px;
@@ -1410,48 +1408,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Overlay semi-transparent, mais sans تغيير الخلفية الأصلية */
 .modal-backdrop {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgb(0, 0, 0,0); /* شفاف */
+  background-color: rgb(0, 0, 0,0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1485,7 +1445,6 @@
   color: #e00;
 }
 
-/* زر إضافة للسلة */
 .add-btn {
   display: inline-block;
   margin-top: 20px;
@@ -1509,12 +1468,12 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 12px;
-  width: 40%;               /* ⬅️ صغّر العرض */
-  max-width: 500px;         /* ⬅️ أقصى عرض */
+  width: 40%;              
+  max-width: 500px;       
   max-height: 85vh;
   overflow-y: auto;
   position: relative;
-  font-size: 12px;          /* ⬅️ حجم الخط العام */
+  font-size: 12px;        
 }
 
 .close-button {
@@ -1547,8 +1506,7 @@
 }
 
 .main-image img {
-  width: 220px;               /* ⬅️ تصغير الصورة الرئيسية */
-  height: auto;
+  width: 220px;               
   border-radius: 10px;
   object-fit: contain;
   margin-bottom: 10px;
@@ -1561,7 +1519,7 @@
 }
 
 .thumbnail {
-  width: 50px;               /* ⬅️ تصغير الصور المصغرة */
+  width: 50px;             
   height: 50px;
   border-radius: 6px;
   object-fit: cover;
@@ -1579,7 +1537,7 @@
 }
 
 .price-box {
-  font-size: 18px;           /* ⬅️ تصغير الثمن */
+  font-size: 18px;          
   font-weight: bold;
   margin-bottom: 8px;
 }
@@ -1649,12 +1607,12 @@
 }
 
 .section-separator .title {
-  font-weight: 600; /* خليها شوي خفيفة باش تبان أنيقة */
+  font-weight: 600;
   font-size: 1.4rem;
   text-transform: uppercase;
   color: #6f0963; 
   font-family: 'Georgia'; 
   font-style: italic; 
   letter-spacing: 1.5px; 
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /* ظل خفيف يعطي عمق */
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }

@@ -783,19 +783,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .product-card {
   position: relative;
   padding: 10px;
@@ -811,7 +798,6 @@
   border-radius: 8px;
 }
 
-/* البادج الأحمر تحت الصورة */
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -846,7 +832,6 @@
   display: inline-block;
 }
 
-/* السلة فأسفل اليمين */
 .cart-icon {
   position: absolute;
   bottom: 10px;
@@ -863,12 +848,6 @@
 
 
 
-
-
-
-
-
-
 .hero-content h1 {
   font-size: 48px;
   font-weight: bold;
@@ -881,17 +860,6 @@
   font-size: 20px;
   font-style: italic;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
   /* Styles pour le footer */
@@ -1088,31 +1056,6 @@
     }
   }
 
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
 /* Styling for the hero section */
 .hero-gallery {
   position: relative;
@@ -1176,15 +1119,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
 .cart-icon-container {
   text-align: right;
   padding: 0 10px;
@@ -1199,117 +1133,6 @@
 .fa-shopping-cart:hover {
   color: #ff5722 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .home-container {
   display: flex;
   flex-wrap: wrap;
@@ -1397,12 +1220,12 @@
 
 
 .overlay h2 {
-  font-style: italic; /* يجعل النص مائل */
-  font-family: 'Playfair Display', serif; /* خط أنيق وشيك */
+  font-style: italic; 
+  font-family: 'Playfair Display', serif; 
   font-size: 15px;
-  color: #000000; /* أبيض أو اختار لون يناسب الصورة */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* ظل خفيف للنص */
-  letter-spacing: 1px; /* تباعد بين الحروف */
+  color: #000000; 
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); 
+  letter-spacing: 1px; 
   margin: 0;
 }
 
@@ -1422,69 +1245,36 @@
 }
 
 .section-separator .title {
-  font-weight: 600; /* خليها شوي خفيفة باش تبان أنيقة */
+  font-weight: 600; 
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #444; /* لون غامق شوي لكن مش أسود قاسي */
-  font-family: 'Georgia'; /* خط serif يعطي طابع كلاسيكي وأنيق */
-  font-style: italic; /* هنا دير italic */
-  letter-spacing: 1.5px; /* زيادة التباعد بين الحروف باش يبان مريح للعين */
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /* ظل خفيف يعطي عمق */
+  color: #444; 
+  font-family: 'Georgia';
+  font-style: italic; 
+  letter-spacing: 1.5px; 
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .home {
   display: flex;
-  flex-wrap: nowrap;       /* منع لف العناصر لأسطر جديدة */
-  justify-content: flex-start; /* حطهم من جهة اليسار (تقدر تغيرها ل center إذا بغيت) */
+  flex-wrap: nowrap;    
+  justify-content: flex-start; 
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  overflow-x: auto;        /* سكرول أفقي إذا ما كفاوش الكروت */
+  overflow-x: auto;        
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
-} /* سلاسة السكرول على الموبايل */
+} 
 .home::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
 
 .categorys {
-  flex: 0 0 auto;          /* الحجم ثابت، ما يتمددش ولا ينكمش */
+  flex: 0 0 auto;         
   width: 200px;
   text-align: center;
   border-radius: 12px;
@@ -1528,8 +1318,6 @@
   color: #333;
 }
 
-
-/* الحاوية الرئيسية */
 .home {
   display: flex;
   gap: 20px;
@@ -1543,9 +1331,6 @@
 .home::-webkit-scrollbar {
   display: none;
 }
-
-
-/* تأثير hover */
 .categorys:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 25px rgba(232, 30, 99, 0.15);
@@ -1554,7 +1339,7 @@
 .categorys {
   flex-shrink: 0;
   width: 250px;
-  height: 400px; /* خديت كارت مربعة مثلاً */
+  height: 400px; 
   text-align: center;
   border-radius: 12px;
   overflow: hidden;
@@ -1565,17 +1350,16 @@
   position: relative;
 }
 
-/* الصورة تغطي الكارت كلو */
 .image {
   width: 100%;
-  height: 100%; /* باش تولي قادة مع البطاقة */
+  height: 100%; 
   background-size: cover;
   background-position: center;
   border-radius: 12px;
   position: relative;
 }
 
-/* اسم الماركة يطلع فوق الصورة (position absolute) */
+/* (position absolute) */
 .categorys h2 {
   position: absolute;
   bottom: 10px;
@@ -1587,10 +1371,6 @@
   color: white;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
-
-
-
-/* البادج فوق الصورة */
 .badges {
   position: absolute;
   top: 8px;
@@ -1603,33 +1383,12 @@
   font-weight: bold;
 }
 
-/* الاسم تحت الصورة */
 .categorys h2 {
   margin: 12px 0;
   font-size: 1.1rem;
   font-weight: 600;
   color: #333;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .decouvrez-section {
   text-align: center;
@@ -1689,31 +1448,6 @@
 .btn-decouvrez:hover {
   background-color: #a82450;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1792,7 +1526,7 @@
   justify-content: center;
   gap: 15px;
   padding: 20px;
-  background-color: #f8f8f8; /* خلفية بسيطة */
+  background-color: #f8f8f8; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-radius: 8px;
   max-width: 1000px;
@@ -1802,7 +1536,7 @@
 .thumbnails {
   display: flex;
   gap: 12px;
-  /* نخليهم في صف واحد */
+  
 }
 
 .thumbnail {
@@ -1830,25 +1564,8 @@
   background-size: cover;
   background-position: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  flex-shrink: 0; /* باش ما يصغرش */
+  flex-shrink: 0; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1943,7 +1660,7 @@
 .info-side {
   flex: 1;
   text-align: left;
-  color: #111; /* لون أسود أنيق */
+  color: #111; 
   font-family: 'Playfair Display', serif;
   padding: 10px;
 }
@@ -1993,7 +1710,7 @@
 }
 
 .btn-discover {
-  background: linear-gradient(90deg, #d4af37, #c49b2d); /* ذهبي متدرج */
+  background: linear-gradient(90deg, #d4af37, #c49b2d); 
   color: #fff;
   border: none;
   font-family: 'Playfair Display', serif;
@@ -2012,92 +1729,118 @@
 
 
 
-
-
-
-
-
-
-
 .profile-container {
-  max-width: 600px;
-  margin: 30px auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
   color: #333;
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.profile-container h2 {
+h2 {
   text-align: center;
-  margin-bottom: 20px;
   color: #222;
-  font-weight: 700;
+  margin-bottom: 30px;
 }
 
-.profile-info h3,
-.profile-info .section-title {
-  margin-top: 25px;
-  margin-bottom: 15px;
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+.user-info p {
+  margin: 6px 0;
+}
+
+.btn-outline {
+  margin-top: 10px;
+  background: transparent;
+  color: #555;
+  border: 1px solid #ccc;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section h3 {
+  margin-bottom: 10px;
   font-weight: 600;
   color: #444;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 6px;
 }
 
-.profile-info label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #555;
-  margin-top: 12px;
+.tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.profile-info input[type="text"] {
-  width: 100%;
-  padding: 8px 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  cursor: not-allowed; /* si readonly */
-}
-
-fieldset {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 15px 20px 12px 20px;
-  margin-bottom: 20px;
-  background-color: #fefefe;
-}
-
-fieldset legend {
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 0 8px;
-  color: #333;
-}
-
-fieldset label {
-  display: inline-block;
-  width: 48%;
-  margin-bottom: 10px;
+.tag {
+  padding: 6px 16px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  border: none;
   cursor: pointer;
-  user-select: none;
+  font-size: 14px;
+  transition: all 0.3s;
 }
 
-fieldset input[type="checkbox"] {
-  margin-right: 8px;
-  transform: scale(1.1);
-  vertical-align: middle;
+.tag:hover {
+  background-color: #e0e0e0;
+}
+
+.tag.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn.save-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn.save-btn:hover {
+  background-color: #333;
 }
 
 .confidential {
-  font-size: 0.9rem;
-  color: #777;
+  margin-top: 20px;
   text-align: center;
-  margin-top: 15px;
-  font-style: italic;
+  font-size: 12px;
+  color: #888;
 }

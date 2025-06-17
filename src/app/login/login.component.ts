@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../services/auth.service';  // استيراد الخدمة
+import { AuthService } from '../services/auth.service'; 
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -17,16 +17,25 @@ export class LoginComponent {
   errorMessage: string = '';
 
   constructor(private router: Router, private authService: AuthService) {}
+login() {
+  const success = this.authService.login(this.email, this.password);
 
-  login() {
-    const success = this.authService.login(this.email, this.password);
+  if (success) {
+    const role = this.authService.getUserRole();
 
-    if (success) {
-      alert('Connexion réussie !');
-      this.router.navigate(['catalog']);
+    if (role === 'admin') {
+      this.router.navigate(['/admin']);   
+    } else if (role === 'client') {
+      this.router.navigate(['/catalog']);   
+    
     } else {
-      this.errorMessage = 'Email ou mot de passe incorrect.';
-      alert(this.errorMessage);
+      this.router.navigate(['']);  
     }
+
+  } else {
+    this.errorMessage = 'Email ou mot de passe incorrect.';
+    alert(this.errorMessage);
   }
+}
+
 }

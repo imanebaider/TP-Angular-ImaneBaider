@@ -769,7 +769,7 @@
   border-radius: 8px;
 }
 
-/* البادج الأحمر تحت الصورة */
+
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -1393,85 +1393,6 @@ h2 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .panier-container {
   display: flex;
   flex-direction: row;
@@ -1566,15 +1487,6 @@ h2 {
   width: 40px;
   height: auto;
 }
-
-
-
-
-
-
-
-
-
 
 
 

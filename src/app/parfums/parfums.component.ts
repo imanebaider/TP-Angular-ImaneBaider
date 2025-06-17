@@ -31,7 +31,6 @@ filteredProducts: Product[] = [];
 
 selectedImage: string = '';
 
-  // المتغيرات للتحكم في النافذة
   isModalOpen: boolean = false;
   modalProduct: Product | null = null;
   currentRating: number = 0;
@@ -83,7 +82,7 @@ goToProductDetails(productId: number): void {
     if (product) {
       this.cartService.addItem(product);
       alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
-      this.closeModal();  // نغلق النافذة بعد الإضافة
+      this.closeModal();  
     }
   }
   search() {
@@ -95,14 +94,12 @@ goToProductDetails(productId: number): void {
 }
 
 
-  // تفتح النافذة مع تفاصيل المنتج
   openModal(product: Product) {
     this.modalProduct = product;
   this.selectedImage = product.imageUrl[0]; // première image
   this.isModalOpen = true;
   }
 
-  // تغلق النافذة
   closeModal() {
     this.isModalOpen = false;
     this.modalProduct = null;

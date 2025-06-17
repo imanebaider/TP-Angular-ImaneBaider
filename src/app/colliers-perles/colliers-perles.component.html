@@ -150,7 +150,6 @@
       (mouseenter)="onMouseEnter(product.productId)" 
       (mouseleave)="onMouseLeave()">
 
-    <!-- صور المنتج -->
     <div class="product-images" style="position: relative; height: 80%; overflow: hidden;">
       <img 
         [src]="'http://localhost:3000/assets/images/' + product.imageUrl[0]" 
@@ -158,7 +157,6 @@
         class="product-image"
       >
       
-      <!-- أيقونة السلة هنا داخل div position relative للصورة -->
       <i class="fas fa-shopping-cart cart-icon" 
          title="Add to cart"
          aria-label="Add to cart"
@@ -166,13 +164,11 @@
       </i>
     </div>
 
-    <!-- عنوان المنتج -->
     <h3 class="product-title" 
         (click)="goToProductDetails(product.productId)">
       {{ product.productTitle }}
     </h3>
 
-    <!-- تقييم وسعر المنتج -->
     <div class="rating-price">
       <div *ngFor="let star of [1, 2, 3, 4, 5]" 
            [class.active]="star <= product.rating" 

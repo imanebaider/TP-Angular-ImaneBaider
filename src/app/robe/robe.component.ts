@@ -78,7 +78,8 @@ constructor(private http: HttpClient, private router: Router , private cartServi
 
   addToCart(product: Product): void {
     this.cartService.addItem(product);
-    alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
+    alert(`Le produit ${product.productTitle} a été ajouté au panier !`);
+
   }
   search() {
   const term = this.searchTerm.toLowerCase().trim();

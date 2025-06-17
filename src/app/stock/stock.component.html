@@ -71,7 +71,6 @@
   </thead>
   <tbody>
      <tr *ngFor="let product of stocks">
-      <!-- ✅ عمود الصورة -->
       <td>
        <img *ngIf="product.imageUrl"
      [src]="'http://localhost:3000/assets/images/' + product.imageUrl"
@@ -84,7 +83,6 @@
       <td>{{ product.productTitle }}</td>
 
       <td>
-        <!-- عرض الكمية أو input -->
         <span *ngIf="editingProductId !== product.productId">
           {{ product.quantity }}
           <span *ngIf="product.quantity < 5" style="color: red; font-weight: bold;">

@@ -1091,28 +1091,6 @@
 
 
 
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
 /* Styling for the hero section */
 .hero-gallery {
   position: relative;
@@ -1179,12 +1157,6 @@
 
 
 
-
-
-
-
-
-
 .cart-icon-container {
   text-align: right;
   padding: 0 10px;
@@ -1199,113 +1171,6 @@
 .fa-shopping-cart:hover {
   color: #ff5722 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1397,12 +1262,12 @@
 
 
 .overlay h2 {
-  font-style: italic; /* يجعل النص مائل */
-  font-family: 'Playfair Display', serif; /* خط أنيق وشيك */
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
   font-size: 15px;
-  color: #000000; /* أبيض أو اختار لون يناسب الصورة */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* ظل خفيف للنص */
-  letter-spacing: 1px; /* تباعد بين الحروف */
+  color: #000000; 
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); 
+  letter-spacing: 1px; 
   margin: 0;
 }
 
@@ -1422,69 +1287,39 @@
 }
 
 .section-separator .title {
-  font-weight: 600; /* خليها شوي خفيفة باش تبان أنيقة */
+  font-weight: 600; 
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #444; /* لون غامق شوي لكن مش أسود قاسي */
-  font-family: 'Georgia'; /* خط serif يعطي طابع كلاسيكي وأنيق */
-  font-style: italic; /* هنا دير italic */
-  letter-spacing: 1.5px; /* زيادة التباعد بين الحروف باش يبان مريح للعين */
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /* ظل خفيف يعطي عمق */
+  color: #444; 
+  font-family: 'Georgia'; 
+  font-style: italic; 
+  letter-spacing: 1.5px; 
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 .home {
   display: flex;
-  flex-wrap: nowrap;       /* منع لف العناصر لأسطر جديدة */
-  justify-content: flex-start; /* حطهم من جهة اليسار (تقدر تغيرها ل center إذا بغيت) */
+  flex-wrap: nowrap;      
+  justify-content: flex-start; 
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  overflow-x: auto;        /* سكرول أفقي إذا ما كفاوش الكروت */
+  overflow-x: auto;       
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
-} /* سلاسة السكرول على الموبايل */
+} 
 .home::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
 
 .categorys {
-  flex: 0 0 auto;          /* الحجم ثابت، ما يتمددش ولا ينكمش */
+  flex: 0 0 auto;          
   width: 200px;
   text-align: center;
   border-radius: 12px;
@@ -1529,7 +1364,6 @@
 }
 
 
-/* الحاوية الرئيسية */
 .home {
   display: flex;
   gap: 20px;
@@ -1545,7 +1379,6 @@
 }
 
 
-/* تأثير hover */
 .categorys:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 25px rgba(232, 30, 99, 0.15);
@@ -1554,7 +1387,7 @@
 .categorys {
   flex-shrink: 0;
   width: 250px;
-  height: 400px; /* خديت كارت مربعة مثلاً */
+  height: 400px;
   text-align: center;
   border-radius: 12px;
   overflow: hidden;
@@ -1565,17 +1398,15 @@
   position: relative;
 }
 
-/* الصورة تغطي الكارت كلو */
 .image {
   width: 100%;
-  height: 100%; /* باش تولي قادة مع البطاقة */
+  height: 100%;
   background-size: cover;
   background-position: center;
   border-radius: 12px;
   position: relative;
 }
 
-/* اسم الماركة يطلع فوق الصورة (position absolute) */
 .categorys h2 {
   position: absolute;
   bottom: 10px;
@@ -1588,9 +1419,6 @@
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-
-
-/* البادج فوق الصورة */
 .badges {
   position: absolute;
   top: 8px;
@@ -1603,32 +1431,12 @@
   font-weight: bold;
 }
 
-/* الاسم تحت الصورة */
 .categorys h2 {
   margin: 12px 0;
   font-size: 1.1rem;
   font-weight: 600;
   color: #333;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .decouvrez-section {
@@ -1689,32 +1497,6 @@
 .btn-decouvrez:hover {
   background-color: #a82450;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1792,7 +1574,7 @@
   justify-content: center;
   gap: 15px;
   padding: 20px;
-  background-color: #f8f8f8; /* خلفية بسيطة */
+  background-color: #f8f8f8; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-radius: 8px;
   max-width: 1000px;
@@ -1802,7 +1584,6 @@
 .thumbnails {
   display: flex;
   gap: 12px;
-  /* نخليهم في صف واحد */
 }
 
 .thumbnail {
@@ -1830,23 +1611,8 @@
   background-size: cover;
   background-position: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  flex-shrink: 0; /* باش ما يصغرش */
+  flex-shrink: 0; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1943,7 +1709,7 @@
 .info-side {
   flex: 1;
   text-align: left;
-  color: #111; /* لون أسود أنيق */
+  color: #111; 
   font-family: 'Playfair Display', serif;
   padding: 10px;
 }
@@ -1993,7 +1759,7 @@
 }
 
 .btn-discover {
-  background: linear-gradient(90deg, #d4af37, #c49b2d); /* ذهبي متدرج */
+  background: linear-gradient(90deg, #d4af37, #c49b2d); 
   color: #fff;
   border: none;
   font-family: 'Playfair Display', serif;
@@ -2009,127 +1775,6 @@
   background: linear-gradient(90deg, #010101, #000000);
   transform: scale(1.03);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

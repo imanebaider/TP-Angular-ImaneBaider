@@ -811,7 +811,6 @@
   border-radius: 8px;
 }
 
-/* البادج الأحمر تحت الصورة */
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -846,7 +845,6 @@
   display: inline-block;
 }
 
-/* السلة فأسفل اليمين */
 .cart-icon {
   position: absolute;
   bottom: 10px;
@@ -1111,18 +1109,17 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
-  min-height: 400px; /* طول أدنى للكارد */
+  min-height: 400px; 
 }
 
 .product-image {
   width: 100%;
   
   border-radius: 8px;
-   height: 100%; /* طول كبير للصورة */
+   height: 100%; 
   object-fit: cover; 
 }
 
-/* البادج الأحمر تحت الصورة */
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -1157,7 +1154,6 @@
   display: inline-block;
 }
 
-/* السلة فأسفل اليمين */
 .cart-icon {
   position: absolute;
   bottom: 10px;

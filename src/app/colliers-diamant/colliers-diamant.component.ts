@@ -28,7 +28,6 @@ filteredProducts: Product[] = [];
   this.http.get<Product[]>('http://localhost:3000/api/products?type=diamant').subscribe({
     next: (data) => {
       this.products = data;
-      // فلترة المنتجات اللي الكمية ديالها أكبر من 0
       this.filteredProducts = this.products.filter(p => p.quantity > 0);
     },
     error: (err) => {

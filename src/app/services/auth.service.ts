@@ -13,12 +13,11 @@ export class AuthService {
   private users: User[] = [
     { email: 'client@test.com', password: '1234', role: 'client' },
     { email: 'gerant@test.com', password: '1234', role: 'gerant' },
-    { email: 'admin@test.com', password: '1234', role: 'admin' },
+    { email: 'imanebaider@gmail.com', password: '1234', role: 'admin'  },
   ];
 
   private currentUser: User | null = null;
 constructor() {
-  // أول مرة فقط، خزّن المستخدمين الافتراضيين إلا ما كانوش موجودين
   const existingUsers = localStorage.getItem('users');
   if (!existingUsers) {
     localStorage.setItem('users', JSON.stringify(this.users));
@@ -26,7 +25,7 @@ constructor() {
 }
 
   login(email: string, password: string): boolean {
-  const users = this.getUsers(); // جبدهم من localStorage
+  const users = this.getUsers(); 
   const user = users.find(u => u.email === email && u.password === password);
 
   if (user) {
@@ -46,7 +45,6 @@ constructor() {
   isLoggedIn(): boolean {
     if (this.currentUser) return true;
 
-    // حاول تشوف في localStorage
     const storedUser = localStorage.getItem('currentUser');
     if (storedUser) {
       this.currentUser = JSON.parse(storedUser);
@@ -64,13 +62,13 @@ constructor() {
     return this.currentUser;
   }
   register(user: User): boolean {
-  const users = this.getUsers(); // جبد المستخدمين من localStorage
+  const users = this.getUsers();
   const exists = users.find(u => u.email === user.email);
 
-  if (exists) return false; // المستخدم موجود
+  if (exists) return false; 
 
-  users.push(user); // زيد المستخدم الجديد
-  localStorage.setItem('users', JSON.stringify(users)); // خزّنهم
+  users.push(user);
+  localStorage.setItem('users', JSON.stringify(users)); 
 
   this.currentUser = user;
   localStorage.setItem('currentUser', JSON.stringify(user));

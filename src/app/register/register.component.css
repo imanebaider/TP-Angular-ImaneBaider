@@ -811,7 +811,6 @@
   border-radius: 8px;
 }
 
-/* البادج الأحمر تحت الصورة */
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -846,7 +845,6 @@
   display: inline-block;
 }
 
-/* السلة فأسفل اليمين */
 .cart-icon {
   position: absolute;
   bottom: 10px;

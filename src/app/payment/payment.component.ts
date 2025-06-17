@@ -39,7 +39,7 @@ console.log("✅ Adresse récupérée dans paiement:", this.address);
     return this.orderSummary.total || 0;
   }
   editAddress() {
-  return this.router.navigate(['/validation']); // ترجع لصفحة إدخال العنوان
+  return this.router.navigate(['/validation']);
 }
 
 onPay() {
@@ -61,11 +61,11 @@ onPay() {
     updateRequests.filter((req): req is Observable<any> => req !== null)
   ).subscribe({
     next: () => {
-      console.log('جميع تحديثات الستوك تمت بنجاح');
+      console.log('Toutes les mises à jour du stock ont été effectuées avec succès');
       this.router.navigate(['/confirmation']);
     },
     error: (err) => {
-      console.error('خطأ في تحديث الستوك:', err);
+      console.error('Erreur lors de la mise à jour du stock', err);
     }
   });
 }

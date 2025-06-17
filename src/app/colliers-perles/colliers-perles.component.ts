@@ -38,7 +38,6 @@ export class ColliersPerlesComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
-    // هنا تقدر تضيف اللوجيك ديال إضافة المنتج للسلة
     console.log(`Added product ${product.productTitle} to cart.`);
   }
 

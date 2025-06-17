@@ -42,9 +42,52 @@
 
 
 
+<div class="menu-container">
+  <!-- Colliers -->
+<div class="menu-category">
+  <a routerLink="/catalog"  class="category-title">
+    <i class="fas fa-gem"  i18n></i> Bijaux
+  </a>
+  
+</div>
 
+  <!-- Boucles d'oreilles -->
+<div class="menu-category">
+  <a  routerLink="/sacs" class="category-title">
+    <i i18n></i> Sacs
+  </a>
+  
+</div>
 
-
+  
+  <!-- Bracelets -->
+  <div class="menu-category">
+    <a routerLink="/robes" class="category-title">
+      <i   class="fas fa-bracelet" i18n></i> Robes
+    </a>
+    
+  </div>
+  
+  <!-- Bagues -->
+  <div class="menu-category">
+    <a routerLink="/talons" class="category-title">
+      <i   i18n></i> Talons
+    </a>
+    
+  </div>
+  
+  <!-- Autres -->
+  <div class="menu-category">
+    <a href="#" class="category-title">
+      <i class="fas fa-ring" i18n></i> Autres
+    </a>
+    <div class="submenu">
+      <a  routerLink="/parfum" i18n>Maquillage</a>
+      <a  routerLink="/parfum" i18n>Soins de la peau</a>
+      <a  routerLink="/parfum" i18n>Soins capillaires</a>
+    </div>
+  </div>
+</div>
 
 
 
@@ -52,64 +95,59 @@
 
 
 <div class="profile-container">
-  <h2>Mon profil</h2>
+  <h2>👤 Profil Client</h2>
 
-  <section class="profile-info">
-
-    <!-- Affichage des infos dynamiques de l'utilisateur connecté -->
-    <div *ngIf="currentUser">
-      <p><strong>Rôle :</strong> {{ currentUser.role }}</p>
+  <div class="profile-header">
+    <img [src]="avatarPreview || defaultAvatar" alt="Avatar" class="avatar" />
+    <div class="user-info">
+      <p><strong>Email :</strong> {{ currentUser?.email }}</p>
+      <p><strong>Rôle :</strong> {{ currentUser?.role }}</p>
+      <input type="file" id="avatarInput" hidden (change)="onAvatarChange($event)" />
+      <button (click)="triggerFileInput()" class="btn-outline">Changer</button>
     </div>
+  </div>
 
-    <h3>Informations</h3>
+  
+  <div class="section">
+    <h3>❤️ Catégories</h3>
+    <div class="tags-group">
+      <button *ngFor="let tag of categories" (click)="toggleCategory(tag)" [class.active]="selectedCategories.includes(tag)" class="tag">
+        {{ tag }}
+      </button>
+    </div>
+  </div>
 
-    <label for="pseudo">Pseudo : *</label>
-<input type="text" id="pseudo" name="pseudo" [value]="currentUser?.email" readonly />
+  <div class="section">
+    <h3>🎨 Styles</h3>
+    <div class="tags-group">
+      <button *ngFor="let style of styles" (click)="toggleStyle(style)" [class.active]="selectedStyles.includes(style)" class="tag">
+        {{ style }}
+      </button>
+    </div>
+  </div>
 
+  <button class="btn save-btn" (click)="saveProfile()">💾 Sauvegarder</button>
 
-    <p class="section-title">Préférences <span>(+20 points)</span></p>
-
-    <fieldset>
-      <legend>Quelles sont vos catégories favorites ?</legend>
-      <label><input type="checkbox" name="categories" value="Femme" /> Femme</label>
-      <label><input type="checkbox" name="categories" value="Homme" /> Homme</label>
-      <label><input type="checkbox" name="categories" value="Grande Taille" /> Grande Taille</label>
-      <label><input type="checkbox" name="categories" value="Enfants" /> Enfants</label>
-      <label><input type="checkbox" name="categories" value="Maison" /> Maison</label>
-      <label><input type="checkbox" name="categories" value="Fournitures Pour Animaux" /> Fournitures Pour Animaux</label>
-    </fieldset>
-
-    <fieldset>
-      <legend>Pour qui avez-vous l'habitude d'acheter des vêtements ?</legend>
-      <label><input type="checkbox" name="achetePour" value="Moi" /> Moi</label>
-      <label><input type="checkbox" name="achetePour" value="Mon petit copain" /> Mon petit copain</label>
-      <label><input type="checkbox" name="achetePour" value="Mes parents" /> Mes parents</label>
-      <label><input type="checkbox" name="achetePour" value="Petites Filles 1 À 6 Ans" /> Petites Filles 1 À 6 Ans</label>
-      <label><input type="checkbox" name="achetePour" value="Filles 7 À 14 Ans" /> Filles 7 À 14 Ans</label>
-      <label><input type="checkbox" name="achetePour" value="Petits Garçons 1 À 6 Ans" /> Petits Garçons 1 À 6 Ans</label>
-      <label><input type="checkbox" name="achetePour" value="Garçons 7 À 14 Ans" /> Garçons 7 À 14 Ans</label>
-      <label><input type="checkbox" name="achetePour" value="Bébés 0 À 24 Mois" /> Bébés 0 À 24 Mois</label>
-      <label><input type="checkbox" name="achetePour" value="Chiens" /> Chiens</label>
-      <label><input type="checkbox" name="achetePour" value="Chats" /> Chats</label>
-    </fieldset>
-
-    <fieldset>
-      <legend>Quels sont vos styles favoris ?</legend>
-      <label><input type="checkbox" name="styles" value="Basiques" /> Basiques</label>
-      <label><input type="checkbox" name="styles" value="Casual" /> Casual</label>
-      <label><input type="checkbox" name="styles" value="Élégant" /> Élégant</label>
-      <label><input type="checkbox" name="styles" value="Sexy" /> Sexy</label>
-      <label><input type="checkbox" name="styles" value="Sportif" /> Sportif</label>
-      <label><input type="checkbox" name="styles" value="Vintage" /> Vintage</label>
-      <label><input type="checkbox" name="styles" value="Vacances" /> Vacances</label>
-      <label><input type="checkbox" name="styles" value="Fête" /> Fête</label>
-      <label><input type="checkbox" name="styles" value="Tenues de travail" /> Tenues de travail</label>
-      <label><input type="checkbox" name="styles" value="Tenues de mariage" /> Tenues de mariage</label>
-    </fieldset>
-
-    <p class="confidential">Les informations restent confidentielles</p>
-  </section>
+  <p class="confidential">🔒 Informations confidentielles</p>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

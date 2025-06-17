@@ -29,11 +29,11 @@ export class DetailSacsComponent implements OnInit {
   this.http.get<Product>(`http://localhost:3000/api/sacs/${id}`).subscribe({
     next: (data) => {
       this.product = data;
-      this.selectedImage = data.imageUrl[0]; // الصورة الأولى افتراضياً
+      this.selectedImage = data.imageUrl[0]; 
     },
     error: (err) => {
       console.error('Erreur lors de la récupération du sac:', err);
-      this.router.navigate(['/not-found']); // إذا ما لقاوش
+      this.router.navigate(['/not-found']); 
     }
   });
 }

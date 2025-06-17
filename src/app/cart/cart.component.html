@@ -21,7 +21,7 @@
   <i class="fas fa-user user-icon"></i>
   <div class="dropdown-content">
     <a routerLink="/login">Me connecter</a>
-    <a href="#">Mes Commandes</a>
+    <a routerLink="/commande" >Mes Commandes</a>
     <a href="#">Mes Notifications</a>
     <a href="#">Mes Coupons</a>
     <a href="#">Mes Points Bonus</a>
@@ -95,7 +95,6 @@
     <button (click)="clearCart()" *ngIf="cartItems.length > 0" class="clear-cart-btn">🧹 Vider le panier</button>
   </div>
 
-<!-- نعرضو résumé غير إلا كان شي item مختار -->
 <div class="order-summary" *ngIf="selectedItems.length">
 
   <h3>Résumé De Votre Commande</h3>

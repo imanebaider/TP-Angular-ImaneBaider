@@ -656,12 +656,6 @@
   display: block;
 }
 
-
-
-
-
-
-
 /* Promo banner */
 .promo-banner {
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -739,20 +733,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .product-card {
   position: relative;
   padding: 10px;
@@ -768,7 +748,6 @@
   border-radius: 8px;
 }
 
-/* البادج الأحمر تحت الصورة */
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -802,25 +781,6 @@
   border-radius: 4px;
   display: inline-block;
 }
-
-/* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /* Styles pour le footer */
   .site-footer {
     background-color: #f8f8f8;
@@ -1045,239 +1005,6 @@
   color: #999;
   font-weight: 400;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ✅ Style global */
 body {

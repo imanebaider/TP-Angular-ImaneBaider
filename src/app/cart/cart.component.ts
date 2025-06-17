@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { CheckoutService } from '../services/checkout.service';
 import { RouterModule } from '@angular/router';
 import { ProductStock } from '../services/stock.service';
-import { StockService } from '../services/stock.service'; // تأكد من المسار صحيح
+import { StockService } from '../services/stock.service'; 
 
 @Component({
   selector: 'app-cart',
@@ -33,17 +33,14 @@ export class CartComponent implements OnInit {
 ngOnInit() {
   this.cartItems = this.cartService.getItems();
 
-  // نجيبوا الستوك الأصلي من API
   this.http.get<ProductStock[]>('http://localhost:3000/api/stock').subscribe(stockData => {
-    // نضيف originalStock لكل منتج فـ cartItems
     this.cartItems.forEach(item => {
       const stockItem = stockData.find(s => s.productId === item.productId);
       if (stockItem) {
-        item.originalStock = stockItem.quantity;  // هادي مهمة
+        item.originalStock = stockItem.quantity;  
       }
     });
 
-    // إعداد الكميات والاختيار
     this.cartItems.forEach(item => {
       if (!item.quantity || item.quantity < 1) {
         item.quantity = 1;
@@ -62,7 +59,7 @@ ngOnInit() {
     const selectedItems = this.cartItems.filter(item => item.selected);
 
     const totalBeforeDiscount = selectedItems.reduce((acc, item) => acc + item.productPrice * item.quantity, 0);
-    const discount = selectedItems.length ? 0.01 : 0;  // استعمل المنطق ديالك هنا
+    const discount = selectedItems.length ? 0.01 : 0;  
     const total = totalBeforeDiscount - discount;
 
     this.orderSummary = {
@@ -72,7 +69,6 @@ ngOnInit() {
       total
     };
 
-    // خزّن الملخص في السيرفيس
     this.checkoutService.setOrderSummary(this.orderSummary);
   }
 
@@ -100,27 +96,22 @@ ngOnInit() {
     this.router.navigate(['/products', productId]);
   }
 
-  // العناصر المختارة فقط
   get selectedItems(): Product[] {
     return this.cartItems.filter(item => item.selected);
   }
 
-  // المجموع قبل التخفيض
   getTotalBeforeDiscount(): number {
     return this.selectedItems.reduce((acc, item) => acc + item.productPrice * item.quantity, 0);
   }
 
-  // حساب التخفيض (مثال بسيط)
   getDiscount(): number {
     return this.selectedItems.length ? 0.01 : 0;
   }
 
-  // المجموع النهائي
   getTotal(): number {
     return this.getTotalBeforeDiscount() - this.getDiscount();
   }
 
-  // استعملها مثلا مع تغيير اختيار checkbox
   updateSummary() {
     this.cartService.updateCart(this.cartItems);
     this.updateOrderSummary();

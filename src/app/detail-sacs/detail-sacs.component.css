@@ -698,13 +698,6 @@
 .user-menu:hover .dropdown-content {
   display: block;
 }
-
-
-
-
-
-
-
 /* Promo banner */
 .promo-banner {
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -780,22 +773,6 @@
   margin-right: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .product-card {
   position: relative;
   padding: 10px;
@@ -811,7 +788,6 @@
   border-radius: 8px;
 }
 
-/* البادج الأحمر تحت الصورة */
 .promo-banner {
   margin-top: 8px;
   background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -846,7 +822,6 @@
   display: inline-block;
 }
 
-/* السلة فأسفل اليمين */
 .cart-icon {
   position: absolute;
   bottom: 10px;
@@ -861,14 +836,6 @@
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
 .hero-content h1 {
   font-size: 48px;
   font-weight: bold;
@@ -881,17 +848,6 @@
   font-size: 20px;
   font-style: italic;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
   /* Styles pour le footer */
@@ -1088,31 +1044,6 @@
     }
   }
 
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
 /* Styling for the hero section */
 .hero-gallery {
   position: relative;
@@ -1172,17 +1103,6 @@
     font-size: 1rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 .cart-icon-container {
   text-align: right;
   padding: 0 10px;
@@ -1197,50 +1117,6 @@
 .fa-shopping-cart:hover {
   color: #ff5722 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .product-images {
   position: relative;
   width: 100%;
@@ -1273,63 +1149,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .stars {
   font-size: 20px;
   cursor: pointer;
   color: #ccc;
-  display: inline-block; /* النجوم في نفس السطر */
-  margin-right: 0; /* إزالة المسافة بين النجوم */
-  padding-right: 0; /* إزالة الحشو بين النجوم */
+  display: inline-block; 
+  margin-right: 0; 
+  padding-right: 0; 
 }
 
 .stars:hover,
 .stars.active {
   color: gold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1546,8 +1378,8 @@
 /*immpratnt */
 .thumbnails {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 صور فكل سطر */
-  gap: 5px; /* مسافة صغيرة بزاف بين الصور عمودياً وأفقياً */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 5px; 
   margin-top: 10px;
 }
 

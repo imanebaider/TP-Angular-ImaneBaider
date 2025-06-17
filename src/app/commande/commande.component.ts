@@ -18,7 +18,6 @@ constructor(private router: Router) {}
     this.orders = JSON.parse(localStorage.getItem('orders') || '[]');
   }
 
-  // باش تغيري حالة الطلب يدوياً (اختياري)
   updateStatus(order: any, newStatus: string) {
     order.status = newStatus;
     localStorage.setItem('orders', JSON.stringify(this.orders));

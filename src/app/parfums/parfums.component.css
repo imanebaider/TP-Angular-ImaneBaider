@@ -1091,28 +1091,6 @@
 
 
 
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
 /* Styling for the hero section */
 .hero-gallery {
   position: relative;
@@ -1174,15 +1152,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
 .cart-icon-container {
   text-align: right;
   padding: 0 10px;
@@ -1197,73 +1166,6 @@
 .fa-shopping-cart:hover {
   color: #ff5722 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .product-images {
   position: relative;
@@ -1295,26 +1197,13 @@
   margin-top: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .stars {
   font-size: 20px;
   cursor: pointer;
   color: #ccc;
-  display: inline-block; /* النجوم في نفس السطر */
-  margin-right: 0; /* إزالة المسافة بين النجوم */
-  padding-right: 0; /* إزالة الحشو بين النجوم */
+  display: inline-block; 
+  margin-right: 0; 
+  padding-right: 0; 
 }
 
 .stars:hover,
@@ -1323,7 +1212,6 @@
 }
 
 
-/* السلة فأسفل اليمين */
 .cart-icon {
   position: absolute;
   bottom: 10px;
@@ -1337,28 +1225,6 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1411,11 +1277,6 @@
 
 
 
-
-
-
-
-
 .section-separator {
   display: flex;
   align-items: center;
@@ -1431,23 +1292,23 @@
 }
 
 .section-separator .title {
-  font-weight: 600; /* خليها شوي خفيفة باش تبان أنيقة */
+  font-weight: 600; 
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #6f0963; /* لون غامق شوي لكن مش أسود قاسي */
-  font-family: 'Georgia'; /* خط serif يعطي طابع كلاسيكي وأنيق */
-  font-style: italic; /* هنا دير italic */
-  letter-spacing: 1.5px; /* زيادة التباعد بين الحروف باش يبان مريح للعين */
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /* ظل خفيف يعطي عمق */
+  color: #6f0963; 
+  font-family: 'Georgia'; 
+  font-style: italic; 
+  letter-spacing: 1.5px; 
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); 
 }
 
 
 
-/* Overlay semi-transparent, mais sans تغيير الخلفية الأصلية */
+
 .modal-backdrop {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgb(0, 0, 0,0); /* شفاف */
+  background-color: rgb(0, 0, 0,0); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1465,7 +1326,6 @@
   text-align: left;
 }
 
-/* زر الإغلاق */
 .close-button {
   position: absolute;
   top: 10px;
@@ -1481,7 +1341,7 @@
   color: #e00;
 }
 
-/* زر إضافة للسلة */
+
 .add-btn {
   display: inline-block;
   margin-top: 20px;
@@ -1505,12 +1365,12 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 12px;
-  width: 40%;               /* ⬅️ صغّر العرض */
-  max-width: 500px;         /* ⬅️ أقصى عرض */
+  width: 40%;               
+  max-width: 500px;        
   max-height: 85vh;
   overflow-y: auto;
   position: relative;
-  font-size: 12px;          /* ⬅️ حجم الخط العام */
+  font-size: 12px;          
 }
 
 .close-button {
@@ -1543,7 +1403,7 @@
 }
 
 .main-image img {
-  width: 220px;               /* ⬅️ تصغير الصورة الرئيسية */
+  width: 220px;               
   height: auto;
   border-radius: 10px;
   object-fit: contain;
@@ -1557,7 +1417,7 @@
 }
 
 .thumbnail {
-  width: 50px;               /* ⬅️ تصغير الصور المصغرة */
+  width: 50px;               
   height: 50px;
   border-radius: 6px;
   object-fit: cover;
@@ -1575,7 +1435,7 @@
 }
 
 .price-box {
-  font-size: 18px;           /* ⬅️ تصغير الثمن */
+  font-size: 18px;           
   font-weight: bold;
   margin-bottom: 8px;
 }
