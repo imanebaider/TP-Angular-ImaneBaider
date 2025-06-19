@@ -1,1 +1,210 @@
-<p>admin works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	
+	
+
+	<title> admin LORAYA</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i ></i>
+			<span class="text">LORAYA</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a routerLink="/stock">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">My Stock</span>
+				</a>
+			</li>
+			<li>
+				<a routerLink="/commande_client">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">commandes</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu">
+			
+			<li>
+  <a class="logout" (click)="logout()">
+  <i class='bx bxs-log-out-circle'></i>
+  <span class="text">Déconnexion</span>
+</a>
+
+</li>
+
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+<ul class="box-info">
+
+
+  <li>
+    <i class='bx bxs-diamond'></i> <!-- Bijoux -->
+    <span class="text">
+      <h3>{{ productsCount }}</h3>
+      <p>Bijoux</p>
+    </span>
+  </li>
+
+  <li>
+    <i class='bx bxs-t-shirt'></i> <!-- Robes -->
+    <span class="text">
+      <h3>{{ robesCount }}</h3>
+      <p>Robes</p>
+    </span>
+  </li>
+
+  <li>
+    <i class='bx bxs-wink-smile'></i> <!-- Talons -->
+    <span class="text">
+      <h3>{{ talonsCount }}</h3>
+      <p>Talons</p>
+    </span>
+  </li>
+
+  <li>
+    <i class='bx bxs-spray-can'></i> <!-- Parfums -->
+    <span class="text">
+      <h3>{{ parfumsCount }}</h3>
+      <p>Parfums</p>
+    </span>
+  </li>
+
+  <li>
+    <i class='bx bxs-handbag'></i> <!-- Sacs -->
+    <span class="text">
+      <h3>{{ sacsCount }}</h3>
+      <p>Sacs</p>
+    </span>
+  </li>
+
+</ul>
+
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Suivi des Produits et du Stock
+
+</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<!-- Autres éléments -->
+
+<!-- Graphique de stock -->
+<div class="chart-container" style="margin-top: 40px;">
+  <canvas baseChart
+    [data]="lineChartData"
+    [type]="'line'"
+    [options]="{ responsive: true }">
+  </canvas>
+</div>
+
+				</div>
+				<div class="todo">
+  <div class="head">
+    <h3>Tâches du jour</h3>
+    <i class='bx bx-plus'></i>
+    <i class='bx bx-filter'></i>
+  </div>
+  <ul class="todo-list">
+    <li class="not-completed">
+      <p>Ajouter nouveau produit "Collier d'Or"</p>
+      <i class='bx bx-dots-vertical-rounded'></i>
+    </li>
+    <li class="completed">
+      <p>Répondre aux messages clients</p>
+      <i class='bx bx-dots-vertical-rounded'></i>
+    </li>
+    <li class="not-completed">
+      <p>Vérifier les stocks des sacs</p>
+      <i class='bx bx-dots-vertical-rounded'></i>
+    </li>
+    <li class="completed">
+      <p>Mettre à jour les promotions</p>
+      <i class='bx bx-dots-vertical-rounded'></i>
+    </li>
+    <li class="not-completed">
+      <p>Vérifier les commandes en attente</p>
+      <i class='bx bx-dots-vertical-rounded'></i>
+    </li>
+    <li class="completed">
+      <p>Publier nouveau parfum "Rüya Oud"</p>
+      <i class='bx bx-dots-vertical-rounded'></i>
+    </li>
+    <li class="not-completed">
+      <p>Mettre à jour les stocks des talons</p>
+      <i class='bx bx-dots-vertical-rounded'></i>
+    </li>
+  </ul>
+</div>
+
+
+		<!-- MAIN -->
+
+	<!-- CONTENT -->
+	
+
+	

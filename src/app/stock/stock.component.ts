@@ -1,12 +1,13 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'; 
-import { Product } from '../../models/Product';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { RouterModule } from '@angular/router';
-import { StockService , ProductStock} from '../services/stock.service';
 
+import { Product } from '../../models/Product';
+import { HttpClient } from '@angular/common/http';
+import { StockService , ProductStock} from '../services/stock.service';
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-stock',
   standalone: true,  
@@ -21,7 +22,7 @@ export class StockComponent implements OnInit {
   editingProductId: number | null = null;
   newQuantity: number = 0;
 
-  constructor(private stockService: StockService) {}
+  constructor(private stockService: StockService,private authService: AuthService ,private router: Router,) {}
 
   ngOnInit() {
     this.loadStock();
@@ -49,4 +50,10 @@ export class StockComponent implements OnInit {
     this.editingProductId = null;
   }
   
+
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
+
 }

@@ -1,7 +1,7 @@
 
 
+import { Component, Input, Output, EventEmitter, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angular/core'; 
 
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'; 
 import { Product } from '../../models/Product';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -80,10 +80,11 @@ goToProductDetails(productId: number): void {
 
    addToCart(product: Product | null): void {
     if (product) {
-      this.cartService.addItem(product);
-      alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
-      this.closeModal();  
-    }
+  this.cartService.addItem(product);
+  alert(`Le produit ${product.productTitle} a été ajouté au panier !`);
+  this.closeModal();
+}
+
   }
   search() {
   const term = this.searchTerm.toLowerCase().trim();
@@ -107,7 +108,55 @@ goToProductDetails(productId: number): void {
  selectImage(img: string): void {
     this.selectedImage = img;
   }
+
+
+  
+  @ViewChild('homeContainer', { static: false }) homeContainer!: ElementRef<HTMLDivElement>;
+
+  images = [
+    { url: 'http://localhost:3000/assets/images/para1.jpg',   badge: 'New' },
+    { url: 'http://localhost:3000/assets/images/para2.jpg', },
+    { url: 'http://localhost:3000/assets/images/para3.jpg', badge: 'Top' },
+    { url: 'http://localhost:3000/assets/images/para4.jpg',   },
+    { url: 'http://localhost:3000/assets/images/para5.jpg',   },
+    { url: 'http://localhost:3000/assets/images/para6.jpg',  },
+    { url: 'http://localhost:3000/assets/images/para7.jpg',   },
+    { url: 'http://localhost:3000/assets/images/para8.jpg', },
+    { url: 'http://localhost:3000/assets/images/para9.jpg',   },
+    { url: 'http://localhost:3000/assets/images/para10.jpg', },
+     { url: 'http://localhost:3000/assets/images/para11.jpg', },
+  
+  
+  ];
+
+  cardWidth = 220;
+  scrollPosition = 0;
+
+  ngAfterViewInit(): void {
+    this.startAutoScroll();
+  }
+
+  startAutoScroll() {
+    setInterval(() => {
+      if (this.homeContainer) {
+        const container = this.homeContainer.nativeElement;
+        this.scrollPosition += this.cardWidth;
+
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+        if (this.scrollPosition > maxScrollLeft) {
+          this.scrollPosition = 0;
+        }
+
+        container.scrollTo({
+          left: this.scrollPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 1500);
+  }
 }
+
+
 
 
 

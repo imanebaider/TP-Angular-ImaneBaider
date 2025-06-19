@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	
+	
+
+	<title> admin LORAYA</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i ></i>
+			<span class="text">LORAYA</span>
+		</a>
+		<ul class="side-menu top">
+			<li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+  <a routerLink="/admin">
+    <i class='bx bxs-dashboard'></i>
+    <span class="text">Dashboard</span>
+  </a>
+</li>
+
+<li routerLinkActive="active">
+  <a routerLink="/stock">
+    <i class='bx bxs-shopping-bag-alt'></i>
+    <span class="text">My Stock</span>
+  </a>
+</li>
+
+			<li>
+				<a routerLink="/commande_client">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">commande</span>
+				</a>
+			</li>
+		
+		</ul>
+		<ul class="side-menu">
+						
+			<li>
+  <a class="logout" (click)="logout()">
+  <i class='bx bxs-log-out-circle'></i>
+  <span class="text">Déconnexion</span>
+</a>
+
+</li>
+
+
+
+
+
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>commandes</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a>
+			</div>
+
+
+
+<h2>Liste des commandes clients</h2>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Client</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of commandes">
+      <td>{{ order.id }}</td>
+      <td>{{ order.clientName || 'Anonyme' }}</td>
+      <td>{{ order.date | date:'short' }}</td>
+      <td>
+        <select [(ngModel)]="order.status" (change)="updateStatus(order, order.status)">
+          <option value="Pending">Pending</option>
+          <option value="Confirmed">Confirmed</option>
+          <option value="Shipped">Shipped</option>
+          <option value="Delivered">Delivered</option>
+          <option value="Cancelled">Cancelled</option>
+        </select>
+      </td>
+      <td>{{ order.total | currency:'USD' }}</td>
+      <td>
+        <button (click)="goToConfirmation(order.id)">Voir Détails</button>
+        <button (click)="deleteOrder(order.id)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

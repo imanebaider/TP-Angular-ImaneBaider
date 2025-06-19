@@ -110,26 +110,32 @@
 
 
 
-<br>
-<br>
-<br>
-<br>
+
+<section class="hero-gallery">
+  <!-- Image principale (visible par défaut) -->
+  <div class="main-hero" style="background-image: url('http://localhost:3000/assets/images/talonsbak.jpg');">
+    <div class="hero-content">
+      <h1 i18n  >LORAYA</h1>
+      <p  i18n> Des talons qui marchent avec toi au rythme de tes rêves</p>
+    </div>
+  </div>
+  
+  
+</section>
+
+<br><br><br><br>
 
 
 <div class="brands-section">
+
   <div class="section-separator">
     <span class="line"></span>
-    <span class="title">Des parfums d’exception,
-</span>
+    <span class="title">Notre Produit</span>
     <span class="line"></span>
   </div>
-  </div>
-<br>
+</div>
 
-
-
-
-
+<br><br><br>
 <ul class="product-grid">
   <li *ngFor="let product of filteredProducts" class="product-card"
       (mouseenter)="onMouseEnter(product.productId)" 

@@ -57,6 +57,17 @@ onPay() {
     }
   });
 
+  // ✅ استعمل الاسم من this.address مباشرة
+  const order = {
+    id: 'CMD' + Math.floor(Math.random() * 1000000),
+    clientName: this.address?.fullName || 'Anonyme',
+    date: new Date().toLocaleString(),
+    status: 'Pending',
+    total: this.getTotal()
+  };
+
+  this.checkoutService.setOrder(order);
+
   forkJoin(
     updateRequests.filter((req): req is Observable<any> => req !== null)
   ).subscribe({
@@ -69,6 +80,5 @@ onPay() {
     }
   });
 }
-
 
 }

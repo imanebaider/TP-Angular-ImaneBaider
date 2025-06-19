@@ -61,21 +61,23 @@ export class ValidationComponent implements OnInit {
   getTotal(): number {
     return this.orderSummary.total || 0;
   }
+goToPaiement() {
+  if (this.addressForm.valid) {
+    const formData = this.addressForm.value;
 
-  goToPaiement() {
-    if (this.addressForm.valid) {
-      const formData = this.addressForm.value;
-      console.log("✅ Adresse à enregistrer:", formData);
+    // 👇 خزني الاسم فـ localStorage
+    localStorage.setItem('clientName', formData.fullName);
 
-      // 👇 خزّن البيانات
-      this.checkoutService.setAddress(formData);
+    // خزني العنوان كامل فـ service
+    this.checkoutService.setAddress(formData);
 
-      // 👇 تنقّل
-      this.router.navigate(['/payment']);
-    } else {
-      this.addressForm.markAllAsTouched(); // باش تبان الأخطاء
-    }
+    // تنقل لصفحة الدفع
+    this.router.navigate(['/payment']);
+  } else {
+    this.addressForm.markAllAsTouched();
   }
+}
+
 
 
 

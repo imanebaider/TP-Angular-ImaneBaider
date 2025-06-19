@@ -73,11 +73,11 @@ constructor(private http: HttpClient, private router: Router , private cartServi
   this.router.navigate(['/products', productId]);
 }
 
+addToCart(product: Product): void {
+  this.cartService.addItem(product);
+  alert(`Le produit ${product.productTitle} a été ajouté au panier !`);
+}
 
-  addToCart(product: Product): void {
-    this.cartService.addItem(product);
-    alert(`تمت إضافة المنتج ${product.productTitle} للسلة!`);
-  }
   search() {
   const term = this.searchTerm.toLowerCase().trim();
 

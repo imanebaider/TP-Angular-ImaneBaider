@@ -44,20 +44,19 @@
 
 
 
-
 <div class="menu-container">
   <!-- Colliers -->
 <div class="menu-category">
-  <a href="#" class="category-title">
-    <i class="fas fa-necklace"  i18n></i> Tom Ford
+  <a  routerLink="/catalog" class="category-title">
+    <i class="fas fa-necklace"  i18n></i>BIJAUX
   </a>
   
 </div>
 
   <!-- Boucles d'oreilles -->
 <div class="menu-category">
-  <a href="#" class="category-title">
-    <i class="fas fa-gem" i18n></i> Calvin Klein
+  <a   routerLink="/parfums" class="category-title">
+    <i class="fas fa-gem" i18n></i>PARFUMS
   </a>
   
 </div>
@@ -65,16 +64,16 @@
   
   <!-- Bracelets -->
   <div class="menu-category">
-    <a href="#" class="category-title">
-      <i   class="fas fa-bracelet" i18n></i> Dior
+    <a routerLink="/robes"  class="category-title">
+      <i   class="fas fa-bracelet" i18n></i> ROBES
     </a>
     
   </div>
   
   <!-- Bagues -->
   <div class="menu-category">
-    <a href="#" class="category-title">
-      <i  class="fas fa-ring" i18n></i> Lancôme
+    <a routerLink="/talons" class="category-title">
+      <i  class="fas fa-ring" i18n></i> TALONS
     </a>
     
   </div>
@@ -82,13 +81,9 @@
   <!-- Autres -->
   <div class="menu-category">
     <a href="#" class="category-title">
-      <i  i18n></i> Autres
+      <i  class="fas fa-gem" i18n></i> Autres
     </a>
     <div class="submenu">
-      <a   routerLink="/catalog" i18n>bijaux</a>
-      <a   routerLink="/sacs" i18n>Sacs</a>
-      <a   routerLink="/robes" i18n>Robes</a>
-      <a  routerLink="/talons"i18n>Talons</a>
       <a  routerLink="/parfum" i18n>Soins de vissage</a>
     </div>
   </div>
@@ -235,6 +230,26 @@
   
 
 
+
+<div class="brands-section">
+
+  <div class="section-separator">
+    <span class="line"></span>
+    <span class="title">Meilleures marques
+</span>
+    <span class="line"></span>
+  </div>
+
+ <div class="home" #homeContainer>
+  <a *ngFor="let img of images" class="categorys">
+    <div class="image" [style.background-image]="'url(' + img.url + ')'">
+      <div class="badges" *ngIf="img.badge">{{ img.badge }}</div>
+    </div>
+    
+  </a>
+</div>
+
+</div>
 
 
 

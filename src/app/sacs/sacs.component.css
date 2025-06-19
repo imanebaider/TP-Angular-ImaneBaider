@@ -1223,3 +1223,182 @@
   text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 
+
+
+.product-card h3:hover {
+  color: #00aaff;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(135, 206, 250, 0.35);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.brands-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.section-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-separator .line {
+  height: 1px;
+  background-color: #ccc;
+  flex-grow: 1;
+}
+
+.section-separator .title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.home {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px;
+}
+
+.categorys {
+  flex: 0 0 auto;
+  width: 220px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.categorys .image {
+  width: 220px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+}
+
+.categorys .badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #007BFF;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+
+.home {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE and Edge */
+}
+
+.home::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Opera */
+}
+.categorys {
+  flex: 0 0 auto;
+  width: 300px; /* كبرنا العرض */
+  text-decoration: none;
+  color: inherit;
+}
+
+.categorys .image {
+  width: 300px; /* نفس الحجم مع العنصر الرئيسي */
+  height: 300px; /* كبرنا الطول */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+}
+.promo {
+  background: linear-gradient(135deg, #e0f2ff, #cce5ff);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.promo h2 {
+  color: #0056b3;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.promo p {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+.new-price {
+  color: red;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.price-normal {
+  font-weight: normal;
+  color: black;
+}

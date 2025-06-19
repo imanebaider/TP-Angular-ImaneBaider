@@ -22,6 +22,10 @@ import { StockComponent } from './stock/stock.component';
 import { AuthGuard } from './guards/auth.guard';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminComponent } from './admin/admin.component';
+import { CommandeClientComponent } from './commande-client/commande-client.component';
+
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -46,6 +50,8 @@ export const routes: Routes = [
   { path: 'stock', component: StockComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent },
    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'admin', component: AdminComponent },
+    { path: 'commande_client', component: CommandeClientComponent },
 
   { path: '**', redirectTo: '' }
 ];

@@ -1,6 +1,9 @@
 export class Product {
   public selected: boolean;
   public originalStock?: number;
+  public discountPrice?: number;
+  public promotionEndTime?: Date;
+
   // Constructeur de la classe Product
   constructor(
     public productId: number,
@@ -11,6 +14,7 @@ export class Product {
     public imageUrl: string[],
     public rating: number = 0,
     public type: string,
+    discountPrice?: number,
     selected: boolean = true,
     originalStock?: number,          // براميطر جديد اختياري
   ) {

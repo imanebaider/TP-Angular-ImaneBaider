@@ -1119,6 +1119,7 @@
   width: 100%;
   height: 100vh; /* Full screen height */
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .main-hero {
@@ -1356,13 +1357,16 @@
 }
 
 .section-separator .title {
-  font-weight: 600; /* خليها شوي خفيفة باش تبان أنيقة */
+  font-weight: 600;
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #684158; /* لون غامق شوي لكن مش أسود قاسي */
-  font-family: 'Georgia'; /* خط serif يعطي طابع كلاسيكي وأنيق */
-  font-style: italic; /* هنا دير italic */
-  letter-spacing: 1.5px; /* زيادة التباعد بين الحروف باش يبان مريح للعين */
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /* ظل خفيف يعطي عمق */
+  color: #684158; 
+  font-family: 'Georgia'; 
+  font-style: italic; 
+  letter-spacing: 1.5px; 
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1); 
 }
+
+
+
 

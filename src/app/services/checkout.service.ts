@@ -22,4 +22,15 @@ export class CheckoutService {
   getOrderSummary() {
     return this.orderSummary;
   }
+
+  setOrder(order: any) {
+  const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+  orders.push(order);
+  localStorage.setItem('orders', JSON.stringify(orders));
+}
+
+getOrders(): any[] {
+  return JSON.parse(localStorage.getItem('orders') || '[]');
+}
+
 }
