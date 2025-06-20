@@ -167,13 +167,37 @@ L’utilisateur peut consulter les détails ou supprimer une commande directemen
 page.
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_listeCommandes.PNG?raw=true
 )
+La page présente la liste des produits que l’utilisateur a ajoutés à ses favoris.
+Chaque article est affiché avec son nom, sa description, et un bouton pour le retirer des
+favoris.
+Cette fonctionnalité permet à l’utilisateur de gérer facilement ses articles préférés pour un
+accès rapide.
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_favorite.PNG?raw=true
 )
+Le tableau de bord offre une vue d’ensemble des stocks par catégorie (bijoux, robes, talons,
+parfums, sacs) pour faciliter la gestion.
+Il liste les tâches prioritaires du jour, comme l’ajout de produits, la réponse aux clients, la
+mise à jour des stocks et des promotions, ainsi que le suivi des commandes.
+Cette interface permet à l’administrateur de superviser efficacement l’inventaire et les
+opérations quotidiennes.
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_admin_dashboard.PNG?raw=true
 )
+
+La page affiche la liste complète des commandes clients avec leur identifiant, date, statut et
+montant total.
+Chaque commande peut être consultée en détail ou supprimée directement depuis cette
+interface.
+Cette vue permet à l’administrateur de gérer facilement les commandes en cours et archivées.
 ![image alt](
 https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_admin_commande.PNG?raw=true
 )
+
+La page affiche un tableau détaillé du stock avec les produits, quantités, types, ainsi que la
+possibilité de modifier les informations et des alertes sur les stocks faibles.
+Elle propose des outils simples pour gérer efficacement le stock, comme la mise à jour rapide
+des quantités et l’ajout de nouveaux produits.
+Elle permet un suivi précis de l’état des produits afin d’assurer leur disponibilité et répondre
+aux besoins des clients
 ![image alt](
 https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_admin_stock.PNG?raw=true
 )
