@@ -62,9 +62,38 @@ For more information on using the Angular CLI, including detailed command refere
 
 # TP4 - Imane Baider
 
-## Description
-TP Angular sur les templates, bindings et directives.
+Ce projet Angular met en place une application e-commerce nommée LORAYA dédiée à la vente de bijoux, parfums, sacs, robes et chaussures à talons. Il s'appuie sur l'utilisation des templates, bindings, directives Angular et le routing sécurisé avec AuthGuard.
 
+L'application permet :
+
+L’affichage de différents produits par catégories (bijoux, colliers, robes, sacs, parfums...).
+
+La gestion du panier d'achat et du paiement.
+
+L’enregistrement des commandes et la page de confirmation.
+
+La gestion du stock avec édition de quantités et export en PDF.
+
+L'utilisation d'un dashboard admin pour suivre les commandes et les produits.
+
+L’affichage de favoris, du profil utilisateur, et des détails produit.
+
+ # Dépendances importantes à installer
+Avant d’utiliser la fonctionnalité PDF pour exporter le stock, il faut installer la bibliothèque jspdf :
+
+
+npm install jspdf --legacy-peer-deps
+Cette commande est nécessaire pour générer les fichiers PDF via Angular, notamment dans la section Stock de l’application.
+
+#  Génération de diagrammes
+Si vous souhaitez générer des diagrammes dans Angular (par exemple pour le suivi de produits, commandes, ou statistiques), vous pouvez installer une bibliothèque de graphiques telle que :
+
+
+npm install chart.js ng2-charts --legacy-peer-deps
+Et l’importer dans votre module ou composant. N'oubliez pas d'importer ChartsModule si nécessaire.
+
+#  Sécurisation avec AuthGuard
+Certaines routes (ex: /catalog, /cart, /validation, /payment, /confirmation, /commande, /stock, /profile) sont protégées avec un AuthGuard, pour empêcher l'accès aux utilisateurs non authentifiés.
 ## Captures d'écran
 la liste des produits
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya1.PNG?raw=true
