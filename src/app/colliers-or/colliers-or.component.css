@@ -1198,3 +1198,29 @@
 
 
 
+
+
+.wishlist-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #ccc;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  z-index: 10;
+}
+
+.wishlist-icon:hover {
+  color: #ff4444;
+  background-color: #ffeaea;
+}
+
+.wishlist-icon.active {
+  color: #e60023;
+  background-color: #ffeaea;
+}
