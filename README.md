@@ -62,7 +62,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 # TP4 - Imane Baider
 
-Ce projet Angular met en place une application e-commerce nommée LORAYA dédiée à la vente de bijoux, parfums, sacs, robes et chaussures à talons. Il s'appuie sur l'utilisation des templates, bindings, directives Angular et le routing sécurisé avec AuthGuard.
+Ce projet Angular met en place une application e-commerce nommée "LORAYA"  dédiée à la vente de bijoux, parfums, sacs, robes et chaussures à talons. Il s'appuie sur l'utilisation des templates, bindings, directives Angular et le routing sécurisé avec AuthGuard.
 
 L'application permet :
 
