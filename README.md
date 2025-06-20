@@ -95,33 +95,87 @@ Et l’importer dans votre module ou composant. N'oubliez pas d'importer ChartsM
 #  Sécurisation avec AuthGuard
 Certaines routes (ex: /catalog, /cart, /validation, /payment, /confirmation, /commande, /stock, /profile) sont protégées avec un AuthGuard, pour empêcher l'accès aux utilisateurs non authentifiés.
 ## Captures d'écran
-la liste des produits
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya1.PNG?raw=true
+La page d’accueil du site Loraya se distingue par un design moderne et élégant qui
+reflète l’univers de la mode et de la beauté féminine.
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya.PNG?raw=true
 )
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya2.PNG?raw=true
-)
-
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya3.PNG?raw=true
-)
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya5.PNG?raw=true
-)
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya6.PNG?raw=true
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya1.PNG?raw=true
 )
 
-![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/main/loraya7.PNG?raw=true
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya3.PNG?raw=true
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya4.PNG?raw=true
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya7.PNG?raw=true
 )
 
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_bijaux.PNG?raw=true
 
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_bijaux1.PNG?raw=true
 
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_bijaux2.PNG?raw=true
+)
+Lorsqu’une utilisatrice clique sur le bouton « Se connecter » sur la page d’accueil du site
+Loraya, elle est redirigée vers une page de connexion dédiée. Sur cette page, le système
+identifie automatiquement si l’utilisatrice est une cliente ou une administratrice en
+fonction de l’adresse e-mail saisie.
+Après vérification de l’adresse e-mail et des informations d’identification, l’utilisatrice
+est dirigée vers la section appropriée du site selon son rôle. Cette gestion des accès
+garantit une navigation personnalisée et sécurisée, permettant aux clientes d’accéder à
+leurs commandes et favoris, et aux administratrices de gérer le catalogue, les commandes
+et les autres fonctionnalités administratives
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_connexion.PNG?raw=true
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_compte.PNG?raw=true
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_profile.PNG?raw=true
+)
+La page panier affiche les articles sélectionnés par l'utilisateur, incluant le nom, le type, la
+description, le prix et la quantité de chaque produit.
+Elle propose des actions comme vider le panier ou passer au paiement, tout en résumant le
+montant total avec les éventuelles réductions.
+Un message "Presque épuisé" met en avant l'urgence, et les moyens de paiement acceptés
+comme Visa et Mastercard sont également affichés.
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_panier.PNG?raw=true
+)
+La page récapitule les informations de livraison, incluant le nom, l'adresse complète, la ville,
+le code postal et le numéro de téléphone.
+Elle affiche les détails de la commande (produit, quantité, prix, réduction et total) ainsi que les
+options de paiement disponibles.
+LORAYA garantit la sécurité des paiements et la confidentialité des données personnelles
+grâce à des mesures de protection conformes aux normes de l’industrie.
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_validation.PNG?raw=true
+)
+La page permet de saisir l'adresse de facturation et les informations de carte
+bancaire (numéro, expiration, CVV) pour finaliser l'achat.
+Elle récapitule la commande (produits, quantité, prix total, réduction) et propose une
+option pour enregistrer la carte.
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_payer.PNG?raw=true
+)
 
-
-
-
-
-
-
-
-
-
+La page confirme l’enregistrement de la commande avec le numéro, la date, le montant, le
+statut du paiement et les détails de livraison.
+Elle propose aussi les options pour continuer les achats, imprimer la facture, ou contacter le
+support client.
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_confirmation.PNG?raw=true
+)
+La page affiche la liste des commandes passées avec leur numéro, date et heure.
+Chaque commande présente les produits achetés, la quantité et le total payé.
+L’utilisateur peut consulter les détails ou supprimer une commande directement depuis cette
+page.
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_listeCommandes.PNG?raw=true
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_favorite.PNG?raw=true
+)
+![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_admin_dashboard.PNG?raw=true
+)
+![image alt](
+https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_admin_commande.PNG?raw=true
+)
+![image alt](
+https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_admin_stock.PNG?raw=true
+)
 
 
