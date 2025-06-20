@@ -76,6 +76,9 @@ goToPaiement() {
   } else {
     this.addressForm.markAllAsTouched();
   }
+
+
+  
 }
 
 

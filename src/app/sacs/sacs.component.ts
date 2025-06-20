@@ -12,7 +12,7 @@ import { CartService } from '../services/cart.service';
   standalone: true,
   imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './sacs.component.html',
-  styleUrls: ['./sacs.component.css']  // <- corrected (was styleUrl)
+  styleUrls: ['./sacs.component.css']
 })
 export class SacsComponent implements OnInit, AfterViewInit {
   @Input() selectedProduct: Product | null = null;
@@ -23,6 +23,8 @@ export class SacsComponent implements OnInit, AfterViewInit {
   hovered: number | null = null;
   searchTerm: string = '';
   currentRating: number = 0;
+
+  wishlist: Product[] = [];  // <-- هنا المصفوفة ديال المفضلة
 
   apiUrl = 'http://localhost:3000/api/sacs';
 
@@ -42,6 +44,12 @@ export class SacsComponent implements OnInit, AfterViewInit {
         console.error('Erreur lors de la récupération des produits', err);
       }
     });
+
+    // تحميل المفضلة من localStorage
+    const storedWishlist = localStorage.getItem('wishlist');
+    if (storedWishlist) {
+      this.wishlist = JSON.parse(storedWishlist);
+    }
   }
 
   get availableProducts(): Product[] {
@@ -84,19 +92,17 @@ export class SacsComponent implements OnInit, AfterViewInit {
   @ViewChild('homeContainer', { static: false }) homeContainer!: ElementRef<HTMLDivElement>;
 
   images = [
-    { url: 'http://localhost:3000/assets/images/sacloraya1.jpg',   badge: 'New' },
-    { url: 'http://localhost:3000/assets/images/sacloraya2.jpg', },
+    { url: 'http://localhost:3000/assets/images/sacloraya1.jpg', badge: 'New' },
+    { url: 'http://localhost:3000/assets/images/sacloraya2.jpg' },
     { url: 'http://localhost:3000/assets/images/sacloraya3.jpg', badge: 'Top' },
-    { url: 'http://localhost:3000/assets/images/sacloraya4.jpg',   },
-    { url: 'http://localhost:3000/assets/images/sacloraya5.jpg',   },
-    { url: 'http://localhost:3000/assets/images/sacloraya6.jpg',  },
-    { url: 'http://localhost:3000/assets/images/sacloraya7.jpg',   },
-    { url: 'http://localhost:3000/assets/images/sacloraya8.jpg', },
-    { url: 'http://localhost:3000/assets/images/sacloraya9.jpg',   },
-    { url: 'http://localhost:3000/assets/images/sacloraya10.jpg', },
-     { url: 'http://localhost:3000/assets/images/sacloraya11.jpg', },
-  
-  
+    { url: 'http://localhost:3000/assets/images/sacloraya4.jpg' },
+    { url: 'http://localhost:3000/assets/images/sacloraya5.jpg' },
+    { url: 'http://localhost:3000/assets/images/sacloraya6.jpg' },
+    { url: 'http://localhost:3000/assets/images/sacloraya7.jpg' },
+    { url: 'http://localhost:3000/assets/images/sacloraya8.jpg' },
+    { url: 'http://localhost:3000/assets/images/sacloraya9.jpg' },
+    { url: 'http://localhost:3000/assets/images/sacloraya10.jpg' },
+    { url: 'http://localhost:3000/assets/images/sacloraya11.jpg' },
   ];
 
   cardWidth = 220;
@@ -123,5 +129,21 @@ export class SacsComponent implements OnInit, AfterViewInit {
         });
       }
     }, 1500);
+  }
+
+  // ----------- Wishlist functions -----------
+
+  toggleWishlist(product: Product): void {
+    const index = this.wishlist.findIndex(p => p.productId === product.productId);
+    if (index !== -1) {
+      this.wishlist.splice(index, 1); // حذف من المفضلة
+    } else {
+      this.wishlist.push(product); // إضافة للمفضلة
+    }
+    localStorage.setItem('wishlist', JSON.stringify(this.wishlist));
+  }
+
+  isInWishlist(product: Product): boolean {
+    return this.wishlist.some(p => p.productId === product.productId);
   }
 }

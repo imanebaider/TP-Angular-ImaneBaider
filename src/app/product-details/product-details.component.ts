@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
+  wishlist: Product[] = [];
   product!: Product;
   selectedImage: string = '';
   type: string = '';
@@ -51,6 +52,25 @@ export class ProductDetailsComponent implements OnInit {
   addToCart(product: Product): void {
     this.cartService.addItem(product);
     alert(`✅ Le produit"${product.productTitle}" a bien été ajouté au panier`);
+  }
+
+
+
+  
+  //  Ajouter ou retirer de la wishlist
+  toggleWishlist(product: Product): void {
+    const index = this.wishlist.findIndex(p => p.productId === product.productId);
+    if (index !== -1) {
+      this.wishlist.splice(index, 1);
+    } else {
+      this.wishlist.push(product);
+    }
+    localStorage.setItem('wishlist', JSON.stringify(this.wishlist));
+  }
+
+  // Vérifier si un produit est dans la wishlist
+  isInWishlist(product: Product): boolean {
+    return this.wishlist.some(p => p.productId === product.productId);
   }
 }
 

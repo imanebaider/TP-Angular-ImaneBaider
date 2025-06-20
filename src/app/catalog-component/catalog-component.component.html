@@ -6,7 +6,7 @@
 
   <header class="main-header">
     <div class="logo">
-      <i class="fas fa-gem"></i> LORAYA
+      <i ></i> LORAYA
     </div>
   
   
@@ -32,7 +32,7 @@
   </div>
 </div>
     <a routerLink="/cart" class="fas fa-shopping-cart"></a>
-    <i class="far fa-heart"></i>
+     <i><a routerLink="/favorites" class="far fa-heart"></a></i>
     <i class="fas fa-globe"></i>
 
     
@@ -147,6 +147,16 @@
   <li *ngFor="let product of filteredProducts" class="product-card"
       (mouseenter)="onMouseEnter(product.productId)" 
       (mouseleave)="onMouseLeave()">
+
+
+      <i 
+        class="fas fa-heart wishlist-icon"
+        [class.active]="isInWishlist(product)"
+        (click)="toggleWishlist(product)"
+        title="Ajouter aux favoris"
+        aria-label="Ajouter aux favoris">
+      </i>
+
 
     <div class="product-images">
       <img *ngFor="let img of product.imageUrl; let i = index"

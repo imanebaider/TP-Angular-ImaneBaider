@@ -24,6 +24,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { CommandeClientComponent } from './commande-client/commande-client.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 
@@ -51,7 +52,7 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'admin', component: AdminComponent },
-    { path: 'commande_client', component: CommandeClientComponent },
-
+  { path: 'commande_client', component: CommandeClientComponent },
+  { path: 'favorites', component: FavoritesComponent },
   { path: '**', redirectTo: '' }
 ];

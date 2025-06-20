@@ -26,7 +26,7 @@ login() {
     if (role === 'admin') {
       this.router.navigate(['/admin']);   
     } else if (role === 'client') {
-      this.router.navigate(['/catalog']);   
+      this.router.navigate(['']);   
     
     } else {
       this.router.navigate(['']);  

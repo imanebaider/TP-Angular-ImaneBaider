@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -21,7 +22,7 @@
   <div class="dropdown-content">
     <a routerLink="/login">Me connecter</a>
     <a routerLink="/commande" >Mes Commandes</a>
-    <a routerLink="/profile"i18n>Mon profile </a>
+    <a href="#">Mes Notifications</a>
     <a href="#">Mes Coupons</a>
     <a href="#">Mes Points Bonus</a>
     <a href="#">Récemment Vus</a>
@@ -29,83 +30,48 @@
   </div>
 </div>
     <i class="fas fa-shopping-cart"></i>
-     <i><a routerLink="/favorites" class="far fa-heart"></a></i>
-    <i class="fas fa-globe"></i>
+ <i><a routerLink="/favorites" class="far fa-heart"></a></i>
+     <i class="fas fa-globe"></i>
 
     
   </div>
 </header>
 
 
-<div class="progress-bar">
-  <div class="step" [class.active]="currentStep >= 1">Panier</div>
-  <div class="step" [class.active]="currentStep >= 2">VALIDATION</div>
-  <div class="step" [class.active]="currentStep >= 3">Payer</div>
-  <div class="step" [class.active]="currentStep >= 4">CONFIRMATION</div>
+
+
+
+
+
+
+
+
+
+<div class="favorites-section">
+  <h2>Mes Favoris</h2>
+
+  <ul class="product-grid" *ngIf="wishlist.length > 0; else noFavorites">
+    <li *ngFor="let product of wishlist" class="product-card">
+      <div class="product-images">
+        <img [src]="'http://localhost:3000/assets/images/' + product.imageUrl[0]" 
+             [alt]="product.productTitle"
+             (click)="goToProductDetails(product.productId)"
+             style="cursor:pointer" />
+      </div>
+
+      <h3 (click)="goToProductDetails(product.productId)" style="cursor:pointer">
+        {{ product.productTitle }}
+      </h3>
+
+      <button (click)="removeFromWishlist(product)">Retirer des favoris</button>
+    </li>
+  </ul>
+
+  <ng-template #noFavorites>
+    <p>Vous n'avez aucun produit dans vos favoris.</p>
+  </ng-template>
 </div>
 
- <!-- ✅ Message principal -->
-  <div class="thank-you-box">
-    <h2>Merci pour votre commande !</h2>
-    <p>Votre commande a bien été enregistrée.</p>
-  </div>
-
-  <!-- ✅ Résumé principal -->
-  <div class="summary-box">
-    <p><strong>Numéro de commande :</strong> {{ orderId }}</p>
-    <p><strong>Date :</strong> {{ orderDate | date: 'dd/MM/yyyy' }}</p>
-    <p><strong>Total :</strong> DH{{ total }}</p>
-    <p><strong>Méthode de paiement :</strong> {{ paymentMethod }}</p>
-    <p><strong>Statut du paiement :</strong>
-      <span [class.paid]="isPaid" [class.pending]="!isPaid">
-        {{ isPaid ? 'Payé' : 'En attente de paiement' }}
-      </span>
-    </p>
-    <p><strong>Livraison :</strong> {{ shippingCompany }} – Suivi : {{ trackingNumber }}</p>
-    <p><strong>Date estimée :</strong> {{ estimatedDeliveryDate | date:'dd/MM/yyyy' }}</p>
-  </div>
-
-  <!-- ✅ Détails des produits -->
-  <section class="order-details" *ngIf="orderItems.length > 0">
-    <h3>Produits commandés</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Image</th>
-          <th>Produit</th>
-          <th>Quantité</th>
-          <th>Prix unitaire</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of orderItems">
-          <td><img [src]="'http://localhost:3000/assets/images/' + item.imageUrl[0]" alt="{{ item.productTitle }}" width="50" /></td>
-          <td>{{ item.productTitle }}</td>
-          <td>{{ item.quantity }}</td>
-          <td>DH{{ item.productPrice }}</td>
-          <td>DH{{ item.productPrice * item.quantity }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- ✅ Informations du client -->
-  <section class="customer-info">
-    <h3>Informations du client</h3>
-    <p><strong>Nom :</strong> {{ customer.name }}</p>
-    <p><strong>Téléphone :</strong> {{ customer.phone }}</p>
-    <p><strong>Adresse :</strong> {{ customer.address }}</p>
-    <p><strong>Email :</strong> {{ customer.email }}</p>
-  </section>
-
-  <!-- ✅ Actions -->
-  <div class="actions">
-    <button routerLink="">🏠 Accueil</button>
-    <button routerLink="/catalog">🛍️ Continuer les achats</button>
-    <button (click)="printInvoice()">🧾 Imprimer la facture</button>
-    <a href="tel:+212600000000">📞 Contacter le support</a>
-  </div>
 
 
 
@@ -114,6 +80,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br><br><br><br><br><br><br><br><br>
 
 
   <footer class="site-footer">

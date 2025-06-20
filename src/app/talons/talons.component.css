@@ -1213,6 +1213,27 @@
 
 
 
+.wishlist-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #ccc;
+  font-size: 1.4rem;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+.wishlist-icon:hover {
+  color: red;
+}
+
+.wishlist-icon.active {
+  color: red;
+  background-color: #ffecec;
+}
 
 
 

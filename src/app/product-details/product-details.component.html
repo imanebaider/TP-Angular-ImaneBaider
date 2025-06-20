@@ -32,7 +32,7 @@
   </div>
 </div>
      <a routerLink="/cart" class="fas fa-shopping-cart"></a>
-    <i class="far fa-heart"></i>
+     <i><a routerLink="/favorites" class="far fa-heart"></a></i>
     <i class="fas fa-globe"></i>
 
     
@@ -140,16 +140,30 @@
                 <i class="material-icons">local_shipping</i>
                 <span>Livraison gratuite</span>
             </div>
+
+
+
+            
         </div>
         
         <p class="description">{{product.description}}</p>
         
+
+       
         <button class="add-to-cart"  title="Ajouter au panier"
    aria-label="Ajouter au panier"
    (click)="addToCart(product)"
    style="cursor:pointer;">
   Ajouter au panier
-</button>
+</button>  <i 
+        class="fas fa-heart wishlist-icon"
+        [class.active]="isInWishlist(product)"
+        (click)="toggleWishlist(product)"
+        title="Ajouter aux favoris"
+        aria-label="Ajouter aux favoris">
+      </i>
+
+  
 
 
    
