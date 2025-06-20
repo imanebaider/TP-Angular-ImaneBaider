@@ -112,7 +112,6 @@ reflète l’univers de la mode et de la beauté féminine.
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_bijaux.PNG?raw=true
 )
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_bijaux1.PNG?raw=true
-
 )
 ![image alt](https://github.com/imanebaider/TP-Angular-ImaneBaider/blob/master/loraya_bijaux2.PNG?raw=true
 )
