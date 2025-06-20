@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { jsPDF } from 'jspdf';
+
 @Component({
   selector: 'app-commande-client',
   templateUrl: './commande-client.component.html',
@@ -49,4 +51,32 @@ export class CommandeClientComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
+
+
+  
+    generatePDF() {
+  const doc = new jsPDF();
+  doc.setFontSize(14);
+  doc.text('📄 Liste des Commandes Clients', 10, 10);
+  doc.setFontSize(10);
+  doc.text('N° - Produit - Quantité - Total', 10, 20);
+  doc.line(10, 22, 200, 22); // ligne de séparation
+
+  let y = 30;
+  this.commandes.forEach((order, index) => {
+    const produit = order.produit || 'Produit inconnu';
+    const quantite = order.quantite || 'N/A';
+    const total = order.total || 'N/A';
+    doc.text(`${index + 1}. ${produit} - ${quantite} - ${total}`, 10, y);
+    y += 10;
+
+    if (y > 280) {
+      doc.addPage();
+      y = 10;
+    }
+  });
+
+  doc.save('commandes.pdf');
+}
+
 }
